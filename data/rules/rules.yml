@@ -1,0 +1,52 @@
+version: "2.0"
+
+rules:
+- rule: Confirm that the bot is not a human
+  steps:
+  - intent: check_human
+  - action: action_bot
+  
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: action_default
+
+- rule: answer out of scope
+  steps:
+  - intent: out_of_scope
+  - action: action_out_of_scope
+
+- rule: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+  
+- rule: help
+  steps:
+  - intent: help
+  - action: utter_help
+
+- rule: thankyou
+  steps:
+  - intent: thankyou
+  - action: action_thank_you
+
+
+- rule: exclamation_sentence
+  steps:
+  - intent: exclamation_sentence
+  - action: action_exclamation_sentence
+
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+
+- rule: check_loan_amount
+  steps:
+  - intent: check_loan_amount
+  - action: action_check_loan_amount
+
+

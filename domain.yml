@@ -1,0 +1,759 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- check_human:
+    use_entities: true
+- inform:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- thankyou:
+    use_entities: true
+- borrow_money:
+    use_entities: []
+- information_company:
+    use_entities: true
+- adress_company:
+    use_entities: true
+- interest_rate:
+    use_entities: true
+- not_interest:
+    use_entities: true
+- payback_time:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- session_start:
+    use_entities: true
+- restart:
+    use_entities: true
+- trigger_handoff:
+    use_entities: true
+- help:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- information_provided:
+    use_entities: true
+- borrower:
+    use_entities: true
+- late_payment:
+    use_entities: true
+- payment_methods:
+    use_entities: true
+- loan_information:
+    use_entities: true
+- change_person:
+    use_entities: true
+- change_id_card:
+    use_entities: true
+- change_telephone_number:
+    use_entities: true
+- change_amount_of_money:
+    use_entities: true
+- loan_type:
+    use_entities: true
+- loan_process:
+    use_entities: true
+- detail_loan:
+    use_entities: true
+- interrupt_loan:
+    use_entities: true
+- time_get_money:
+    use_entities: true
+- methob_get_money:
+    use_entities: true
+- accept_or_not:
+    use_entities: true
+- incentives:
+    use_entities: true
+- income_condition:
+    use_entities: true
+- fill_info_request:
+    use_entities: true
+- loan_appraisal:
+    use_entities: true
+- bad_debt:
+    use_entities: true
+- contact_information:
+    use_entities: true
+- loan_error:
+    use_entities: true
+- not_accept:
+    use_entities: true
+- debt_collection_policy:
+    use_entities: true
+- surcharge:
+    use_entities: true
+- mortgage:
+    use_entities: true
+- loan_security:
+    use_entities: true
+- cic_introduce:
+    use_entities: true
+- disbursement:
+    use_entities: true
+- contract_information:
+    use_entities: true
+- interest_payment_period:
+    use_entities: true
+- purpose_information:
+    use_entities: true
+- lending_area:
+    use_entities: true
+- sign_contract:
+    use_entities: true
+- loan_helper:
+    use_entities: true
+- overdue_interest:
+    use_entities: true
+- loan_extension:
+    use_entities: true
+- human_handoff:
+    use_entities: true
+- loan_consulting:
+    use_entities: true
+- cost_consulting:
+    use_entities: true
+- exclamation_sentence:
+    use_entities: true
+- exchange_fee:
+    use_entities: true
+- high_interest:
+    use_entities: true
+- check_loan_amount:
+    use_entities: true
+entities:
+- amount-of-money
+- PERSON
+- company
+- job_title
+- income
+- number
+- handoff_to
+- location
+- email
+- id_card
+- telephone_number
+- loan_name
+- date_of_birth
+- facebook_name
+- house_type
+- time
+- age
+- gender_value
+slots:
+  AA_CONTINUE_FORM:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  PERSON:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  user_name:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  age:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  amount-of-money:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  company:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  currency:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: VND
+    auto_fill: true
+    influence_conversation: false
+  email:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  end_time:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  end_time_formatted:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  grain:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  handoff_to:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  id_card:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  income:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  job_title:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  location:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  next_form_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  number:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  previous_form_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  repeated_validation_failures:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  start_time:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  start_time_formatted:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  telephone_number:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  time:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  time_formatted:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  zz_confirm_form:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  loan_name:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  gender_value:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: anh chị
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_out_of_scope:
+  - text: Yêu cầu của {gender_value} nằm ngoài sự phục vụ của bên công ty em, mong {gender_value} cung cấp chính xác những thông tin được yêu cầu ạ
+  utter_ask_borrow_money_form_user_name:
+  - text: Vui lòng cung cấp họ tên đầy đủ của {gender_value}? (Viết hoa chữ cái đầu, ví dụ, Nguyễn Văn A)
+  utter_goodbye:
+  - text: Hẹn gặp lại {gender_value} nhé!!!
+  utter_noworries:
+  - text: Em rất vui vì đã giúp được {gender_value} :)))
+  utter_wait_complete:
+  - text: Xin cảm ơn qúy khách. Thông tin đã hoàn tất. bên công ty em đang xác nhận thông tin của {gender_value}, vui lòng chờ trong ít phút và bên công ty em sẽ gọi lại cho {gender_value}!
+  utter_interest_rate:
+  - text: Lãi suất cho nhà đầu tư – là người cho vay là 18%/năm. Đây là tiền lãi khoản vay mà khách hàng phải trả cho nhà đầu tư. Đây là mức lãi minh bạch và cạnh tranh nhất thị trường online hiện nay ạ. Ngoài ra, khách hàng sẽ trả thêm phí dịch vụ sàn kết nối cho VNDC (dựa theo bảng phí cụ thể cho từng hạn mức vay từ 1tr-5tr).
+  utter_interest_payment_period:
+  - text: Lãi và phí sẽ được thanh toán vào cuối kỳ hạn cho vay. {gender_value} có thể đăng nhập vào app VNDCredit để kiểm tra số tiền lãi phải trả cho khoản vay của mình
+  utter_verify_user_confirm:
+  - buttons:
+    - payload: /affirm
+      title: Có
+    - payload: /deny
+      title: Không
+    text: Để tiến hành vay tiền, {gender_value} có thể truy cập vào [link](https://www.vndcredit.vn) để điền thông tin hoặc cung cấp thông tin đầy đủ trực tiếp cho em qua tin nhắn để đăng ký khoản vay. {gender_value} có muốn trực tiếp đăng ký thông tin khoản vay qua tin nhắn không?
+  utter_verify_number_of_money:
+  - buttons:
+    - payload: /affirm
+      title: Có
+    - payload: /deny
+      title: Không
+    text: Rất tiếc, hiện nay bên em chỉ cung cấp số tiền lớn nhất là 5000000 VND, {gender_value} có muốn tiếp tục cung cấp thông tin vay tiền không ạ ?
+  utter_ask_borrow_money_form_id_card:
+  - text: Xin vui lòng cung cấp số chứng minh thư hoặc số căn cước công dân của {gender_value}!
+  utter_ask_borrow_money_form_telephone_number:
+  - text: Xin vui lòng cung cấp số điện thoại của {gender_value}!
+  utter_ask_borrow_money_form_age:
+  - text: Xin vui lòng cung cấp số tuổi của {gender_value}!
+  utter_ask_borrow_money_form_email:
+  - text: Vui lòng cung cấp cho em email của {gender_value} ạ?
+  utter_ask_borrow_money_form_income:
+  - text: Vui lòng cung cấp cho em biết thu nhập của {gender_value} ạ?
+  utter_ask_borrow_money_form_job_title:
+  - text: Vui lòng cung cấp cho em biết công việc của {gender_value} ạ?
+  utter_ask_borrow_money_form_location:
+  - text: Vui lòng cung cấp cho em biết hiện tại {gender_value} đang sống ở thành phố nào ạ?
+  utter_ask_borrow_money_form_amount-of-money:
+  - text: Số tiền {gender_value} muốn vay là bao nhiêu ({gender_value} vui lòng cung cấp số tiền chính xác bằng số)!
+  utter_no_payment_amount:
+  - text: Xin lỗi, em không hiểu số tiền {gender_value} muốn vay, vui lòng cung cấp lại
+  utter_no_paymentdate:
+  - text: Xin lỗi, thời gian {gender_value} nhập không hợp lệ
+  utter_adress_company:
+  - text: Công ty bên công ty em nằm ở toàn tầng K2, toà B, 39 Lê Văn Lương, Nhân Chính, Thanh Xuân, Hà Nội.
+  utter_information_company:
+  - text: |-
+      VNDC là sản phẩm sàn giao dịch tài chính cho vay hàng ngang xây dựng trên nền tảng trực tuyến kết nối trực tiếp giữa các nhà đầu tư và người có nhu cầu đi vay.
+      VNDC cung cấp các dịch vụ tài chính đơn giản nhanh chóng và có độ tin cậy cao, có đăng ký ngành nghề KD hợp pháp rõ ràng. 
+      Khi sử dụng dịch vụ của VNDC tất cả các điều khoản, thông tin khoản vay, mức phí phải trả … đều được thể hiện chi tiết trên hợp đồng, rõ ràng, minh bạch, KH được quyền xem kĩ hợp đồng đến khi nào KH hoàn toàn yên tâm mới đồng ý ký kết hợp đồng vay. Vì vậy {gender_value} có thể hoàn yên tâm khi sử dụng dịch vụ của VNDC ạ.
+  utter_ask_rephrase:
+  - text: Em không hiểu ý lắm, {gender_value} có thể nói rõ hơn không ạ?
+  utter_ok:
+  - text: Vâng, cảm ơn {gender_value}
+  utter_ask_continue:
+  - text: Qúy khách vui lòng hoàn thành nốt các thông tin cần cung cấp để có thể tiến hành vay tiền ạ.
+  utter_default:
+  - text: Em không hiểu lắm, {gender_value} có thể nói rõ hơn không ạ?
+  utter_ask_borrow_money_form_AA_CONTINUE_FORM:
+  - buttons:
+    - payload: /affirm
+      title: Có
+    - payload: /deny
+      title: Không
+    text: T {gender_value} có muốn hoàn tất thông tin vay tiền không?
+  utter_ask_interrupt_borrow_confirm:
+  - buttons:
+    - payload: /affirm
+      title: Tiếp tục
+    - payload: /deny
+      title: Dừng lại
+    text: Quý khách xác nhận không muốn vay tiền nữa ạ?
+  utter_ask_borrow_money_form_zz_confirm_form:
+  - buttons:
+    - payload: /affirm
+      title: Đồng ý
+    text: |-
+      Xác nhận thông tin khách hàng:  
+      -   Họ tên: {user_name}  
+      -   Số điện thoại: {telephone_number}
+      -   Số chứng minh thư: {id_card}
+      -   Số tiền vay: {amount-of-money} VNĐ
+      Quý khách đã yêu cầu khoản vay {amount-of-money} VNĐ từ sàn cho vay VNDC, với lãi suất 8%/khoản vay trong thời gian 35 ngày kể từ thời điểm hiện tại. Vui lòng xác nhận thông tin trên có chính xác không ạ. Nếu không đúng, vui lòng cho em biết thông tin gì sai ạ?
+  utter_borrow_money_cancelled:
+  - text: Khoản vay của đã bị hủy, xin cảm ơn vì đã tham gia dịch vụ của bên công ty. Hi vọng sẽ được hợp tác với {gender_value} lần sau.
+  utter_payback_time:
+  - text: |-
+      Thời gian vay tối đa là 35 ngày kể từ ngày tiền được giải ngân về tài khoản của khách hàng. Qúy khách có thể thanh toán khoản vay trước kỳ hạn bất kỳ lúc nào kể từ sau khi khoản vay được giải ngân và không bị mất thêm phí gì cả.
+      Nếu quá 35 ngày {gender_value} sẽ phải chịu thêm phí trả chậm.
+  utter_not_interest:
+  - text: Công ty bên công ty em cung cấp các khoản vay hỗ trợ tài chính, nêu cần thêm thông tin xin vui lòng tham khảo link dưới đây
+  utter_greet:
+  - text: Xin chào, em là chuyên viên hỗ trợ của sàn cho vay VNDC
+  utter_ask_handoff:
+  - text: T {gender_value} có vẻ muốn chuyển cuộc gọi tới một hỗ trợ viên phải không?
+  utter_handoff:
+  - text: Em sẽ chuyển cuộc gọi giúp {gender_value}
+  utter_no_handoff:
+  - text: Vì {gender_value} chưa cấu hình máy chủ lưu trữ nên em không thể đưa {gender_value} đi tới bất kì đâu
+  utter_ask_whatelse:
+  - text: Em còn có thể giúp {gender_value} điều gì nữa không ạ
+  utter_bot:
+  - text: Em là trợ lý ảo của sàn cho vay VNDC. Tuy nhiên em có thể giúp {gender_value} giải đáp những thông tin cần thiết
+  utter_help:
+  - text: |-
+      Em có thể giúp {gender_value} giải đáp những thông tin về:
+        - Thông tin các khoản vay
+        - Thông tin về quy trình vay
+        - Đăng kí các khoản vay
+      Không biết {gender_value} cần giúp đỡ gì ạ?
+  utter_insufficient_funds:
+  - text: Bên công ty em chỉ cung cấp các khoản vay từ 1 triệu (1000000VND) đến 5 triệu (5000000 VND)
+  utter_no_id_card:
+  - text: Số chứng minh thư không hợp lệ
+  utter_no_income:
+  - text: Số thu nhập không hợp lệ
+  utter_no_email:
+  - text: Email cung cấp không hợp lệ
+  utter_no_telephone_number:
+  - text: Số điện thoại không hợp lệ
+  utter_no_amount_of_money:
+  - text: Số tiền {gender_value} cung cấp không hợp lệ
+  utter_unknown_name:
+  - text: Tên {gender_value} nhập có vẻ không hợp lệ
+  utter_borrower:
+  - text: |-
+      Hiện tại dịch vụ của VNDC phục vụ các đối tượng khách hàng:
+        - Là công dân Việt Nam sinh sống và làm việc tại Việt Nam
+        - Có độ tuổi từ 18 - 65
+        - Có công việc ổn đinh, thuộc các ngành nghệ hợp pháp
+        - Không có nợ xấu
+  utter_information_provided:
+  - text: |-
+      Để tiến hành vay tiền, {gender_value} cần cung cấp các thông tin sau:
+        + Họ tên đầy đủ 
+        + Số thẻ ngân hàng, Visa, Debit chính chủ 
+        + Số chứng mình thư nhân dân hoặc căn cước công dân (yêu cầu cá nhân vẫn còn sở hữu cmnd/cccd nguyên vẹn, không bị rơi, mất)
+        + Số điện thoại của quý khách
+      Đây là những thông tin yêu cầu bắt buộc mà bên công ty yêu cầu quý khách cần cung cấp. Công ty sẽ không chấp nhận các trường hợp mượn thông tin hoặc đăng ký thông tin của người khác để vay tiền.
+      Dựa trên những thông tin của khách hàng cung cấp, bên công ty em sẽ thẩm định lại và đưa ra kết quả xét duyệt tới {gender_value} trong vòng 30 phút.
+  utter_late_payment:
+  - text: |-
+      Khi đến hạn thanh toán, quý khách có trách nhiệm thanh toán đầy đủ khoản vay cho bên công ty. Việc thanh toán trễ hoặc không đầy đủ dẫn đến các bất lợi sau:
+        - {gender_value} sẽ phải chịu một mức phí lãi quá hạn dựa trên số tiền chưa hoàn tất cho bên công ty
+        - Bản thân quý khách sẽ khó có cơ hội tiếp tục nhận được sự hỗ trợ lâu dài của VNDC. 
+      Trong trường hợp này, {gender_value} có 2 phương án:
+        - Gia hạn nợ: Nếu {gender_value} muốn gia hạn nợ thì có thể trực tiếp đăng ký trên hệ thống để gia hạn thêm 35 ngày ạ, thời gian đăng ký gia hạn nợ chỉ nằm trong 35 ngày của khoản vay. Phí và lãi gia hạn nợ bằng phí và lãi ban đầu khi vay. 
+        - Nếu mình không đồng ý gia hạn nợ, khi quá hạn nợ mà chưa hoàn thành đầy đủ nợ gốc, thì {gender_value} sẽ cần trả thêm lãi suất chậm trả, phạt vi phạm hợp đồng, bồi thường vi phạm và phí sử dụng dịch vụ quá hạn nợ. Các loại phí và lãi này sẽ tính trên dư nợ gốc thực tế của mình ạ.
+  utter_payment_methods:
+  - text: |-
+      VNDC đem lại các hình thức thanh toán đa dạng và tiện lợi, giúp {gender_value} tiết kiệm được thời gian và công sức. {gender_value} có thể lựa chọn một trong các hình thức thanh toán sau: 
+      - Thanh toán trực tiếp tại các cửa hàng 
+      -	Thanh toán trực tuyến qua ngân hàng 
+      -	Thanh toán trực tuyến qua Ví điện tử 
+      Quý khách có thể thanh toán trước hạn và không có bất kì bất lợi gì. Bên cạnh đó {gender_value} có thể nhờ người khác thanh toán bằng cáp đáp ứng đúng cấu trúc thanh toán và đúng thông tin người nhận trên hợp đồng.
+  utter_invalid_location:
+  - text: Địa chỉ dường như không hợp lệ
+  utter_location_null:
+  - text: Địa chỉ không tìm thấy
+  utter_tap_info:
+  - text: Vui lòng nhập lại thông tin
+  utter_wrong_age:
+  - text: Quý khách không nằm trong nhóm tuổi cho vay của công ty.
+  utter_time_get_money:
+  - text: Tùy vào mỗi khoản vay của công ty mà thời gian thẩm định sẽ khác nhau, nhưng thông thường khoản vay thường được nhận trong vòng từ 5 phút đến 30 phút. Công ty sẽ thông báo tới khách hàng qua tin nhắn khi khoản vay được giải ngân
+  utter_methob_get_money:
+  - text: Khoản vay sẽ được chuyển khoản qua số tài khoản ngân hàng của {gender_value} đã cung cấp ngay khi quá trình kí kết hợp đồng online kết thúc.
+  utter_purpose_information:
+  - text: |-
+      Bên công ty sẽ yêu cầu khách hàng cung cấp một số thông tin về cá nhân quý khách, mục đích sử dụng khoản vay. Những thông tin này nhằm mục đích cho công ty có thể thẩm định khác hàng để đưa ra quyết định có chấp thuận khoản vay hay không.
+      VNDC cam kết tất cả các thông tin của {gender_value} sẽ được bảo mật theo quy định được ghi theo hợp đồng thỏa thuận giữa các bên trong HĐ. Trong quá trình thẩm định công ty sẽ không liên hệ bất kì gì với người thân của khách hàng, việc liên hệ với người thân của khách hàng chỉ diễn ra nếu khách hàng không có ý thức trả nợ đúng hạn.
+  utter_accept_or_not:
+  - text: Thông tin khoản vay có được chấp thuận hay không, {gender_value} có thể xem trên website [tại đây](https://www.vndcredit.vn) hoặc thông báo tại app [VNDMoney](https://www.vndcredit.vn) sau khoảng 5 đến 10 phút ạ
+  utter_sign_contract:
+  - text: |-
+      Việc ký kết hợp đồng sẽ được tiến hành online. Quá trình ký hợp đồng online gồm các bước:
+        ...
+      Hợp đồng online có đầy đủ giá trị pháp lý, quy định quyền và nghĩa vụ của 2 bên. Nếu {gender_value} muốn bản hợp đồng gốc, {gender_value} có thể dowload hợp đồng trên mạng và in trên máy in ạ.
+  utter_loan_helper:
+  - text: Dạ không được ạ, người nhu cầu vay phải là người đứng tên và chịu trách nhiệm trả tiền cho nhà đầu tư ạ.
+  utter_loan_type:
+  - text: |-
+      Bên em cung cấp hình thức vay tín chấp hay còn gọi là vay online (vay tiền trực tuyến).
+      Vay tiền nhanh online là hình thức vay tiền chỉ cần CMND, vay tiền không thế chấp, vay tiền không cần gặp mặt.
+      Hình thức vay tiền được diễn ra trên sàn giao dịch VNDong, thủ tục 100% online đơn giản, khách hàng chỉ cần có điện thoại thông minh để tải app và làm theo hướng dẫn trên app.
+  utter_loan_process:
+  - text: |-
+      Các bước trong quy trình vay:
+        - Lựa chọn khoản vay
+        - Hoàn thiện hồ sơ vay trên [link đăng kí](https://www.vndcredit.vn)
+        - Nhận kết quả xét duyệt qua điện thoại
+        - Giải ngân khoản vay qua tài khoản ngân hàng
+        - Hướng dẫn thanh toán khi đến kì hạn
+  utter_detail_loan:
+  - text: |-
+      Chi tiết cụ thể khoản vay: 
+       {formatted_loan}
+  utter_loan_information:
+  - custom:
+      data:
+      - description: '+ Phí dịch vụ: 80000VND + Thời hạn: 35 ngày + Giải ngân: 10 phút'
+        title: Gói vay từ 1 triệu đến 2 triệu VND
+      - description: '+ Phí dịch vụ 100000VND + Thời hạn 35 ngày + Giải ngân: 10 phút'
+        title: Gói vay từ 2 triệu đến 3 triệu VND
+      - description: '+ Phí dịch vụ 120000VND + Thời hạn 35 ngày + Giải ngân: 20 phút'
+        title: Gói vay từ 3 triệu đến 4 triệu VND
+      - description: '+ Phí dịch vụ 150000VND + Thời hạn 35 ngày + Giải ngân: 30 phút'
+        title: Gói vay từ 4 triệu đến 5 triệu VND
+      payload: collapsible
+    text: Sàn cho vay VNDC cung cấp các khoản vay các khoản vay có giá trị từ 1 triệu đến 5 triệu VND với với lãi xuất 8%.
+  utter_loan_information_addtion:
+  - text: Mỗi khách hàng chỉ được thực hiện một khoản vay duy nhất tại một thời điểm và phải thanh toán đầy đủ trước khi thực hiện khoản vay khác.
+  utter_lending_area:
+  - text: Hiện tại sàn cho vay VNDC cung cấp các khoản vay trên 64 tỉnh thành của Việt Nam. Hiện tại VNDC chưa phục vụ các khách hàng là người nước ngoài hoặc người Việt sinh sống ở nước ngoái
+  utter_thanks_custom_interrupt:
+  - text: Vâng, cảm ơn {gender_value}, bên công ty em hi vọng có thể tiếp tục phục vụ {gender_value} trông lần tới.
+  utter_no_value:
+  - text: Thông tin {gender_value} cung cấp có vẻ không đúng
+  utter_incentives:
+  - custom:
+      data:
+      - image: https://nganhangonline.org/wp-content/uploads/2021/05/Cac-App-vay-tien-khong-lai-suat-vay-khuyen-mai-lai-lan-dau-cuc-hap-dan-min.jpg
+        name: abc
+        ratings: '4.0'
+        title: Ưu đãi cho khách hàng quen
+        url: https://nganhangonline.org/app-vay-tien-khong-lai-suat.html
+      - image: https://www.vietinbank.vn/vayuudai/resources/img/main-00.jpg
+        name: abc
+        ratings: '4.0'
+        title: Ưu đãi hàng tháng
+        url: https://www.vietinbank.vn/vn/tin-tuc/Vay-uu-dai-lai-suat-chi-tu-6-nam-voi-VietinBank-20200312171040.html
+      - image: https://www.vietinbank.vn/vayuudai/resources/img/main-00.jpg
+        name: abc
+        ratings: '4.0'
+        title: Ưu đãi hàng năm
+        url: https://www.vietinbank.vn/vn/tin-tuc/Vay-uu-dai-lai-suat-chi-tu-6-nam-voi-VietinBank-20200312171040.html
+      - image: https://www.vietinbank.vn/vayuudai/resources/img/main-00.jpg
+        name: abc
+        ratings: '4.0'
+        title: Mừng sinh nhật
+        url: https://www.vietinbank.vn/vn/tin-tuc/Vay-uu-dai-lai-suat-chi-tu-6-nam-voi-VietinBank-20200312171040.html
+      payload: cardsCarousel
+    text: Dưới đây là danh sách các gói vay ưu đãi của công ty em
+  utter_income_condition:
+  - text: Bộ phận thẩm định của VNDC sẽ phân tích khả năng chi trả của khách hàng, chỉ cần {gender_value} đủ khả năng chi trả đúng hạn thì đều có thể vay được
+  utter_fill_info_request:
+  - text: |-
+      Dạ không được ạ. Chứng mình thư/Căn cước công dân, số điện thoại và số thẻ là những thông tin bắt buộc cần cung cấp cho công ty để có thể tiến hành vay. 
+      Những thông tin này yêu cầu cần chính chủ và {gender_value} vẫn đang sở hữu chúng. Những trường hợp rơi mất sẽ không thể tiến hành ký hợp đồng bên em được ạ.
+  utter_loan_appraisal:
+  - text: |-
+      - Quy trình thẩm định sẽ được tiến hành hoàn toàn online, mất thời gian từ 15 đến 20 phút. 
+      - Nhân viên sẽ kết nối với khách hàng qua số điện thoại được khách hàng cung cấp và tiến hành xác minh lại một số thông tin của khách hàng bao gồm:
+        + Xác minh chứng minh thư
+        + Xác minh số tiền vay
+        + Quay video ký hợp đồng online
+      - Thông tin hợp đồng và thông tin khách hàng sẽ được giữ hoàn toàn bảo mật và được ghi rõ ràng trong hợp đông
+      - Công ty sẽ không gọi điện cho bất cứ người thân nào của quý khách để thẩm định. Thông tin người thân của quý khách chỉ nhằm để liên hệ nếu quý khách không có ý thức trả nợ đúng hạn
+      - Quá trình thẩm định của công ty diễn ra nhanh chóng, tiện lợi, giúp quý khách tiết kiệm thời gian nhất có thể.
+  utter_bad_debt:
+  - text: |-
+      Nợ xấu là một yếu tố ảnh hưởng rất lớn đến khả năng cho vay của {gender_value}. Đồi với các khách hàng từng có nợ xấu, công ty có các quy định sau:
+        - Nếu khách hàng có nợ xấu và đã trả đầy đủ, {gender_value} có thể đăng ký để công ty thẩm định yêu cầu của {gender_value}
+        - Nếu hiện tại bận vẫn còn nợ xấu và nằm trong danh sách của CIC thì hiện tại {gender_value} không nằm trong nhóm khách hàng của công ty
+        - Người thân hoặc bạn bè của {gender_value} bị nợ xấu sẽ không ảnh hưởng đến khả năng được cho vay của {gender_value}
+  utter_contact_information:
+  - text: |-
+      Nếu khách hàng có bất kì thắc mắc gì, vui lòng liên hệ liên hệ hotline 1900636366 để bộ phận chăm sóc khách hàng tư vấn đầy đủ nhất cho quý khách.
+      {gender_value} hoàn toàn có thể đến trực tiếp văn phòng công ty tại địa chỉ Tầng K2, Tòa B, 39 Lê Văn Lương để giải đáp thắc mắc cũng như các vấn đề của {gender_value}. 
+      Thời gian làm việc của VNDC từ 8h sáng tới 20h tối tất cả các ngày trong tuần.
+  utter_loan_error:
+  - text: Xin lỗi vì bất tiện này, {gender_value} vui lòng gọi điện đến hotline 1900636366 để bộ phận chăm sóc khách hàng kiểm tra lại giúp {gender_value} ạ.
+  utter_not_accept:
+  - text: |-
+      Rất tiếc khi yêu cầu của {gender_value} bị từ chối ạ. Quyết định trên là của nhà đầu tư lựa chọn và hiện nay không có nhà đầu tư nào lựa chọn xét duyện
+      khoản vay cho {gender_value}. {gender_value} có thể đăng ký lại khoản vay sau ....
+  utter_debt_collection_policy:
+  - text: VNDC thu hồi nợ hoàn toàn văn minh, lịch sự, chuyên nghiệp. Với đội ngũ chuyên nghiệp, công ty thu hồi nợ nhanh chóng, hài hòa, không làm phiền đến cuộc sống gia đình, công việc của khách hàng.
+  utter_surcharge:
+  - text: Dạ trong trường hợp mình trả đúng hạn thì sẽ không phát sinh thêm bất kì chi phí nào khác chị nhé. Tuy nhiên, trong trường hợp mình chậm trả thì lãi và phí sẽ phát sinh theo thời gian chậm tương tương ứng ạ.
+  utter_mortgage:
+  - text: Hiện nay VNDC chỉ cho vay tín chấp theo hạn mức từ 1 triệu đến 5 triệu. Hình thức cho vay thế chấp hiện chưa được áp dụng tại công ty
+  utter_loan_security:
+  - text: |-
+      Quý khách có thể hoàn toàn yên tâm về tính bảo mật của khoản vay. Công ty sẽ giữ bảo mật hoàn toàn thông tin các nhân cũng như hợp đồng của khách hàng như cam kết đã được ký.
+      Công ty cam kết không tiết lộ bất cứ thông tin gì của khách hàng cho bên thứ 3.
+  utter_cic_introduce:
+  - text: CIC là Trung Tâm Thông Tin Tín Dụng trực thuộc Ngân Hàng Nhà Nước Việt Nam. CIC sẽ thể hiện hiện tại khách hàng đang có mối quan hệ vay với bao nhiêu tổ chức, có đang bị nợ xấu hay quá hạn thanh toán tại các tổ chức đó hay không ạ.
+  utter_disbursement:
+  - text: |-
+      Việc giải ngân tới khách hàng tuân theo một số quy định sau:
+      - Mỗi khách hàng chỉ được giải ngân một khoản vay duy nhất
+      - Số tiền được duyệt vay là số tiền lớn nhất một khách hàng có thể vay (Nếu {gender_value} được duyệt vay 4 triệu {gender_value} chỉ có thể vay từ 4 triệu trở xuống)
+      - Những khách hàng đã đăng ký khoản vay thành công vẫn có thể đổi số tiền vay trước khi tiền được giải ngân bằng cách liên hệ với bộ phận chăm sóc khách hàng để chỉnh sửa lại hợp đồng vay
+  utter_contract_information:
+  - text: Thông tin chi tiết hợp đồng ...
+  utter_overdue_interest:
+  - text: 'Dạ lãi quá hạn và phí mình sẽ tính trên dư nợ thực tế, tức là nếu mình thanh toán rồi nhưng còn thiếu thì tính trên số thiếu kia ạ. Lãi quá hạn bên em thu đúng theo khung pháp luật quy định là 30%/năm trên dư nợ gốc, còn phạt vi phạm là 8% trên dư nợ, bồi thường vi phạm & phí dịch vụ sử dụng sàn bên em được tính theo ngày {gender_value} nhé với mức áp dụng là 315,000/ 35 ngày ~ 9000đ/ ngày. '
+  utter_detail_overdue_interest:
+  - text: |-
+      Chẳng hạn {gender_value} vay {formatted_number_money} và trả nợ muộn 5 ngày thì sẽ phát sinh chi phí sau:
+        + Tiền lãi = 30%/365 x 5 ngày x {formatted_number_money} = {formatted_profit}
+        + Ngoài ra, phạt vi phạm hợp đồng là 8% sẽ là: 8% * {formatted_number_money} = {formatted_penalties}
+        + Bối thường & phí bào trì khoản vay là: 9000 X 5 ngày = {formatted_compensation}
+      Vâỵ tổng phát sinh của mình khi trả chậm 5 ngày là {formatted_total} ạ 
+  utter_loan_extension:
+  - text: |-
+      Khi đến hạn trả nợ mà khách hàng không kịp trả, {gender_value} có thể tiến hành đăng ký gia hạn khoản vay. Để đăng ký gia hạn:
+        - Cần đăng kí gia hạn thời gian nợ trước khi khoản vay đến hạn trả, tức là trong 35 ngày vay trước đó. Còn nếu sau khi khoản nợ chuyển thành nợ quá hạn, thì {gender_value} sẽ không thể đăng kí gia hạn được đâu ạ. Thời gian kéo dài nợ cho mỗi lần gia hạn là 35 ngày ạ. 
+        - Để được gia hạn, {gender_value} sẽ trực tiếp đăng ký thông qua app VNDC và chuyển phí & lãi suất gia hạn cho nhà đầu tư ạ. Sau khi nhà đầu tư xác nhận đã nhận phí & lãi gia hạn của {gender_value}, VNDC sẽ tự động gia hạn nợ và cập nhật lên ứng dụng cho {gender_value} ạ. Thông tin cụ thể về thanh toán sẽ được gửi về ứng dụng để {gender_value} có thể thực hiện theo ạ.
+        - Mức phí gia hạn khoản vay của {gender_value} sẽ là 250 000 VND
+  utter_loan_consulting:
+  - text: Dạ vâng, không biết {gender_value} có thắc mắc về vấn đề gì ạ?
+  utter_cost_consulting:
+  - text: |-
+      Dạ vâng ạ. Với sàn VNDC, một khoản vay sẽ có thời gian là 35 ngày, và trong 35 ngày đó thì mức lãi suất và phí của mình tổng cộng là {formatted_profit}đ {gender_value} nha.
+      Khoản này đã bao gồm tất cả lãi suất trả cho bên cho vay và phí sàn của VNDC rồi {gender_value} ạ. Khoản này khi người cho vay giải ngân cũng sẽ trừ trực tiếp luôn vào khoản giải ngân, tức là thực nhận là {formatted_money_received}đ {gender_value} nhé. 
+      Đến ngày thứ 35 kể từ ngày {gender_value} nhận được tiền, {gender_value} chỉ cần thanh toán lại gốc là {formatted_number_money} cho NĐT là được ạ. 
+  utter_exclamation_sentence:
+  - text: Dạ, đúng như vậy ạ
+  utter_exchange_fee:
+  - text: |-
+      Dưới đây là mức phí dịch vụ của sàn VNDC áp dụng cho các khoản vay trên sàn trong vòng 35 ngày:
+        - Khoản vay < 2 triệu: 80000 VND
+        - Khoản vay 2 triệu đến < 3 triệu: 100000 VND
+        - Khoản vay 3 triệu đến < 4 triệu: 120000 VND
+        - Khoản vay 4 triệu đến < 5 triệu: 150000 VND
+  utter_high_interest:
+  - text: Dạ, số tiền khách hàng phải trả cho sản phẩm tương ứng với chất lượng dịch vụ. Các dịch vụ VNDC cung cấp thủ tục ngắn gọn, bảo mật và nhanh. Chỉ 30 phút là có tiền giải ngân nếu được đồng ý ạ.
+  utter_bot_function:
+  - text: |-
+      Dạ, hiện tại em chỉ thể giải đáp giúp {gender_value} những thông tin về:
+        - Thông tin các khoản vay
+        - Thông tin về quy trình vay
+        - Đăng kí các khoản vay
+actions:
+- action_change_inform
+- action_session_start
+- action_restart
+- action_show_payback_time
+- action_information_company
+- action_show_interest_rate
+- action_handoff
+- action_handoff_options
+- action_borrow_money
+- action_switch_forms_ask
+- action_switch_forms_deny
+- action_switch_forms_affirm
+- action_switch_back_ask
+- validate_borrow_money_form
+- action_reset_all_slots
+- action_out_of_scope
+- action_default
+- utter_ask_change_inform
+- action_show_detail_loan
+- action_show_all_loan
+- action_confirm_callback_time
+- action_payment_methods
+- action_late_payment
+- action_time_get_money
+- action_methob_get_money
+- action_purpose_information
+- action_accept_or_not
+- action_cost_consulting
+- action_overdue_interest
+- action_thank_you
+- action_loan_helper
+- action_lending_area
+- action_sign_contract
+- action_information_provided
+- action_loan_extension
+- action_loan_consulting
+- action_exchange_fee
+- action_high_interest
+- action_loan_type
+- action_bot
+- action_exclamation_sentence
+- action_bad_debt
+- action_loan_appraisal
+- action_mortgage
+- action_surcharge
+- action_borrower
+- action_income_condition
+- action_contact_information
+- action_loan_process
+- action_not_accept
+- action_loan_error
+- action_loan_security
+- action_cic_introduce
+- action_contract_information
+- action_interest_payment_period
+- action_not_interest
+- action_debt_collection_policy
+- action_fill_info_request
+- action_incentives
+- action_disbursement
+- action_check_loan_amount
+- action_verify_user_confirm
+forms:
+  borrow_money_form:
+    AA_CONTINUE_FORM:
+    - intent: affirm
+      type: from_intent
+      value: yes
+    - intent: deny
+      type: from_intent
+      value: no
+    - intent:
+      - borrow_money_form
+      type: from_text
+    amount-of-money:
+    - entity: number
+      type: from_entity
+    - intent:
+      - affirm
+      - inform
+      - borrow_money_form
+      type: from_text
+    id_card:
+    - entity: number
+      type: from_entity
+    - intent:
+      - affirm
+      - inform
+      - borrow_money_form
+      type: from_text
+    telephone_number:
+    - entity: number
+      type: from_entity
+    - intent:
+      - affirm
+      - inform
+      - borrow_money_form
+      type: from_text
+    user_name:
+    - entity: PERSON
+      type: from_entity
+    - intent:
+      - affirm
+      - inform
+      - borrow_money_form
+      type: from_text
+    zz_confirm_form:
+    - intent: affirm
+      type: from_intent
+      value: yes
+    - intent: deny
+      type: from_intent
+      value: no
+    - intent:
+      - borrow_money_form
+      type: from_text
+e2e_actions: []

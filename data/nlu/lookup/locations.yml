@@ -1,0 +1,67 @@
+version: "2.0"
+nlu:
+  - lookup: locations
+    examples: |
+      - Hà Nội
+      - Hồ Chí Minh
+      - An Giang
+      - Bà Rịa - Vũng Tàu
+      - Bạc Liêu
+      - Bắc Giang
+      - Bắc Kạn
+      - Bắc Ninh
+      - Bến Tre
+      - Bình Dương
+      - Bình Định
+      - Bình Phước
+      - Bình Thuận
+      - Cao Bằng
+      - Cà Mau
+      - Cần Thơ
+      - Hải Phòng
+      - Đà Nẵng
+      - Gia Lai
+      - Hòa Bình
+      - Hà Giang
+      - Hà Nam
+      - Hà Tĩnh
+      - Hưng Yên
+      - Hải Dương
+      - Hậu Giang
+      - Điện Biên
+      - Đắk Lắk
+      - Đắk Nông
+      - Đồng Nai
+      - Đồng Tháp
+      - Khánh Hòa
+      - Kiên Giang
+      - Kon Tum
+      - Lai Châu
+      - Long An
+      - Lào Cai
+      - Lâm Đồng
+      - Lạng Sơn
+      - Nam Định
+      - Nghệ An
+      - Ninh Bình
+      - Ninh Thuận
+      - Phú Thọ
+      - Phú Yên
+      - Quảng Bình
+      - Quảng Nam
+      - Quảng Ngãi
+      - Quảng Ninh
+      - Quảng Trị
+      - Sóc Trăng
+      - Sơn La
+      - Thanh Hóa
+      - Thái Bình
+      - Thái Nguyên
+      - Thừa Thiên - Huế
+      - Tiền Giang
+      - Trà Vinh
+      - Tuyên Quang
+      - Tây Ninh
+      - Vĩnh Long
+      - Vĩnh Phúc
+      - Yên Bái

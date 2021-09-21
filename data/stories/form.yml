@@ -1,0 +1,794 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID 34b4e79ec41d430e90f8f1406a0b63a5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: Story from Conversation ID 5215c0b8cb8a4f648109a79ea601ea5f
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: information_provided
+  - action: action_information_provided
+  - intent: payback_time
+  - action: action_show_payback_time
+  - intent: bad_debt
+  - action: action_bad_debt
+  - intent: loan_appraisal
+  - action: action_loan_appraisal
+  - intent: purpose_information
+  - action: action_purpose_information
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - intent: change_id_card
+  - action: action_change_inform
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: Story from Conversation ID b202929044864400bd6d56e6be922c78
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: payback_time
+  - action: action_show_payback_time
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: late_payment
+  - action: action_late_payment
+  - intent: surcharge
+  - action: action_surcharge
+  - intent: information_provided
+  - action: action_information_provided
+  - intent: time_get_money
+  - action: action_time_get_money
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - active_loop: null
+  - action: action_borrow_money
+  - intent: methob_get_money
+  - action: action_methob_get_money
+  - intent: payment_methods
+  - action: action_payment_methods
+
+- story: Story from Conversation ID 34b4e79ec41d430e90f8f1406a0b63a5sdasa
+  steps:
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: Story from Conversation ID 3806cef7fde247298560f418b2bc7185
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_process
+  - action: action_loan_process
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: time_get_money
+  - action: action_time_get_money
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: Story from Conversation ID 5c5841597d0b40ef96a45c672828b8f4
+  steps:
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - intent: change_telephone_number
+  - action: action_change_inform
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: Story from Conversation ID 5c5841597d0b40ef96a45c672828b8f4adsad
+  steps:
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - intent: change_person
+  - action: action_change_inform
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: Story from Conversation ID 5c5841597d0b40ef96a45c672828b82313
+  steps:
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - intent: change_id_card
+  - action: action_change_inform
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: Story from Conversation ID 5c5841597d0b40ef96a45c672828b8f0283
+  steps:
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - intent: change_amount_of_money
+  - action: action_change_inform
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: Story from Conversation ID 83423423
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: deny
+  - action: utter_ask_whatelse
+
+- story: Story from Conversation ID 763284732
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: information_provided
+  - action: action_information_provided
+  - intent: payback_time
+  - action: action_show_payback_time
+  - intent: bad_debt
+  - action: action_bad_debt
+  - intent: loan_appraisal
+  - action: action_loan_appraisal
+  - intent: purpose_information
+  - action: action_purpose_information
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: deny
+  - action: utter_ask_whatelse
+
+- story: Story from Conversation ID 6236436432
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: payback_time
+  - action: action_show_payback_time
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: late_payment
+  - action: action_late_payment
+  - intent: surcharge
+  - action: action_surcharge
+  - intent: information_provided
+  - action: action_information_provided
+  - intent: time_get_money
+  - action: action_time_get_money
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: deny
+  - action: utter_ask_whatelse
+
+- story: Story from Conversation ID 8827218321
+  steps:
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: deny
+  - action: utter_ask_whatelse
+
+- story: Story from Conversation ID 77236132637
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_process
+  - action: action_loan_process
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: time_get_money
+  - action: action_time_get_money
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: deny
+  - action: utter_ask_whatelse
+
+- story: Story from Conversation ID 775556788
+  steps:
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: deny
+  - action: utter_ask_whatelse
+
+- story: interrupt borrow + continue
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - AA_CONTINUE_FORM: yes
+  - slot_was_set:
+    - requested_slot: amount-of-money
+  - intent: inform
+    entities:
+    - income: 2 triệu
+    - number: 2000000
+  - slot_was_set:
+    - number: 2000000
+  - action: borrow_money_form
+  - slot_was_set:
+    - amount-of-money: '2000000.00'
+  - slot_was_set:
+    - currency: VND
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: inform
+    entities:
+    - number: 129383232
+  - slot_was_set:
+    - number: 129383232
+  - action: borrow_money_form
+  - slot_was_set:
+    - id_card: '129383232'
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: telephone_number
+  - intent: inform
+    entities:
+    - number: 923483423
+  - slot_was_set:
+    - number: 923483423
+  - action: borrow_money_form
+  - slot_was_set:
+    - telephone_number: '923483423'
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: user_name
+  - intent: inform
+    entities:
+    - PERSON: Phạm Tuấn Ngọc
+  - slot_was_set:
+    - PERSON: Phạm Tuấn Ngọc
+  - action: borrow_money_form
+  - slot_was_set:
+    - user_name: Phạm Tuấn Ngọc
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: zz_confirm_form
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: interrupt borrow + continue1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - AA_CONTINUE_FORM: yes
+  - slot_was_set:
+    - requested_slot: amount-of-money
+  - intent: inform
+    entities:
+    - income: 2 triệu
+    - number: 2000000
+  - slot_was_set:
+    - number: 2000000
+  - action: borrow_money_form
+  - slot_was_set:
+    - amount-of-money: '2000000.00'
+  - slot_was_set:
+    - currency: VND
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_borrow_money
+
+
+- story: interrupt borrow + continue2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: interrupt borrow + continue2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_borrow_money
+
+- story: interrupt borrow + deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - AA_CONTINUE_FORM: yes
+  - slot_was_set:
+    - requested_slot: amount-of-money
+  - intent: inform
+    entities:
+    - income: 2 triệu
+    - number: 2000000
+  - slot_was_set:
+    - number: 2000000
+  - action: borrow_money_form
+  - slot_was_set:
+    - amount-of-money: '2000000.00'
+  - slot_was_set:
+    - currency: VND
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: inform
+    entities:
+    - number: 129383232
+  - slot_was_set:
+    - number: 129383232
+  - action: borrow_money_form
+  - slot_was_set:
+    - id_card: '129383232'
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: telephone_number
+  - intent: inform
+    entities:
+    - number: 923483423
+  - slot_was_set:
+    - number: 923483423
+  - action: borrow_money_form
+  - slot_was_set:
+    - telephone_number: '923483423'
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: user_name
+  - intent: inform
+    entities:
+    - PERSON: Phạm Tuấn Ngọc
+  - slot_was_set:
+    - PERSON: Phạm Tuấn Ngọc
+  - action: borrow_money_form
+  - slot_was_set:
+    - user_name: Phạm Tuấn Ngọc
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: zz_confirm_form
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: deny
+  - action: utter_thanks_custom_interrupt
+
+- story: interrupt borrow + deny1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - AA_CONTINUE_FORM: yes
+  - slot_was_set:
+    - requested_slot: amount-of-money
+  - intent: inform
+    entities:
+    - income: 2 triệu
+    - number: 2000000
+  - slot_was_set:
+    - number: 2000000
+  - action: borrow_money_form
+  - slot_was_set:
+    - amount-of-money: '2000000.00'
+  - slot_was_set:
+    - currency: VND
+  - slot_was_set:
+    - repeated_validation_failures: 0
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: deny
+  - action: utter_thanks_custom_interrupt
+
+- story: interrupt borrow + deny2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: deny
+  - action: utter_thanks_custom_interrupt
+
+- story: interrupt borrow + deny3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: deny
+  - action: utter_thanks_custom_interrupt
+
+- story: Story from Conversation ID 1231321
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: amount-of-money
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: telephone_number
+  - intent: change_telephone_number
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: telephone_number
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: user_name
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: zz_confirm_form
+  - intent: change_id_card
+  - action: action_change_inform
+  - slot_was_set:
+    - id_card: null
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: zz_confirm_form
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: deny
+  - action: utter_thanks_custom_interrupt
+
+- story: Story from Conversation ID 1231321
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_process
+  - action: action_loan_process
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: amount-of-money
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: telephone_number
+  - intent: change_telephone_number
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: telephone_number
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: user_name
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: zz_confirm_form
+  - intent: change_id_card
+  - action: action_change_inform
+  - slot_was_set:
+    - id_card: null
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: zz_confirm_form
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: deny
+  - action: utter_thanks_custom_interrupt
+
+- story: Story from Conversation ID 1231321
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_process
+  - action: action_loan_process
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: amount-of-money
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: affirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: telephone_number
+  - intent: change_telephone_number
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: telephone_number
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: user_name
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: zz_confirm_form
+  - intent: change_id_card
+  - action: action_change_inform
+  - slot_was_set:
+    - id_card: null
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - requested_slot: id_card
+  - intent: inform
+  - action: borrow_money_form
+  - slot_was_set:
+    - requested_slot: zz_confirm_form
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_interrupt_borrow_confirm
+  - intent: deny
+  - action: utter_thanks_custom_interrupt

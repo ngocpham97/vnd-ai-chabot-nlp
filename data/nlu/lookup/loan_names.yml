@@ -1,0 +1,9 @@
+version: "2.0"
+nlu:
+  - lookup: loan_names
+    examples: |
+      - MoneyCat
+      - Tamo
+      - Senmo
+      - Takomo
+      - Cash24

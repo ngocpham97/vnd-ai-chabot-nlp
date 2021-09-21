@@ -1,0 +1,69 @@
+version: "2.0"
+stories:
+- story: Story from location + info
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: adress_company
+  - action: utter_adress_company
+  - intent: information_company
+  - action: action_information_company
+
+- story: Story from info + location
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: information_company
+  - action: action_information_company
+  - intent: adress_company
+  - action: utter_adress_company
+
+- story: Story from Conversation ID e05597e9b91a4cbfa0856b7015885730
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: information_company
+    entities:
+    - company: VNDC
+  - action: action_information_company
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: income_condition
+  - action: action_income_condition
+
+- story: Story from Conversation ID 9fa6f5372c1d4f9aa30de92e7f6acedd
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: income_condition
+  - action: action_income_condition
+
+- story: Story loan_type + info
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: information_company
+  - action: action_information_company
+  - intent: borrower
+  - action: action_borrower

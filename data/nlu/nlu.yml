@@ -1,0 +1,4375 @@
+version: "2.0"
+nlu:
+- intent: check_human
+  examples: |
+    - Anh là bot à?
+    - Chị là bot à?
+    - Bạn là bot à?
+    - Tôi đang nói chuyện với một người máy à?
+    - Tôi đang nói chuyện với một robot à?
+    - Tôi đang nói chuyện với một robot phải không?
+    - Anh là người hay là robot?
+    - Chị là người hay là robot?
+    - Bạn là người hay là robot?
+    - Anh là người thực à?
+    - Chị là người thực à?
+    - Bạn là trợ lý ảo à?
+    - Anh là trợ lý ảo à?
+    - Chị là trợ lý ảo à?
+    - Bạn là trợ lý ảo AI à?
+    - Chị là trợ lý ảo AI à?
+    - Anh là trợ lý ảo AI à?
+    - bạn không phải là bot chứ
+    - anh không phải là bot chứ
+    - chị không phải là bot chứ
+    - chị không phải là hệ thống tự động chứ
+    - Bạn là một chatbot à
+    - Anh là một chatbot à
+    - Chị là một chatbot à
+    - Bạn là một chatbot phải không?
+    - Anh là một chatbot phải không?
+    - Chị là một chatbot phải không
+    - Tôi đang nói chuyện với tổng đài tự động à?
+    - Tôi đang nói chuyện với tổng đài tự động phải không?
+    - Tôi đang nói chuyện với hệ thống tự động phải không?
+    - bạn nó một hệ thống trí tuệ nhân tạo à?
+    - bạn nó một hệ thống trí tuệ nhân tạo phải không?
+    - Bạn không phải là con người à
+    - Bạn không phải người thật à?
+    - Bạn thật sự là một bot à?
+    - Có phải tôi đang nói chuyện với bot à?
+    - Tôi chắc chắn đang nói chuyện với bot
+    - Tôi chắc chắn đang nói chuyện với tổng đài tự động
+    - Đây là một tổng đài tự động à?
+    - Đây là một bot phải không?
+    - Đây là một hệ thống tự động phải không?
+    - Tôi đang nói chuyện với bot à
+- intent: change_person
+  examples: |
+    - họ tên không đúng rồi
+    - không đúng họ tên rồi
+    - sai tên
+    - sai rồi họ tên rồi
+    - tôi muốn thay đổi họ tên
+    - tôi muốn đổi họ tên
+    - đổi họ tên cho anh
+    - đổi lại họ tên cho chị
+    - đủi họ tên cho tao
+    - thay họ tên cho mình nhé
+    - tôi muốn đổi lại tên nhé
+    - tên không đúng rồi
+    - không đúng tên rồi
+    - sai họ tên
+    - sai tên rồi
+    - tôi muốn thay đổi tên
+    - tôi muốn đổi tên
+    - tên khác nhé
+    - thay tên khác đi bot
+    - thay đổi tên cho anh
+    - thay họ tên cho mình
+    - sai họ tên rồi bot ơi
+    - đổi lại tên đi
+    - tôi cần thay đổi tên
+    - thay thông tin tên cho tôi
+    - thay tên lại được không
+    - hình như sai tên rồi
+    - à sai tên rồi bot
+    - sai tên cmnr
+    - tôi muốn đổi lại tên
+    - ồ tôi muốn thay đổi tên
+    - khoan đã, tôi muốn thay đổi tên
+    - khoan, sai tên rồi
+    - chờ đã, tôi muốn đổi tên
+    - ôi, sai thông tin tên rồi
+    - trời, tôi thấy sai tên rồi
+    - khoan, hình như chưa được tên rồi
+    - khoan, hình như thiếu tên rồi
+    - khoan, thiếu tên rồi
+    - tên chưa đủ nhé
+    - sai tên tao rồi
+    - chưa đủ tên nhé
+- intent: change_id_card
+  examples: |
+    - số cm không đúng rồi
+    - không đúng số cm rồi
+    - sai số cm
+    - sai số cm rồi
+    - tôi muốn thay đổi số cm
+    - tôi muốn đổi số cm
+    - đổi số cm cho anh
+    - đổi số cm cho chị
+    - đủi số cm cho tao
+    - thay số cm cho mình nhé
+    - tôi muốn đổi số cm nhé
+    - số cm khác nhé
+    - thay số cm khác đi bot
+    - thay đổi số cm cho anh
+    - thay số cm cho mình
+    - sai số cm rồi bot ơi
+    - đổi lại số cm đi
+    - tôi cần thay đổi số cm
+    - thay thông tin số cm cho tôi
+    - thay số cm lại được không
+    - hình như sai số cm rồi
+    - à sai số cm rồi bot
+    - sai số cm cmnr
+    - tôi muốn đổi lại số cm
+    - ồ tôi muốn thay đổi số cm
+    - khoan đã, tôi muốn thay đổi số cm
+    - khoan, sai số cm rồi
+    - chờ đã, tôi muốn đổi số cm
+    - ôi, sai thông tin số cm rồi
+    - trời, tôi thấy sai số cm rồi
+    - khoan, hình như chưa được số cm rồi
+    - khoan, hình như thiếu số cm rồi
+    - khoan, thiếu số cm rồi
+    - số cm chưa đủ nhé
+    - sai số cm tao rồi
+    - chưa đủ số cm nhé
+    - số căn cước không đúng rồi
+    - không đúng số căn cước rồi
+    - sai số căn cước
+    - sai số căn cước rồi
+    - tôi muốn thay đổi số căn cước
+    - tôi muốn đổi số căn cước
+    - đổi số căn cước cho anh
+    - đổi số căn cước cho chị
+    - đủi số căn cước cho tao
+    - thay số căn cước cho mình nhé
+    - tôi muốn đổi số căn cước nhé
+    - số căn cước khác nhé
+    - thay số căn cước khác đi bot
+    - thay đổi số căn cước cho anh
+    - thay số căn cước cho mình
+    - sai số căn cước rồi bot ơi
+    - đổi lại số căn cước đi
+    - tôi cần thay đổi số căn cước
+    - thay thông tin số căn cước cho tôi
+    - thay số căn cước lại được không
+    - hình như sai số căn cước rồi
+    - à sai số căn cước rồi bot
+    - sai số căn cước số chứng minhnr
+    - tôi muốn đổi lại số căn cước
+    - ồ tôi muốn thay đổi số căn cước
+    - khoan đã, tôi muốn thay đổi số căn cước
+    - khoan, sai số căn cước rồi
+    - chờ đã, tôi muốn đổi số căn cước
+    - ôi, sai thông tin số căn cước rồi
+    - trời, tôi thấy sai số căn cước rồi
+    - khoan, hình như chưa được số căn cước rồi
+    - khoan, hình như thiếu số căn cước rồi
+    - khoan, thiếu số căn cước rồi
+    - số căn cước chưa đủ nhé
+    - sai số căn cước tao rồi
+    - chưa đủ số căn cước nhé
+    - căn cước công dân không đúng rồi
+    - không đúng căn cước công dân rồi
+    - sai căn cước công dân
+    - sai căn cước công dân rồi
+    - tôi muốn thay đổi căn cước công dân
+    - tôi muốn đổi căn cước công dân
+    - đổi căn cước công dân cho anh
+    - đổi căn cước công dân cho chị
+    - đủi căn cước công dân cho tao
+    - thay căn cước công dân cho mình nhé
+    - tôi muốn đổi căn cước công dân nhé
+    - căn cước công dân khác nhé
+    - thay căn cước công dân khác đi bot
+    - thay đổi căn cước công dân cho anh
+    - thay căn cước công dân cho mình
+    - sai căn cước công dân rồi bot ơi
+    - đổi lại căn cước công dân đi
+    - tôi cần thay đổi căn cước công dân
+    - thay thông tin căn cước công dân cho tôi
+    - thay căn cước công dân lại được không
+    - hình như sai căn cước công dân rồi
+    - à sai căn cước công dân rồi bot
+    - sai căn cước công dân số chứng minhnr
+    - tôi muốn đổi lại căn cước công dân
+    - ồ tôi muốn thay đổi căn cước công dân
+    - khoan đã, tôi muốn thay đổi căn cước công dân
+    - khoan, sai căn cước công dân rồi
+    - chờ đã, tôi muốn đổi căn cước công dân
+    - ôi, sai thông tin căn cước công dân rồi
+    - trời, tôi thấy sai căn cước công dân rồi
+    - khoan, hình như chưa được căn cước công dân rồi
+    - khoan, hình như thiếu căn cước công dân rồi
+    - khoan, thiếu căn cước công dân rồi
+    - căn cước công dân chưa đủ nhé
+    - sai căn cước công dân tao rồi
+    - chưa đủ căn cước công dân nhé
+    - số chứng minh không đúng rồi
+    - không đúng số chứng minh rồi
+    - sai số chứng minh
+    - sai số chứng minh rồi
+    - tôi muốn thay đổi số chứng minh
+    - tôi muốn đổi số chứng minh
+    - đổi số chứng minh cho anh
+    - đổi số chứng minh cho chị
+    - đủi số chứng minh cho tao
+    - thay số chứng minh cho mình nhé
+    - tôi muốn đổi số chứng minh nhé
+    - số chứng minh khác nhé
+    - thay số chứng minh khác đi bot
+    - thay đổi số chứng minh cho anh
+    - thay số chứng minh cho mình
+    - sai số chứng minh rồi bot ơi
+    - đổi lại số chứng minh đi
+    - tôi cần thay đổi số chứng minh
+    - thay thông tin số chứng minh cho tôi
+    - thay số chứng minh lại được không
+    - hình như sai số chứng minh rồi
+    - à sai số chứng minh rồi bot
+    - sai số chứng minh số chứng minhnr
+    - tôi muốn đổi lại số chứng minh
+    - ồ tôi muốn thay đổi số chứng minh
+    - khoan đã, tôi muốn thay đổi số chứng minh
+    - khoan, sai số chứng minh rồi
+    - chờ đã, tôi muốn đổi số chứng minh
+    - ôi, sai thông tin số chứng minh rồi
+    - trời, tôi thấy sai số chứng minh rồi
+    - khoan, hình như chưa được số chứng minh rồi
+    - khoan, hình như thiếu số chứng minh rồi
+    - khoan, thiếu số chứng minh rồi
+    - số chứng minh chưa đủ nhé
+    - sai số chứng minh tao rồi
+    - chưa đủ số chứng minh nhé
+    - số chứng minh nhân dân không đúng rồi
+    - không đúng số chứng minh nhân dân rồi
+    - sai số chứng minh nhân dân
+    - sai số chứng minh nhân dân rồi
+    - tôi muốn thay đổi số chứng minh nhân dân
+    - tôi muốn đổi số chứng minh nhân dân
+    - đổi số chứng minh nhân dân cho anh
+    - đổi số chứng minh nhân dân cho chị
+    - đủi số chứng minh nhân dân cho tao
+    - thay số chứng minh nhân dân cho mình nhé
+    - tôi muốn đổi số chứng minh nhân dân nhé
+    - số chứng minh nhân dân khác nhé
+    - thay số chứng minh nhân dân khác đi bot
+    - thay đổi số chứng minh nhân dân cho anh
+    - thay số chứng minh nhân dân cho mình
+    - sai số chứng minh nhân dân rồi bot ơi
+    - đổi lại số chứng minh nhân dân đi
+    - tôi cần thay đổi số chứng minh nhân dân
+    - thay thông tin số chứng minh nhân dân cho tôi
+    - thay số chứng minh nhân dân lại được không
+    - hình như sai số chứng minh nhân dân rồi
+    - à sai số chứng minh nhân dân rồi bot
+    - sai số chứng minh nhân dân số chứng minh nhân dân rồi
+    - tôi muốn đổi lại số chứng minh nhân dân
+    - ồ tôi muốn thay đổi số chứng minh nhân dân
+    - khoan đã, tôi muốn thay đổi số chứng minh nhân dân
+    - khoan, sai số chứng minh nhân dân rồi
+    - chờ đã, tôi muốn đổi số chứng minh nhân dân
+    - ôi, sai thông tin số chứng minh nhân dân rồi
+    - trời, tôi thấy sai số chứng minh nhân dân rồi
+    - khoan, hình như chưa được số chứng minh nhân dân rồi
+    - khoan, hình như thiếu số chứng minh nhân dân rồi
+    - khoan, thiếu số chứng minh nhân dân rồi
+    - số chứng minh nhân dân chưa đủ nhé
+    - sai số chứng minh nhân dân tao rồi
+    - chưa đủ số chứng minh nhân dân nhé
+- intent: change_telephone_number
+  examples: |
+    - sdt không đúng rồi
+    - không đúng sdt rồi
+    - tôi muốn thay đổi sdt
+    - tôi muốn đổi sdt
+    - đổi sdt cho anh
+    - đổi sdt cho chị
+    - đủi sdt cho tao
+    - thay sdt cho mình nhé
+    - tôi muốn đổi sdt nhé
+    - sdt khác nhé
+    - thay sdt khác đi bot
+    - thay đổi sdt cho anh
+    - thay sdt cho mình
+    - sai sdt rồi bot ơi
+    - đổi lại sdt đi
+    - tôi cần thay đổi sdt
+    - thay thông tin sdt cho tôi
+    - thay sdt lại được không
+    - hình như sai sdt rồi
+    - à sai sdt rồi bot
+    - sai sdt cmnr
+    - tôi muốn đổi lại sdt
+    - ồ tôi muốn thay đổi sdt
+    - khoan đã, tôi muốn thay đổi sdt
+    - khoan, sai sdt rồi
+    - chờ đã, tôi muốn đổi sdt
+    - ôi, sai thông tin sdt rồi
+    - trời, tôi thấy sai sdt rồi
+    - khoan, hình như chưa được sdt rồi
+    - khoan, hình như thiếu sdt rồi
+    - khoan, thiếu sdt rồi
+    - sdt chưa đủ nhé
+    - sai sdt tao rồi
+    - chưa đủ sdt nhé
+    - số phone không đúng rồi
+    - không đúng số phone rồi
+    - sai số phone
+    - sai số phone rồi
+    - tôi muốn thay đổi số phone
+    - tôi muốn đổi số phone
+    - đổi số phone cho anh
+    - đổi số phone cho chị
+    - đủi số phone cho tao
+    - thay số phone cho mình nhé
+    - tôi muốn đổi số phone nhé
+    - số phone khác nhé
+    - thay số phone khác đi bot
+    - thay đổi số phone cho anh
+    - thay số phone cho mình
+    - sai số phone rồi bot ơi
+    - đổi lại số phone đi
+    - tôi cần thay đổi số phone
+    - thay thông tin số phone cho tôi
+    - thay số phone lại được không
+    - hình như sai số phone rồi
+    - à sai số phone rồi bot
+    - sai số phone cmnr
+    - tôi muốn đổi lại số phone
+    - ồ tôi muốn thay đổi số phone
+    - khoan đã, tôi muốn thay đổi số phone
+    - khoan, sai số phone rồi
+    - chờ đã, tôi muốn đổi số phone
+    - ôi, sai thông tin số phone rồi
+    - trời, tôi thấy sai số phone rồi
+    - khoan, hình như chưa được số phone rồi
+    - khoan, hình như thiếu số phone rồi
+    - khoan, thiếu số phone rồi
+    - số phone chưa đủ nhé
+    - sai số phone tao rồi
+    - chưa đủ số phone nhé
+    - số điện thoại không đúng rồi
+    - không đúng số điện thoại rồi
+    - sai số điện thoại
+    - sai số điện thoại rồi
+    - tôi muốn thay đổi số điện thoại
+    - tôi muốn đổi số điện thoại
+    - đổi số điện thoại cho anh
+    - đổi số điện thoại cho chị
+    - đủi số điện thoại cho tao
+    - thay số điện thoại cho mình nhé
+    - tôi muốn đổi số điện thoại nhé
+    - số điện thoại khác nhé
+    - thay số điện thoại khác đi bot
+    - thay đổi số điện thoại cho anh
+    - thay số điện thoại cho mình
+    - sai số điện thoại rồi bot ơi
+    - đổi lại số điện thoại đi
+    - tôi cần thay đổi số điện thoại
+    - thay thông tin số điện thoại cho tôi
+    - thay số điện thoại lại được không
+    - hình như sai số điện thoại rồi
+    - à sai số điện thoại rồi bot
+    - sai số điện thoại cmnr
+    - tôi muốn đổi lại số điện thoại
+    - ồ tôi muốn thay đổi số điện thoại
+    - khoan đã, tôi muốn thay đổi số điện thoại
+    - khoan, sai số điện thoại rồi
+    - chờ đã, tôi muốn đổi số điện thoại
+    - ôi, sai thông tin số điện thoại rồi
+    - trời, tôi thấy sai số điện thoại rồi
+    - khoan, hình như chưa được số điện thoại rồi
+    - khoan, hình như thiếu số điện thoại rồi
+    - khoan, thiếu số điện thoại rồi
+    - số điện thoại chưa đủ nhé
+    - sai số điện thoại tao rồi
+    - chưa đủ số điện thoại nhé
+    - số đt không đúng rồi
+    - không đúng số đt rồi
+    - sai số đt
+    - sai số đt rồi
+    - tôi muốn thay đổi số đt
+    - tôi muốn đổi số đt
+    - đổi số đt cho anh
+    - đổi số đt cho chị
+    - đủi số đt cho tao
+    - thay số đt cho mình nhé
+    - tôi muốn đổi số đt nhé
+    - số đt khác nhé
+    - thay số đt khác đi bot
+    - thay đổi số đt cho anh
+    - thay số đt cho mình
+    - sai số đt rồi bot ơi
+    - đổi lại số đt đi
+    - tôi cần thay đổi số đt
+    - thay thông tin số đt cho tôi
+    - thay số đt lại được không
+    - hình như sai số đt rồi
+    - à sai số đt rồi bot
+    - sai số đt cmnr
+    - tôi muốn đổi lại số đt
+    - ồ tôi muốn thay đổi số đt
+    - khoan đã, tôi muốn thay đổi số đt
+    - khoan, sai số đt rồi
+    - chờ đã, tôi muốn đổi số đt
+    - ôi, sai thông tin số đt rồi
+    - trời, tôi thấy sai số đt rồi
+    - khoan, hình như chưa được số đt rồi
+    - khoan, hình như thiếu số đt rồi
+    - khoan, thiếu số đt rồi
+    - số đt chưa đủ nhé
+    - sai số đt tao rồi
+    - chưa đủ số đt nhé
+- intent: change_amount_of_money
+  examples: |
+    - số tiền vay không đúng rồi
+    - không đúng số tiền vay rồi
+    - sai số tiền vay
+    - sai số tiền vay rồi
+    - tôi muốn thay đổi số tiền vay
+    - tôi muốn đổi số tiền vay
+    - đổi số tiền vay cho anh
+    - đổi số tiền vay cho chị
+    - đủi số tiền vay cho tao
+    - thay số tiền vay cho mình nhé
+    - tôi muốn đổi số tiền vay nhé
+    - số tiền vay khác nhé
+    - thay số tiền vay khác đi bot
+    - thay đổi số tiền vay cho anh
+    - thay số tiền vay cho mình
+    - sai số tiền vay rồi bot ơi
+    - đổi lại số tiền vay đi
+    - tôi cần thay đổi số tiền vay
+    - thay thông tin số tiền vay cho tôi
+    - thay số tiền vay lại được không
+    - hình như sai số tiền vay rồi
+    - à sai số tiền vay rồi bot
+    - sai số tiền vay cmnr
+    - tôi muốn đổi lại số tiền vay
+    - ồ tôi muốn thay đổi số tiền vay
+    - khoan đã, tôi muốn thay đổi số tiền vay
+    - khoan, sai số tiền vay rồi
+    - chờ đã, tôi muốn đổi số tiền vay
+    - ôi, sai thông tin số tiền vay rồi
+    - trời, tôi thấy sai số tiền vay rồi
+    - khoan, hình như chưa được số tiền vay rồi
+    - khoan, hình như thiếu số tiền vay rồi
+    - khoan, thiếu số tiền vay rồi
+    - số tiền vay chưa đủ nhé
+    - sai số tiền vay tao rồi
+    - chưa đủ số tiền vay nhé
+    - anh muốn thêm có được không
+    - mình muốn đổi số tiền vay
+    - mình muốn vay ít hơn
+    - anh muốn đổi tiền vay
+    - chị muốn đổi tiền vay
+    - đổi cho chị số tiền vay đi
+    - đổi tiền vay đi
+- intent: affirm
+  examples: |
+    - Được rồi mình cảm ơn
+    - yes
+    - Được em nhé
+    - Đúng rồi em
+    - đúng rồi e
+    - Được e nhé
+    - được em nhé
+    - ok e nhé
+    - Ok em
+    - Vâng, được nhé anh
+    - Được anh nhé
+    - Vâng, được nhé
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - okela
+    - Okela
+    - oke la
+    - chính xác
+    - dĩ nhiên
+    - chứ còn gì nữa
+    - đương nhiên
+    - rõ ràng
+    - quá đúng
+    - chuẩn xác luôn
+    - hoàn toàn đúng
+    - đúng
+    - ok
+    - chuẩn quá ta
+    - oke
+    - đúng ời
+    - đúng ròi
+    - chuẩn nha
+    - chuẩn
+    - ok đúng
+    - ok good
+    - Ok
+    - Ô khê
+    - Ô kê
+    - Ô sờ kê
+    - ô khê
+    - okei
+    - Ok chờ xí
+    - Ok đợi chút để suy nghĩ đã
+    - Ok nè đợi tí
+    - okay đợi t suy nghĩ chút
+    - Okei
+    - OK
+    - QUÁ CHUẨN
+    - QUÁ CHÍNH XÁC
+    - GOOD VÃI LZZ
+    - Ok bot
+    - OK Bot
+    - okay bot nha
+    - rùi ok
+    - Rùi ok nè
+    - Ok nha
+    - Ok đợi t nghĩ cái nha
+    - ok để suy nghĩ xem
+    - Đúng rồi bạn
+    - Dung roi ban
+    - ok bạn
+    - ok ban
+    - yep
+    - Chấp nhận
+    - Tuyệt vời
+    - Nghe tốt đấy
+    - nghe hay đấy
+    - Được
+    - Tất nhiên rồi
+    - Tôi đồng ý
+    - Đồng ý
+    - Chắc chắn rồi
+    - Okkk
+    - yessss
+    - okay
+    - Điều này nghe thật tuyệt
+    - Đượccccc
+    - Hợp lí đó
+    - ổn đấy
+    - Được, ổn đấy
+    - Được, ok đó
+    - Đúng, tôi xác nhận
+    - Chính xác
+    - Đúng như vậy đó
+    - Được, tôi chấp nhận
+    - Đúng như những gì tôi mong muốn
+    - Chính xácccc
+    - Tôi chấp nhận
+    - Tôi chắc chắn sẽ làm vậy
+    - Tốt
+    - Xác nhận
+    - Tôi muốn điều này
+    - Tôi thích điều này
+    - Tôi cần điều này
+    - Hãy làm nó đi
+    - ok, làm đi
+    - ok, tôi chắc chắn
+    - Được, tôi chắc chắn
+    - Được, tôi đồng ý
+    - ok, tôi chấp nhận
+    - ok, tôi đồng ý
+    - ok, ổn đấy
+    - yes, ổn đấy
+    - ok, tuyệt vời
+    - ok, xác nhận
+    - Được, nghe hay đấy
+    - ok, nghe hay đấy
+    - Okkkkkkk
+    - ok...
+    - Điều này đúng
+    - đúng rồi em
+    - Đúng rồi anh ạ
+    - Đúng rồi nhé
+    - Đúng rồi
+    - chuẩn rồi
+    - Đúng hết rồi em
+    - đúng hết rồi nhé
+    - Chuẩn rồi
+    - ok rồi em ạ
+    - Ok rồi em ạ
+    - Chuẩn rồi anh ạ
+    - chuẩn rồi anh ạ
+    - Đúng rồi anh nhé
+    - đúng rồi anh nhé
+    - Có
+- intent: deny
+  examples: |
+    - Không nhé em
+    - Không được nhé
+    - Tôi không muốn
+    - Tôi không muốn nói
+    - Tôi không muốn cung cấp thông tin này
+    - Tôi không muốn cung cấp
+    - không
+    - nope
+    - no thanks
+    - no
+    - không, cảm ơn
+    - chắc chắn là không
+    - Tôi từ chối
+    - Tôi không thích điều này
+    - Tôi thực sự không thích điều này
+    - Tôi không chấp nhận
+    - Tôi sợ là không
+    - Từ chối
+    - Tôi không chắc chắn
+    - Tôi không muốn chấp nhận
+    - không muốn chấp nhận
+    - E rằng là không
+    - Nó không phải thứ tôi muốn
+    - không, tôi không cần
+    - không, tôi không muốn
+    - không và đừng hỏi lại nữa
+    - Không, xin lỗi
+    - Không đời nào
+    - Không, tôi ghét nó
+    - không phải bây giờ
+    - không phải thời điểm hiện tại
+    - không dừng lại
+    - không, tôi phải suy nghĩ thêm
+    - không, tôi phải suy nghĩ đã
+    - Từ từ, tôi cần thêm thời gian
+    - tôi không đồng ý với việc này
+    - Không, dừng lại
+    - Dừng lại
+    - i don't want to give you my email
+    - Xin lỗi nhưng tôi không muốn
+    - Tôi e là không
+    - Tôi không chắc chắn lắm
+    - Có thể là không
+    - Chắc chắn là không
+    - Tôi không cảm thấy phù hợp lắm
+    - Tôi sẽ suy nghĩ về điều này sau
+    - Tôi muốn dừng lại
+    - Hủy đi
+    - không nhé
+- intent: goodbye
+  examples: |
+    - Gặp lại sau nhé
+    - Gặp lại sau
+    - Tạm biệt
+    - Gặp lại bạn sau
+    - Chào tạm biệt
+    - Tạm biệt nhé
+    - Chào tạm biệt anh
+    - Chào tạm biệt chị
+    - Tạm biệt anh
+    - bye
+    - bye bye
+    - good bye
+    - tạm biệt
+    - hẹn gặp lại
+    - hẹn gặp lại sau
+    - goodbye.
+    - gặp lại sau nhé
+    - ok, bye
+    - Hẹn gặp lại nhé
+    - Khi khác nói chuyện nhé
+    - tạm biệt bạn
+    - BYE
+- intent: greet
+  examples: |
+    - hey
+    - good morning
+    - hi
+    - Xin chào
+    - Chào
+    - Em ơi
+    - Chào page
+    - Chào admin
+    - admin ơi
+    - Chào tư vấn viên
+    - hello
+    - HELLO
+    - Thật tốt vì gặp bạn
+    - Chào, chúc buổi sáng tốt lành
+    - Ai đó ạ, có chuyện gì vậy
+    - Morning!
+    - Có ai ở đó không?
+    - Chào tổng đài
+    - Chào anh
+    - Chào chị
+    - Chào bạn
+    - Good afternoon
+    - hello there
+    - Hân hạnh được gặp bạn
+    - Ban là ai vậy, có vấn đề gì ư
+    - Chúc một ngày vui vẻ
+    - bạn là ai thế
+    - anh là ai thế
+    - chị là ai thế
+    - Cho hỏi ai đấy ạ
+    - yo
+    - em chào anh
+    - chào ad
+    - chao ban
+    - chao anh
+    - em chao anh
+    - chao bot nhe
+    - chào page
+    - chào anh
+    - chào bot nhé
+    - Hello bot
+    - Hi bot
+    - XIN CHÀO
+    - CHÀO
+    - ALO
+    - NĨ HẢO
+    - YO
+    - HIII
+    - HI
+    - HẾ LÔ
+    - À LỐ
+    - A LÔ
+    - HEY
+    - HEYYY
+    - YOOO
+    - YO ƯTF
+    - CHÀO BẠN
+    - HELLO BẠN
+    - CHÀO CẬU
+    - ALO ANH EM
+    - CHÀO ĐỒNG CHÍ
+    - CHÀO EM
+    - CHÀO ANH
+    - NÀY THẰNG KIA
+    - MADAM
+    - HEY SIR
+    - HI SIR
+    - Chào thân ái
+    - Nĩ hảo
+    - Hello
+    - Yo
+    - chào
+    - hiii
+    - ê
+    - nihao
+    - ní hạo
+    - hế lô
+    - alo
+    - à lố
+    - a lô
+    - heyyy
+    - chào bạn
+    - chào cậu
+    - chào đồng chí
+    - chào em
+    - chào mày
+    - hello mày
+    - alo mày
+    - alo bạn eiii
+    - này bạn eii
+    - ê thằng kia
+    - ê mày
+    - ê mài
+    - ê bạn eii
+    - ee banj eeii
+    - ê bạn êii
+    - này thằng kia
+    - bạn ei
+    - ni hao
+    - ní hảo
+    - nĩ hảo
+    - nỉ hảo
+    - nĩ hão
+    - nĩ hạo ma
+    - ohayo gozaimasu
+    - hi there
+    - hey there
+    - madam
+    - hey sir
+    - hi sir
+    - yo yo yo
+    - hí bạn
+    - hello bạn ơi
+    - helllo
+    - heloo
+    - Xin chào bot
+    - Xin chào Bot
+    - Xin chào Chatbot
+- intent: inform
+  examples: |
+    - 0336616764
+    - 0985409649
+    - 0387819656
+    - 0965122576
+    - 0949174250
+    - 0345009893
+    - 0832988569
+    - 0352251203
+    - 0901210186
+    - 0343074146
+    - 0375399332
+    - 0984235266
+    - 0333197872
+    - 0355709813
+    - 0397146113
+    - 0360384973
+    - 0365012505
+    - 0787840173
+    - 0328555563
+    - 0988252333
+    - 0343737254
+    - 0354442590
+    - 0941242900
+    - 0971648619
+    - 0941686315
+    - 0377326830
+    - 0366190892
+    - 0961796051
+    - 0939485993
+    - 0383418147
+    - 0985151189
+    - 0377319986
+    - 0329629344
+    - 0335647292
+    - 0353026138
+    - 0815129032
+    - 0366544182
+    - 0523077618
+    - 0326170063
+    - 0334529011
+    - Số điện thoại của tôi là 0372551270
+    - Số điện thoại của tôi là 0355174694
+    - Số điện thoại của tôi là 0914571072
+    - Số của tôi là 0586279684
+    - Số của tôi là 0947154644
+    - Số của tôi là 0888569719
+    - Số của tôi là 0379069628
+    - Số của tôi là 0908242142
+    - 0976112193
+    - Số chứng minh thư của tôi là [142890283128323](id_card)
+    - Số chứng minh thư của tôi là [142890283128324](id_card)
+    - Số chứng minh thư của tôi là [142890283128325](id_card)
+    - Số chứng minh thư của tôi là [142890283128326](id_card)
+    - Số chứng minh thư của tôi là [142800223128323](id_card)
+    - Số chứng minh thư của anh là [152890983168324](id_card)
+    - Số chứng minh thư của anh là [145890283188320](id_card)
+    - Số chứng minh thư của anh là [1142890983128323](id_card)
+    - Số chứng minh thư của mình là [141890283128623](id_card)
+    - Số chứng minh thư của mình là [242890283128374](id_card)
+    - Số chứng minh thư của mình là [142890883128523](id_card)
+    - Số chứng minh thư của mình là [132890283028323](id_card)
+    - Số chứng minh thư của mình là [242890283128320](id_card)
+    - Số chứng minh thư của mình là [212890283128323](id_card)
+    - Số chứng minh thư của chị là [142810288128365](id_card)
+    - Số chứng minh thư của chị là [142890283128366](id_card)
+    - Số chứng minh thư của chị là [142890283128367](id_card)
+    - Số chứng minh thư của chị là [142890283128368](id_card)
+    - Số chứng minh thư của chị là [142890283128369](id_card)
+    - Số chứng minh thư của chị là [142890283128370](id_card)
+    - 142890283128371
+    - 142890283128372
+    - 142890283128373
+    - 142890283128374
+    - 142890283128375
+    - 142890283128376
+    - 142890283128377
+    - 142890283128378
+    - 142890283128379
+    - 142890283128380
+    - 142890283128381
+    - 142890283128382
+    - 142890283128383
+    - 142890283128384
+    - 142890283128385
+    - 142890283128386
+    - 142890283128387
+    - 142890283128388
+    - 142890283128389
+    - 142890283128390
+    - 142890283128391
+    - 142890283128392
+    - 142890283128393
+    - 142890283128394
+    - 142890283128395
+    - 142890283128396
+    - 142890283128397
+    - 142890283128398
+    - 142890283128399
+    - 10000 VND
+    - 5000 VND
+    - 500 USD
+    - 100000 VND
+    - $500
+    - 500$
+    - 1000000 VND
+    - 1500000 VND
+    - 2000000 VND
+    - 4000000
+    - 7000000
+    - 1000000
+    - 100000VND
+    - 200$
+    - $150
+    - 100 dollars
+    - 1000 dollars
+    - 1 triệu đồng
+    - một triệu đồng
+    - hai triệu đồng
+    - ba triệu đồng
+    - 4 triệu đồng
+    - năm triệu đồng
+    - 2 triệu rưỡi
+    - 3 triệu bảy trăm ngàn
+    - 1 triệu 500 nghìn
+    - một triệu rưỡi
+    - 2.5 triệu đồng
+    - 3 triệu 700 ngàn
+    - 3,5 triệu
+    - 8,8 triệu
+    - 1000 usd
+    - 2000 usd
+    - 200 usd
+    - 5 triệu 200 nghìn
+    - 4 triệu rưỡi
+    - 2 triệu 2
+    - 3 triệu 9 trăm 70 nghìn
+    - sáng mai
+    - vào sáng mai
+    - vào trưa mai
+    - vào tối mai
+    - trưa mai
+    - tối mai
+    - buổi sáng
+    - buổi trưa
+    - buổi tối
+    - tuần tới
+    - vào tuần sau
+    - vào tuần tới
+    - tuần sau
+    - hôm nay
+    - tuần trước
+    - tháng trước
+    - hai ngày trước
+    - 2 ngày trước
+    - hai tuần trước
+    - 2 tuần trước
+    - ngay bây giờ
+    - ngay thời điểm hiện tại
+    - thứ hai
+    - thứ ba
+    - thứ tư
+    - thứ năm
+    - thứ sáu
+    - thứ 7
+    - chủ nhật
+    - năm trước
+    - vào năm trước
+    - năm sau
+    - vào năm sau
+    - năm nay
+    - 5 phút nữa
+    - 1 tiếng nữa
+    - cuối tuần
+    - [16/02/2020](date_of_birth)
+    - [10/04/2021](date_of_birth)
+    - [20/12/2021](date_of_birth)
+    - [24/05/2021](date_of_birth)
+    - [23/06/2021](date_of_birth)
+    - [25/11/2021](date_of_birth)
+    - [19/06/2021](date_of_birth)
+    - [10/03/2021](date_of_birth)
+    - [28/05/2021](date_of_birth)
+    - [21/04/2021](date_of_birth)
+    - [24-02-1982](date_of_birth)
+    - [16-12-1972](date_of_birth)
+    - [22-02-1942](date_of_birth)
+    - [15-11-2000](date_of_birth)
+    - [02-12-2000](date_of_birth)
+    - [19-04-2000](date_of_birth)
+    - Tôi sinh ngày [20-03-2000](date_of_birth)
+    - Tôi sinh ngày [15-10-2000](date_of_birth)
+    - Tôi sinh ngày [12-07-2000](date_of_birth)
+    - Tôi sinh ngày [22-02-2000](date_of_birth)
+    - Tôi sinh ngày [19/06/2021](date_of_birth)
+    - Tôi sinh ngày [10/03/2021](date_of_birth)
+    - Tôi sinh ngày [28/05/2021](date_of_birth)
+    - Tôi sinh ngày [21/04/2021](date_of_birth)
+    - Tôi sinh ngày [24-02-1982](date_of_birth)
+    - Tôi sinh ngày [16-12-1972](date_of_birth)
+    - Tôi sinh ngày [22-02-1942](date_of_birth)
+    - Ngày sinh của tôi là [15-11-2000](date_of_birth)
+    - Ngày sinh của tôi là [02-12-2000](date_of_birth)
+    - Ngày sinh của tôi là [19-04-2000](date_of_birth)
+    - Ngày sinh của tôi là [20-03-2000](date_of_birth)
+    - Ngày sinh của tôi là [15-10-2000](date_of_birth)
+    - Ngày sinh của tôi là [12-07-2000](date_of_birth)
+    - Ngày sinh của tôi là [22-02-2000](date_of_birth)
+    - [Vũ Thuỳ An](PERSON)
+    - [Dương Đoàn Phương Anh](PERSON)
+    - [Nguyễn Quỳnh Anh](PERSON)
+    - [Tô Phương Hồng Ánh](PERSON)
+    - [Tô Thế Bảo](PERSON)
+    - [Hồ Nguyễn Tuấn Biên](PERSON)
+    - [Nguyễn Bình](PERSON)
+    - [Mai Thanh Dũng](PERSON)
+    - [Phạm Tiến Đạt](PERSON)
+    - [Nguyễn Thanh Hà](PERSON)
+    - [Lê Phan Thanh Hằng](PERSON)
+    - [Hoàng Ngọc Mai Hoa](PERSON)
+    - [Lê Minh Khánh](PERSON)
+    - [Nguyễn Phi Long](PERSON)
+    - [Đào Thụy Thùy My](PERSON)
+    - [Nguyễn Hà Kiều Ngân](PERSON)
+    - [Nguyễn Hiếu Nghĩa](PERSON)
+    - [Huỳnh Mai Nhàn](PERSON)
+    - [Phạm Lê Thanh Phong](PERSON)
+    - [Nguyễn Hoàng Phúc](PERSON)
+    - [Đặng Anh Phương](PERSON)
+    - [Phạm Duy Quân](PERSON)
+    - [Nguyễn Phạm Minh Quân](PERSON)
+    - [Tương Tú Quyên](PERSON)
+    - [Huỳnh Ngọc Sơn](PERSON)
+    - [Đào Nguyên Thanh Tâm](PERSON)
+    - [Nguyễn Thành Tâm](PERSON)
+    - [Lê Trung Tín](PERSON)
+    - [Trần Thị Hồng Tú](PERSON)
+    - [Lê Mỹ Thanh](PERSON)
+    - [Nguyễn Trí Thành](PERSON)
+    - [Ngô Thanh Thảo](PERSON)
+    - [Nguyễn Thị Mai Trâm](PERSON)
+    - [Trần Quang Hải Triều](PERSON)
+    - [Nguyễn Lê Thanh Trúc](PERSON)
+    - [Nguyễn Lâm Nhật Uyên](PERSON)
+    - [Nguyễn Ngọc Phương Uyên](PERSON)
+    - [Nguyễn Thị Hồng Vân](PERSON)
+    - [Nguyễn Tô Kim Vy](PERSON)
+    - [Nguyễn Tường Vy](PERSON)
+    - [Lương Nguyễn Thanh Vy](PERSON)
+    - [Nguyễn Hoàng Thảo Vy](PERSON)
+    - [Huỳnh Gia Yến Vy](PERSON)
+    - [Nguyễn Trần Kim Anh](PERSON)
+    - [Nguyễn Thị Thu Diễm](PERSON)
+    - [Nguyễn Duy](PERSON)
+    - [Tiêu Thành Đạt](PERSON)
+    - [Phạm Minh Đức](PERSON)
+    - [Mầu Nhân Hạnh](PERSON)
+    - [Nguyễn Kim Bảo Hân](PERSON)
+    - [Lê Ngọc Hân](PERSON)
+    - [Võ Quốc Huy](PERSON)
+    - [Đặng Thị Ngọc Hương](PERSON)
+    - [Nguyễn Bảo Khang](PERSON)
+    - [Trần Ngọc Kim Khánh](PERSON)
+    - [Lê Thị Trúc Lam](PERSON)
+    - [Từ Thị Phương Linh](PERSON)
+    - [Nguyễn Tấn Luân](PERSON)
+    - [Đỗ Hoài Ly](PERSON)
+    - [Nguyễn Đoàn Kim Ngân](PERSON)
+    - [Lưu Nguyễn Xuân Ngọc](PERSON)
+    - [Hoàng Song Nguyên](PERSON)
+    - [Phan Thị Thanh Nhã](PERSON)
+    - [Nguyễn Hoàng Phong](PERSON)
+    - [Đỗ Vĩnh Phúc](PERSON)
+    - [Lê Thị Ánh Phương](PERSON)
+    - [Nguyễn Ngọc Phương Quyên](PERSON)
+    - [Nghiêm Dương Tú Quỳnh](PERSON)
+    - [Lê Thạch Anh Tài](PERSON)
+    - [Nguyễn Thành Tiến](PERSON)
+    - [Lê Thanh Tú](PERSON)
+    - [Nguyễn Ngọc Phương Thảo](PERSON)
+    - [Trần Trung Thiên](PERSON)
+    - [Võ Thị Minh Thúy](PERSON)
+    - [Nguyễn Ngọc Thúy](PERSON)
+    - [Nguyễn Lâm Phương Thụy](PERSON)
+    - [Tạ Ngọc Minh Thư](PERSON)
+    - [Nguyễn Thanh Trang](PERSON)
+    - [Võ Vân Trang](PERSON)
+    - [Lê Huyền Trân](PERSON)
+    - [Ngô Hoàng Triều](PERSON)
+    - [Nguyễn Vũ Phương Uyên](PERSON)
+    - [Lê Ngọc Tường Vi](PERSON)
+    - [Nguyễn Ngọc Thanh Vy](PERSON)
+    - [Nguyễn Trần Uyển Vy](PERSON)
+    - [Phạm Nguyễn Hoàng Thanh Xuân](PERSON)
+    - [Võ Trần Khả Ái](PERSON)
+    - [Trần Hoàng Kiều Anh](PERSON)
+    - [Nguyễn Ngọc Vân Anh](PERSON)
+    - [Đàm Đức Bình](PERSON)
+    - [Lê Hồng Gấm](PERSON)
+    - [Võ Minh Hiền](PERSON)
+    - [Đoàn Thị Kim Hoàng](PERSON)
+    - [Mai Đăng Kiên](PERSON)
+    - [Trần Quang Khải](PERSON)
+    - [Nguyễn Minh Khánh](PERSON)
+    - [Nguyễn Thị Kim Ngà](PERSON)
+    - [Lý Hồng Ngân](PERSON)
+    - [Trần Trọng Nghĩa](PERSON)
+    - [Nguyễn Trần Thanh Nhi](PERSON)
+    - [Huỳnh Tâm Như](PERSON)
+    - [Nguyễn Tuấn Phát](PERSON)
+    - [Nguyễn Thị Mai Phước](PERSON)
+    - [Lê Nguyễn Nam Phương](PERSON)
+    - [Châu Mẫn Quân](PERSON)
+    - [Phan Xuân Minh Quân](PERSON)
+    - [Nguyễn Trần Anh Quyên](PERSON)
+    - [Lê Thị Hoàng Quyên](PERSON)
+    - [Nguyễn Thị Kim Quyên](PERSON)
+    - [Hoàng Minh Tâm](PERSON)
+    - [Trần Ngọc Thủy Tiên](PERSON)
+    - [Lê Quang Toàn](PERSON)
+    - [Ngô Tòng Anh Tuấn](PERSON)
+    - [Nguyễn Thụy Anh Thư](PERSON)
+    - [Phạm Huỳnh Hoàng Thy](PERSON)
+    - [Nguyễn Hoàng Thy Thy](PERSON)
+    - [Hồ Hoàng Ngọc Trâm](PERSON)
+    - [Đỗ Thị Bảo Trân](PERSON)
+    - [Đàm Tuyết Trân](PERSON)
+    - [Phạm Hải Triều](PERSON)
+    - [Nguyễn Hoàng Xuân Trúc](PERSON)
+    - [Nguyễn Thanh Trung](PERSON)
+    - [Từ Phạm Mỹ Uyên](PERSON)
+    - [Phạm Tố Uyên](PERSON)
+    - [Bùi Nguyễn Gia Vương](PERSON)
+    - [Võ Tường Vy](PERSON)
+    - [Nguyễn Thị Hồng Yến](PERSON)
+    - [Nguyễn Hoàng Thùy An](PERSON)
+    - [Nguyễn Yến Anh](PERSON)
+    - [Nguyễn Hoàng Gia Bảo](PERSON)
+    - [Mai Bảo Chi](PERSON)
+    - [Đặng Anh Duy](PERSON)
+    - [Phạm Thị Mỹ Duyên](PERSON)
+    - [Trần Nguyễn Mai Ngọc Đức](PERSON)
+    - [Nguyễn Hiếu Hiền](PERSON)
+    - [Danh Hiếu](PERSON)
+    - [Vương Gia Huy](PERSON)
+    - [Nguyễn Công Hưng](PERSON)
+    - [Nguyễn Tấn Lợi](PERSON)
+    - [Dương Thị Trà My](PERSON)
+    - [Phạm Trọng Ninh](PERSON)
+    - [Nguyễn Thị Hiền Nga](PERSON)
+    - [Nguyễn Võ Kim Ngân](PERSON)
+    - [Lê Ngọc Quỳnh Ngân](PERSON)
+    - [Phan Thị Thảo Ngọc](PERSON)
+    - [Lưu Minh Nhật](PERSON)
+    - [Lê Nguyễn Quỳnh Như](PERSON)
+    - [Nguyễn Phan Hoàng Phúc](PERSON)
+    - [Nguyễn Như Phương](PERSON)
+    - [Nguyễn Sơn Quang](PERSON)
+    - [Đỗ Huệ Quyên](PERSON)
+    - [Lã Ngọc Diễm Quỳnh](PERSON)
+    - [Lê Văn Tài](PERSON)
+    - [Mai Thị Thanh Tuyền](PERSON)
+    - [Nguyễn Vĩ Tường](PERSON)
+    - [Đỗ Trường Thịnh](PERSON)
+    - [Nguyễn Thị Anh Thư](PERSON)
+    - [Trần Nguyễn Anh Thy](PERSON)
+    - [Trần Thụy Bích Trâm](PERSON)
+    - [Bùi Minh Trâm](PERSON)
+    - [Đặng Ngọc Bảo Trân](PERSON)
+    - [Trần Ngọc Lan Trinh](PERSON)
+    - [Đỗ Trần Thủy Trúc](PERSON)
+    - [Lê Hoàng Anh Vũ](PERSON)
+    - [Vũ Yến Vy](PERSON)
+    - [Võ Thị Thanh Xuân](PERSON)
+    - [Tô Phạm Xuân An](PERSON)
+    - [Trần Nguyễn Hùng Anh](PERSON)
+    - [Đinh Thụy Lan Anh](PERSON)
+    - [Nguyễn Mạnh Cường](PERSON)
+    - [Nguyễn Thị Minh Châu](PERSON)
+    - [Bùi Nguyễn Nhã Duyên](PERSON)
+    - [Trần Phúc Đạt](PERSON)
+    - [Nguyễn Bá Đức Hải](PERSON)
+    - [Trần Mai Hân](PERSON)
+    - [Nguyễn Minh Hưng](PERSON)
+    - [Nguyễn Nhật Lâm](PERSON)
+    - [Trần Thị Ký Linh](PERSON)
+    - [Võ Ngọc Khánh Ngân](PERSON)
+    - [Nguyễn Ngọc Đông Nghi](PERSON)
+    - [Nguyễn Trọng Nghĩa](PERSON)
+    - [Nguyễn Thị Thảo Nguyên](PERSON)
+    - [Trần Hoàng Minh Nguyệt](PERSON)
+    - [Nguyễn Thị Mai Nhi](PERSON)
+    - [Bùi Hoàng Ngọc Nhi](PERSON)
+    - [Đào Ngọc Quỳnh Như](PERSON)
+    - [Trương Thành Phát](PERSON)
+    - [Tạ Hòa Phong](PERSON)
+    - [Hứa Long Phú](PERSON)
+    - [Trần Hoàng Phúc](PERSON)
+    - [Hà Uyên Phương](PERSON)
+    - [Lê Giang Sơn](PERSON)
+    - [Nguyễn Văn Tâm](PERSON)
+    - [Phạm Hoàng Tuấn](PERSON)
+    - [Nguyễn Thanh Tuyền](PERSON)
+    - [Lê Thị Hoàng Thi](PERSON)
+    - [Đặng Võ Minh Thư](PERSON)
+    - [Võ Hoàng Minh Thư](PERSON)
+    - [Lê Minh Trí](PERSON)
+    - [Nguyễn Thanh Trúc](PERSON)
+    - [Phan Nguyễn Tường Vy](PERSON)
+    - [Trần Nguyễn Phương Uyên](PERSON)
+    - [Phan Trần Lan Anh](PERSON)
+    - [Lê Ngọc Tuyết Anh](PERSON)
+    - [Nguyễn Đan](PERSON)
+    - [Nguyễn Thị Ngọc Hân](PERSON)
+    - [Nishida Mai Hoa](PERSON)
+    - [Võ Ngọc Quê Hương](PERSON)
+    - [Nguyễn Lê Hoàng Linh](PERSON)
+    - [Ro Ly](PERSON)
+    - [Võ Trần Thanh Mai](PERSON)
+    - [Lê Nhật My](PERSON)
+    - [Nguyễn Ngọc Thảo My](PERSON)
+    - [Nguyễn Hải Nam](PERSON)
+    - [Trương Khánh Ngân](PERSON)
+    - [Nguyễn Ngô Thuý Ngân](PERSON)
+    - [Nguyễn Phạm Phương Nghi](PERSON)
+    - [Nguyễn Thành Nhân](PERSON)
+    - [Hoàng Vi Yến Nhi](PERSON)
+    - [Phó Khí Trường Phát](PERSON)
+    - [Hà Nhật Phong](PERSON)
+    - [Lợi Trí Phước](PERSON)
+    - [Hứa Thị Ngọc Phương](PERSON)
+    - [Bùi Đình Quang](PERSON)
+    - [Phan Khánh Quyên](PERSON)
+    - [Nguyễn Bá Tài](PERSON)
+    - [Ngô Minh Thái](PERSON)
+    - [Nguyễn Phương Thảo](PERSON)
+    - [Phạm Ngọc Phương Thảo](PERSON)
+    - [Trần Uyên Thảo](PERSON)
+    - [Nguyễn Xuân Thắng](PERSON)
+    - [Lâm Hà Minh Thư](PERSON)
+    - [Đặng Đa Thy](PERSON)
+    - [Nguyễn Hoàng Xuân Thy](PERSON)
+    - [Phó Khí Thu Trang](PERSON)
+    - [Nguyễn Thiên Triều](PERSON)
+    - [Phạm Thanh Trúc](PERSON)
+    - [Trần Ngọc Trung](PERSON)
+    - [Bùi Thanh Trường](PERSON)
+    - [Trần Nguyễn Ái Vy](PERSON)
+    - [Châu Thụy Phương Vy](PERSON)
+    - [Lê Ngọc Anh](PERSON)
+    - [Nguyễn Đình Ngọc Ánh](PERSON)
+    - [Lý Mãn Hoàng Ân](PERSON)
+    - [Lý Mãn Hồng Ân](PERSON)
+    - [Phạm Hoàng Chương](PERSON)
+    - [Nguyễn Hoài Đạt](PERSON)
+    - [Nguyễn Hoàng Giang](PERSON)
+    - [Tạ Hoàng Gia Hân](PERSON)
+    - [Trần Nguyễn Gia Hân](PERSON)
+    - [Nguyễn Anh Huy](PERSON)
+    - [Bùi Thị Thanh Huyền](PERSON)
+    - [Tô Anh Khoa](PERSON)
+    - [Trần Nguyễn Duy Lân](PERSON)
+    - [Trương Hồng Mỹ Linh](PERSON)
+    - [Phan Hoàng Long](PERSON)
+    - [Phạm Vỹ Long](PERSON)
+    - [Phạm Ngọc Ngân](PERSON)
+    - [Trần Phương Nghi](PERSON)
+    - [Hoàng Thùy Linh Nhi](PERSON)
+    - [Phạm Thảo Trang Nhi](PERSON)
+    - [Đỗ Yến Nhi](PERSON)
+    - [Nguyễn Trần Thị Quỳnh Như](PERSON)
+    - [Nguyễn Trần Hữu Phúc](PERSON)
+    - [Vũ Hoàng Minh Phúc](PERSON)
+    - [Lê Thị Diễm Quỳnh](PERSON)
+    - [Đỗ Thành Tài](PERSON)
+    - [Lê Nguyễn Đình Toàn](PERSON)
+    - [Nguyễn Hữu Toàn](PERSON)
+    - [Nguyễn Minh Tú](PERSON)
+    - [Huyên Phạm Thanh Tùng](PERSON)
+    - [Nguyễn Bá Thành](PERSON)
+    - [Nguyễn Đức Thịnh](PERSON)
+    - [Nguyễn Mậu Thịnh](PERSON)
+    - [Phạm Phan Anh Thư](PERSON)
+    - [Lưu Thuỳ Vi](PERSON)
+    - [Đồng Khánh Vy](PERSON)
+    - [Trương Ngọc Tường Vy](PERSON)
+    - [Nguyễn Nhật Yến Vy](PERSON)
+    - [Tiêu Lâm Vỹ](PERSON)
+    - [Lê Hải Yến](PERSON)
+    - [Lê Hòa Anh](PERSON)
+    - [Trần Ngọc Minh Anh](PERSON)
+    - [Nguyễn Hà Tâm Anh](PERSON)
+    - [Trần Thị Ngọc Ánh](PERSON)
+    - [Lê Hoàng Gia Bảo](PERSON)
+    - [Từ Quang Bình](PERSON)
+    - [Lê Nguyễn Bảo Châu](PERSON)
+    - [La Thành Minh Châu](PERSON)
+    - [Hà Hoàng Duy](PERSON)
+    - [Nguyễn Minh Đức](PERSON)
+    - [Nguyễn Hoàn Hảo](PERSON)
+    - [Trần Công Mai Hân](PERSON)
+    - [Lê Phạm Minh Hiếu](PERSON)
+    - [Trần Lê Trọng Hiếu](PERSON)
+    - [Giang Quốc Hùng](PERSON)
+    - [Nguyễn Huỳnh Long](PERSON)
+    - [Trần Sơn Long](PERSON)
+    - [Lê Đức Lộc](PERSON)
+    - [Nguyễn Văn Mạnh](PERSON)
+    - [Lê Chí Minh](PERSON)
+    - [Nguyễn Phạm Hoàng Minh](PERSON)
+    - [Trần Hoàng Minh](PERSON)
+    - [Trang Thị Kim Ngân](PERSON)
+    - [Trần Nguyễn Như Ngọc](PERSON)
+    - [Quách Trí Nguyên](PERSON)
+    - [Nguyễn Thiện Nhân](PERSON)
+    - [Nguyễn Anh Nhật](PERSON)
+    - [Đặng Thị Tuyết Nhi](PERSON)
+    - [Nguyễn Trần Tuyết Nhi](PERSON)
+    - [Ngô Thanh Phong](PERSON)
+    - [Trần Ngọc Lan Phương](PERSON)
+    - [Trần Nhan Minh Quân](PERSON)
+    - [Trần Thư Đỗ Quyên](PERSON)
+    - [Phạm Xuân Anh Tuấn](PERSON)
+    - [Nguyễn Minh Tuấn](PERSON)
+    - [Nguyễn Dương Minh Thảo](PERSON)
+    - [Kiều Võ Quang Thiện](PERSON)
+    - [Nguyễn Quang Bảo Thịnh](PERSON)
+    - [Phạm Nguyễn Ngọc Thu](PERSON)
+    - [Nguyễn Minh Trí](PERSON)
+    - [Đặng Thanh Xuân](PERSON)
+    - [Hàng Nhật Anh](PERSON)
+    - [Lê Phước Cường](PERSON)
+    - [Nguyễn Ngọc Mai Châu](PERSON)
+    - [Trịnh Nguyễn Đức Duy](PERSON)
+    - [Nguyễn Khánh Đan](PERSON)
+    - [Phạm Nguyễn Anh Đạt](PERSON)
+    - [Tôn Thất Hùng](PERSON)
+    - [Nguyễn Ngọc Huy](PERSON)
+    - [Hồ Phan Minh Kiệt](PERSON)
+    - [Trần Đỗ Đăng Khoa](PERSON)
+    - [Lê Ngọc Khoa](PERSON)
+    - [Tăng Nhật Linh](PERSON)
+    - [Võ Minh Long](PERSON)
+    - [Đỗ Tấn Lộc](PERSON)
+    - [Nguyễn Dũng Minh](PERSON)
+    - [Lê Hải My](PERSON)
+    - [Hoàng Nữ Nhu My](PERSON)
+    - [Trịnh Phương Nam](PERSON)
+    - [Tôn Nữ Thùy Ngân](PERSON)
+    - [Nguyễn Thanh Đông Nghi](PERSON)
+    - [Trần Gia Nghi](PERSON)
+    - [Nguyễn Ngọc Thảo Nguyên](PERSON)
+    - [Nguyễn Ngọc Như](PERSON)
+    - [Mai Tâm Như](PERSON)
+    - [Huỳnh Gia Phúc](PERSON)
+    - [Huỳnh Mỹ Phương](PERSON)
+    - [Nguyễn Hoàng Dung Quất](PERSON)
+    - [Nguyễn Mỹ Khánh Tiên](PERSON)
+    - [Nguyễn Hữu Tiến](PERSON)
+    - [Hà Trung Thành](PERSON)
+    - [Nguyễn Cao Thắng](PERSON)
+    - [Lê Thị Yến Thơ](PERSON)
+    - [Nguyễn Hoàng Thuận](PERSON)
+    - [Ngô Huỳnh Anh Thy](PERSON)
+    - [Đặng Lê Bảo Trâm](PERSON)
+    - [Nguyễn Quốc Trung](PERSON)
+    - [Nguyễn Thị Nhật Uyên](PERSON)
+    - [Nguyễn Hồ Phương Uyên](PERSON)
+    - [Nguyễn Quốc Việt](PERSON)
+    - [Lê Quang Vinh](PERSON)
+    - [Phạm Quang Vũ](PERSON)
+    - [Lê Đức Anh](PERSON)
+    - [Nguyễn Đức Anh](PERSON)
+    - [Phan Nguyễn Hoàng Bảo](PERSON)
+    - [Nguyễn Quang Cường](PERSON)
+    - [Hoàng Thảo Chi](PERSON)
+    - [Nguyễn Quang Đạo](PERSON)
+    - [Cao Thành Đạt](PERSON)
+    - [Lê Nhật Hào](PERSON)
+    - [Nguyễn Lê Như Hảo](PERSON)
+    - [Trần Long Hưng](PERSON)
+    - [Trần Quang Hưng](PERSON)
+    - [Huỳnh Nam Khánh](PERSON)
+    - [Phạm Anh Khoa](PERSON)
+    - [Vũ Ngọc Thùy Linh](PERSON)
+    - [Võ Tuệ Mẫn](PERSON)
+    - [Võ Tuệ Minh](PERSON)
+    - [Đoàn Phan Kim Ngân](PERSON)
+    - [Khương Hoàng Ngọc](PERSON)
+    - [Huỳnh Đình Nguyên](PERSON)
+    - [Hồ Đoan Hạnh Nhi](PERSON)
+    - [Huỳnh Quốc Phong](PERSON)
+    - [Mạch Huy Phước](PERSON)
+    - [Nguyễn Nhật Quang](PERSON)
+    - [Nguyễn Minh Quân](PERSON)
+    - [Văn Diễm Quỳnh](PERSON)
+    - [Nguyễn Nhật Tân](PERSON)
+    - [Nguyễn Ngọc Mỹ Tiên](PERSON)
+    - [Nguyễn Anh Tuấn](PERSON)
+    - [Trần Thuận Thành](PERSON)
+    - [Nguyễn Thanh Ngọc Thảo](PERSON)
+    - [Nguyễn Ngọc Trang Thảo](PERSON)
+    - [Nguyễn Trần Thắng](PERSON)
+    - [Dương Ngọc Trang Thư](PERSON)
+    - [Nguyễn Ngọc Trang](PERSON)
+    - [Trần Thảo Trinh](PERSON)
+    - [Phạm Thành Trung](PERSON)
+    - [Nguyễn Hoàng Phương Uyên](PERSON)
+    - [Phạm Thái An](PERSON)
+    - [Đỗ Lưu Hải Anh](PERSON)
+    - [Trần Phạm Gia Bảo](PERSON)
+    - [Nguyễn Dương Thiên Bảo](PERSON)
+    - [Trịnh Thái Bình](PERSON)
+    - [Hồ Phương Chi](PERSON)
+    - [Lê Trần Bảo Đức](PERSON)
+    - [Nguyễn Cao Hoàng Giang](PERSON)
+    - [Lê Hương Giang](PERSON)
+    - [Nguyễn Ngọc Bảo Hân](PERSON)
+    - [Lâm Ngọc Hân](PERSON)
+    - [Nguyễn Gia Huy](PERSON)
+    - [Nguyễn Đoàn Thanh Huy](PERSON)
+    - [Hoàng Ngọc Hương](PERSON)
+    - [Nguyễn Hoàng Kiên](PERSON)
+    - [Ngô Anh Khoa](PERSON)
+    - [Lương Tấn Khoa](PERSON)
+    - [Đào Nguyên Khôi](PERSON)
+    - [Hoàng Lê Ngọc Lâm](PERSON)
+    - [Nguyễn Duy Long](PERSON)
+    - [Nguyễn Thanh Mai](PERSON)
+    - [Đặng Minh Mẫn](PERSON)
+    - [Đào Quang Mến](PERSON)
+    - [Nguyễn Vũ Khoa Nam](PERSON)
+    - [Lê Ngọc Tuyết Ngân](PERSON)
+    - [Nguyễn Trí Nhân](PERSON)
+    - [Hoàng Ngọc Tuyết Nhi](PERSON)
+    - [Trần Mai Tuyết Nhung](PERSON)
+    - [Nguyễn Hà Phương](PERSON)
+    - [Trần Ngọc Anh Quân](PERSON)
+    - [Phạm Hoàng Quốc](PERSON)
+    - [Phù Thành Quy](PERSON)
+    - [Mai Hoàng Đức Quý](PERSON)
+    - [Phạm Ngọc Mai Quỳnh](PERSON)
+    - [Nguyễn Thanh Sơn](PERSON)
+    - [Lê Huỳnh Khả Tú](PERSON)
+    - [Trần Thái Tuấn](PERSON)
+    - [Nguyễn Thanh Tùng](PERSON)
+    - [Lê Huỳnh Thanh](PERSON)
+    - [Đinh Xuân Thảo](PERSON)
+    - [Bạch Sơn Trà](PERSON)
+    - [Nguyễn Ngọc Bảo Trâm](PERSON)
+    - [Phạm Thị Thiên Trúc](PERSON)
+    - [Phan Thị Thúy Vi](PERSON)
+    - [Dương Ngọc Khánh Vy](PERSON)
+    - [Võ Ngọc Tường Vy](PERSON)
+    - [Cam Phương Anh](PERSON)
+    - [Nguyễn Lê Phương Anh](PERSON)
+    - [Nguyễn Gia Bảo](PERSON)
+    - [Trần Ngọc Bích](PERSON)
+    - [Nguyễn Bảo Châu](PERSON)
+    - [Trương Huỳnh Danh](PERSON)
+    - [Ninh Nguyễn Tuấn Dũng](PERSON)
+    - [Tăn Nhật Duy](PERSON)
+    - [Chu Thị Ngọc Hân](PERSON)
+    - [Bùi Đình Hùng Hậu](PERSON)
+    - [Đặng Thanh Hậu](PERSON)
+    - [Nguyễn Anh Hòa](PERSON)
+    - [Nguyễn Song Thanh Hoàng](PERSON)
+    - [Nguyễn Mạnh Hùng](PERSON)
+    - [Huỳnh Anh Khoa](PERSON)
+    - [Nguyễn Tiến Khoa](PERSON)
+    - [Huỳnh Ngọc Khánh Linh](PERSON)
+    - [Nguyễn Khổng Ngọc Long](PERSON)
+    - [Trần Đình Luân](PERSON)
+    - [Lê Minh](PERSON)
+    - [Phan Trung Nam](PERSON)
+    - [Nguyễn Trần Thanh Nữ](PERSON)
+    - [Nguyễn Thụy Kim Ngân](PERSON)
+    - [Dương Lê Thanh Ngọc](PERSON)
+    - [Đoàn Thanh Nhàn](PERSON)
+    - [Trần Phương Nhi](PERSON)
+    - [Đỗ Hoàng Tuyết Nhi](PERSON)
+    - [Nguyễn Trương Minh Phúc](PERSON)
+    - [Nguyễn Thanh Phúc](PERSON)
+    - [Lê Lâm Bảo Phương](PERSON)
+    - [Phan Minh Phương](PERSON)
+    - [Huỳnh Kim Quyên](PERSON)
+    - [Phan Nguyễn Thanh Quyên](PERSON)
+    - [Võ Thị Mỹ Tâm](PERSON)
+    - [Hồ Thị Thủy Tiên](PERSON)
+    - [Nguyễn Quốc Toàn](PERSON)
+    - [Nguyễn Đăng Tuyên](PERSON)
+    - [Lê Trung Thành](PERSON)
+    - [Nguyễn Quốc Thắng](PERSON)
+    - [Huỳnh Thị Kim Trâm](PERSON)
+    - [Trần Phạm Ngọc Trâm](PERSON)
+    - [Hồ Hữu Trí](PERSON)
+    - [Phan Thành Trung](PERSON)
+    - [Đỗ Quang Vinh](PERSON)
+    - [Nguyễn Thành Vinh](PERSON)
+    - [Lý Phạm Bảo Châu](PERSON)
+    - [Mai Tiến Dũng](PERSON)
+    - [Trương Hoàn Minh Đạt](PERSON)
+    - [Nguyễn Quốc Đạt](PERSON)
+    - [Ngô Thành Đạt](PERSON)
+    - [Đinh Xuân Đức](PERSON)
+    - [Đỗ Phan Quỳnh Hương Giang](PERSON)
+    - [Đỗ Minh Hiếu](PERSON)
+    - [Nguyễn Đức Huy](PERSON)
+    - [Châu Lê Hoàng Huy](PERSON)
+    - [Lê Vũ Minh Khanh](PERSON)
+    - [Võ Duy Khiêm](PERSON)
+    - [Phạm Minh Khoa](PERSON)
+    - [Giang Gia Lạc](PERSON)
+    - [Nguyễn Ngọc Khánh Linh](PERSON)
+    - [Nguyễn Ngọc Xuân Mai](PERSON)
+    - [Huỳnh Ngô Thanh Mỹ](PERSON)
+    - [Trần Đức Nhật Nam](PERSON)
+    - [Nguyễn Hải Kiều Nga](PERSON)
+    - [Đặng Nguyễn Bích Ngọc](PERSON)
+    - [Lê Chí Nguyên](PERSON)
+    - [Châu Lưu Ngọc Phát](PERSON)
+    - [Phan Hoàng Phú](PERSON)
+    - [Đái Sỹ Phú](PERSON)
+    - [Nguyễn Duy Phước](PERSON)
+    - [Nguyễn Huy Quang](PERSON)
+    - [Nguyễn Ngọc Mộng Quỳnh](PERSON)
+    - [Ngô Thảo Sương](PERSON)
+    - [Trần Nhật Tân](PERSON)
+    - [Trương Quốc Thái](PERSON)
+    - [Nguyễn Thanh Thảo](PERSON)
+    - [Phạm Đình Thịnh](PERSON)
+    - [Lê Nguyễn Thi Thơ](PERSON)
+    - [Nguyễn Thị Thanh Thuận](PERSON)
+    - [Võ Đình Anh Thy](PERSON)
+    - [Đặng Thiên Trang](PERSON)
+    - [Trần Hoàng Trí](PERSON)
+    - [Võ Ngọc Phương Trinh](PERSON)
+    - [Nguyễn Mỹ Uyên](PERSON)
+    - [Bùi Ngọc Thanh Vi](PERSON)
+    - [Hoàng Thị Thanh Vi](PERSON)
+    - [Đoàn Vũ Kim Xuân](PERSON)
+    - [Nguyễn Hoàng Yến](PERSON)
+    - [Lê Mai Mỹ Anh](PERSON)
+    - [Nguyễn Ngọc Trâm Anh](PERSON)
+    - [Lưu Triệu Tấn Bảo](PERSON)
+    - [Phan Ái Diễm](PERSON)
+    - [Nguyễn Đức Đại](PERSON)
+    - [Phạm Đặng Minh Đăng](PERSON)
+    - [Phạm Đăng Trí Hải](PERSON)
+    - [Ngô Khả Hân](PERSON)
+    - [Bùi Nhật Minh Huy](PERSON)
+    - [Phạm Thị Thu Hường](PERSON)
+    - [Lâm Bảo Khang](PERSON)
+    - [Đào Nguyễn Duy Khang](PERSON)
+    - [Tống Ngọc Bảo Khanh](PERSON)
+    - [Nguyễn Hữu Anh Khoa](PERSON)
+    - [Nguyễn Trần Thanh Liên](PERSON)
+    - [Nguyễn Hữu Phúc Long](PERSON)
+    - [Ka Lê Kim Ngân](PERSON)
+    - [Đỗ Đình Nhân](PERSON)
+    - [Diệp Tuyết Nhi](PERSON)
+    - [Hà Vũ Yến Nhi](PERSON)
+    - [Nguyễn Ngọc Yến Nhi](PERSON)
+    - [Tạ Thanh Phú](PERSON)
+    - [Mai Thị Hồng Phúc](PERSON)
+    - [Huỳnh Phi Nhật Quang](PERSON)
+    - [Trần Bảo Thành Tiến](PERSON)
+    - [Nguyễn Trương Công Toại](PERSON)
+    - [Phan Đình Khánh Toàn](PERSON)
+    - [Đỗ Khả Tú](PERSON)
+    - [Trần Ngọc Khả Tú](PERSON)
+    - [Trần Đức Tuấn](PERSON)
+    - [Võ Ngọc Lan Tuyền](PERSON)
+    - [Nguyễn Tuấn Thành](PERSON)
+    - [Đồng Hương Thạch Thảo](PERSON)
+    - [Trần Ngọc Thanh Thảo](PERSON)
+    - [Phan Ngọc Thắng](PERSON)
+    - [Nguyễn An Thuận](PERSON)
+    - [Vũ Minh Thư](PERSON)
+    - [Phạm Đặng Bảo Trân](PERSON)
+    - [Lê Thị Huyền Trân](PERSON)
+    - [Trịnh Ngọc Đăng Trường](PERSON)
+    - [Nguyễn Hiếu Vinh](PERSON)
+    - [Lê Phạm Quốc Vương](PERSON)
+    - [Trịnh Xuân Yến](PERSON)
+    - [Nguyễn Lan Anh](PERSON)
+    - [Trần Nam Anh](PERSON)
+    - [Trần Ngọc Tuấn Anh](PERSON)
+    - [Phạm Hồng Ân](PERSON)
+    - [Hà Trần Bảo](PERSON)
+    - [Lê Phạm Anh Dũng](PERSON)
+    - [Phan Ngân Hà](PERSON)
+    - [Đỗ Hoàng Mỹ Hạnh](PERSON)
+    - [Châu Lê Khánh Hằng](PERSON)
+    - [Lưu Thiện Huệ](PERSON)
+    - [Trần Tất Quang Huy](PERSON)
+    - [Quách Thanh Huy](PERSON)
+    - [Huỳnh Hoàng Khải](PERSON)
+    - [Nguyễn Cao Bảo Khánh](PERSON)
+    - [Nguyễn Nhựt Khánh](PERSON)
+    - [Trần Quốc Khánh](PERSON)
+    - [Trương Anh Khoa](PERSON)
+    - [Võ Hy Linh](PERSON)
+    - [Nguyễn Tom My](PERSON)
+    - [Đinh Thị Xuân Mỹ](PERSON)
+    - [Huỳnh Thị Ngọc Ngân](PERSON)
+    - [Nguyễn Ngọc Quỳnh Như](PERSON)
+    - [Nguyễn Lê Thanh Như](PERSON)
+    - [Giang Lâm Phát](PERSON)
+    - [Huỳnh Thanh Phát](PERSON)
+    - [Phạm Hải Phú](PERSON)
+    - [Nguyễn Kim Khánh Quân](PERSON)
+    - [Huỳnh Minh Tiến](PERSON)
+    - [Ngô Thị Phương Thảo](PERSON)
+    - [Bùi Thiện Thuật](PERSON)
+    - [Trần Lê Thanh Thư](PERSON)
+    - [Nguyễn Bảo Trân](PERSON)
+    - [Huỳnh Hữu Trí](PERSON)
+    - [Nguyễn Quốc Phát Triển](PERSON)
+    - [Nguyễn Ngọc Bảo Trúc](PERSON)
+    - [Trần Thảo Uyên](PERSON)
+    - [Trần Thanh Vân](PERSON)
+    - [Lại Đại Vĩnh](PERSON)
+    - [Nguyễn Phương Vy](PERSON)
+    - [Hoàng Nguyễn Tường Vy](PERSON)
+    - [Đỗ Phạm Thúy Vy](PERSON)
+    - [Bế Đại Vỹ](PERSON)
+    - [Nguyễn Thị Ngọc Yến](PERSON)
+    - [Vương Ngọc Yến](PERSON)
+    - [Phạm Lâm Trường An](PERSON)
+    - [Nguyễn Thị Quỳnh Anh](PERSON)
+    - [Hồ Hoàng Gia Bảo](PERSON)
+    - [Đào Ngọc Quang Dũng](PERSON)
+    - [Hồ Khánh Duy](PERSON)
+    - [Lê Minh Đức](PERSON)
+    - [Hoàng Giang](PERSON)
+    - [Bùi Thị Quỳnh Giao](PERSON)
+    - [Lý Ngọc Kim Hân](PERSON)
+    - [Huỳnh Công Hoàng](PERSON)
+    - [Bùi Sỹ Hoàng](PERSON)
+    - [Nguyễn Ngọc Quỳnh Hương](PERSON)
+    - [Triệu Huệ Hy](PERSON)
+    - [Nguyễn Tấn Bảo Khang](PERSON)
+    - [Nguyễn Đăng Khoa](PERSON)
+    - [Trần Tấn Lộc](PERSON)
+    - [Nguyễn Thảo My](PERSON)
+    - [Trần Sĩ Nam](PERSON)
+    - [Trần Kim Ngân](PERSON)
+    - [Nguyễn Ngọc Bích Nguyên](PERSON)
+    - [Huỳnh Ngọc Thảo Nguyên](PERSON)
+    - [Trần Mỹ Nhàn](PERSON)
+    - [Phạm Ngọc Uyên Nhi](PERSON)
+    - [Vũ Trường Phát](PERSON)
+    - [Nguyễn Hoàng Anh Quân](PERSON)
+    - [Ngô Diễm Quỳnh](PERSON)
+    - [Trần Thế Sơn](PERSON)
+    - [Võ Tường Tấn Tài](PERSON)
+    - [Nguyễn Ngọc Tú](PERSON)
+    - [Nguyễn Duy Tuấn](PERSON)
+    - [Tiêu Minh Tuấn](PERSON)
+    - [Lê Phước Thanh](PERSON)
+    - [Nguyễn Ngọc Ngân Thùy](PERSON)
+    - [Phan Anh Thư](PERSON)
+    - [Nguyễn Ngọc Thiên Trang](PERSON)
+    - [Nguyễn Thị Thanh Trúc](PERSON)
+    - [Âu Dương Đức Trung](PERSON)
+    - [Nguyễn Ngọc Bảo Uyên](PERSON)
+    - [Hoàng Vũ Trúc Vi](PERSON)
+    - [Trần Linh Võ](PERSON)
+    - [Tạ Trần Mai Vy](PERSON)
+    - [Lê Nguyễn Huy](PERSON)
+    - [Vũ Thị Dương Hoài Phương](PERSON)
+    - [Ngô Đoàn Bảo Phúc](PERSON)
+    - [Nguyễn Trọng Nhật](PERSON)
+    - [Nhật](PERSON)
+    - [Đàm Hoàng Phương](PERSON)
+    - [Phương](PERSON)
+    - [Đỗ Quang Minh](PERSON)
+    - [Minh](PERSON)
+    - [Nguyễn Hồng Sơn](PERSON)
+    - [Sơn](PERSON)
+    - [Hoàng Lê Giang](PERSON)
+    - [Giang](PERSON)
+    - [Nguyễn Trường Thành](PERSON)
+    - [Thành](PERSON)
+    - [Vũ Trung Hiếu](PERSON)
+    - [Hiếu](PERSON)
+    - [Đỗ Thị Hoàng Diễm](PERSON)
+    - [Diễm](PERSON)
+    - [Ngô Gia Tiến](PERSON)
+    - [Tiến](PERSON)
+    - [Trương Văn Dũng](PERSON)
+    - [Dũng](PERSON)
+    - [Phạm Tuấn Ngọc](PERSON)
+    - [Ngọc](PERSON)
+    - [Bùi Trọng Dương](PERSON)
+    - [Dương](PERSON)
+    - [Huỳnh Ngọc Minh](PERSON)
+    - [Bùi Thị Duyên](PERSON)
+    - [Duyên](PERSON)
+    - [Bùi Thị Hồng Hà](PERSON)
+    - [Hà](PERSON)
+    - [Bùi Thị Kiều](PERSON)
+    - [Kiều](PERSON)
+    - [Bùi Thị Kim Liên](PERSON)
+    - [Liên](PERSON)
+    - [Bùi Thị Thùy Dung](PERSON)
+    - [Dung](PERSON)
+    - [Bùi Thùy Linh](PERSON)
+    - [Linh](PERSON)
+    - [Bùi Văn Tuấn](PERSON)
+    - [Tuấn](PERSON)
+    - [Cao Thị Phương Hoa](PERSON)
+    - [Hoa](PERSON)
+    - [Cù Thị Nhật Lệ](PERSON)
+    - [Lệ](PERSON)
+    - [Đặng Hồng Nhung](PERSON)
+    - [Nhung](PERSON)
+    - [Đặng Nguyên Phương](PERSON)
+    - [Đặng Thanh Mỹ Linh](PERSON)
+    - [Đặng Thị Bích Ngọc](PERSON)
+    - [Đặng Thị Diệu Hằng](PERSON)
+    - [Hằng](PERSON)
+    - [Đặng Thục Linh](PERSON)
+    - [Đào Thị Thanh Hằng](PERSON)
+    - [Đào Văn Mạnh](PERSON)
+    - Tên tôi là [Mai Bảo Chi](PERSON)
+    - Tên tôi là [Đặng Anh Duy](PERSON)
+    - Tên tôi là [Phạm Thị Mỹ Duyên](PERSON)
+    - Tên tôi là [Trần Nguyễn Mai Ngọc Đức](PERSON)
+    - Tên tôi là [Nguyễn Hiếu Hiền](PERSON)
+    - Tên tôi là [Danh Hiếu](PERSON)
+    - Tên tôi là [Vương Gia Huy](PERSON)
+    - Tên tôi là [Nguyễn Công Hưng](PERSON)
+    - Tên tôi là [Nguyễn Tấn Lợi](PERSON)
+    - Tên tôi là [Dương Thị Trà My](PERSON)
+    - Tên tôi là [Phạm Trọng Ninh](PERSON)
+    - Tên tôi là [Nguyễn Thị Hiền Nga](PERSON)
+    - Tên tôi là [Nguyễn Võ Kim Ngân](PERSON)
+    - Tên tôi là [Lê Ngọc Quỳnh Ngân](PERSON)
+    - Tên tôi là [Phan Thị Thảo Ngọc](PERSON)
+    - tên tôi là [Lưu Minh Nhật](PERSON)
+    - tên tôi là [Lê Nguyễn Quỳnh Như](PERSON)
+    - tên tôi là [Nguyễn Phan Hoàng Phúc](PERSON)
+    - tên tôi là [Nguyễn Như Phương](PERSON)
+    - tên tôi là [Nguyễn Sơn Quang](PERSON)
+    - tên tôi là [Đỗ Huệ Quyên](PERSON)
+    - tên tôi là [Lã Ngọc Diễm Quỳnh](PERSON)
+    - tên tôi là [Lê Văn Tài](PERSON)
+    - tên tôi là [Mai Thị Thanh Tuyền](PERSON)
+    - tên tôi là [Nguyễn Vĩ Tường](PERSON)
+    - tên tôi là [Đỗ Trường Thịnh](PERSON)
+    - Họ tên tôi là [Nguyễn Thị Anh Thư](PERSON)
+    - Họ tên tôi là [Trần Nguyễn Anh Thy](PERSON)
+    - Họ tên tôi là [Trần Thụy Bích Trâm](PERSON)
+    - Họ tên tôi là [Bùi Minh Trâm](PERSON)
+    - Họ tên tôi là [Đặng Ngọc Bảo Trân](PERSON)
+    - Họ tên tôi là [Trần Ngọc Lan Trinh](PERSON)
+    - Họ tên tôi là [Đỗ Trần Thủy Trúc](PERSON)
+    - Họ tên tôi là [Lê Hoàng Anh Vũ](PERSON)
+    - Họ tên tôi là [Vũ Yến Vy](PERSON)
+    - Họ tên tôi là [Võ Thị Thanh Xuân](PERSON)
+    - Họ tên tôi là [Tô Phạm Xuân An](PERSON)
+    - Họ tên tôi là [Trần Nguyễn Hùng Anh](PERSON)
+    - Họ tên tôi là [Đinh Thụy Lan Anh](PERSON)
+    - Họ tên tôi là [Nguyễn Mạnh Cường](PERSON)
+    - Họ tên tôi là [Nguyễn Thị Minh Châu](PERSON)
+    - Họ tên tôi là [Bùi Nguyễn Nhã Duyên](PERSON)
+    - Họ tên tôi là [Trần Phúc Đạt](PERSON)
+    - Họ tên tôi là [Nguyễn Bá Đức Hải](PERSON)
+    - Họ tên tôi là [Trần Mai Hân](PERSON)
+    - Họ tên tôi là [Nguyễn Minh Hưng](PERSON)
+    - Họ tên tôi là [Nguyễn Nhật Lâm](PERSON)
+    - Họ tên tôi là [Trần Thị Ký Linh](PERSON)
+    - Họ tên tôi là [Võ Ngọc Khánh Ngân](PERSON)
+    - Họ tên tôi là [Nguyễn Ngọc Đông Nghi](PERSON)
+    - Tên của tôi là [Nguyễn Trọng Nghĩa](PERSON)
+    - Tên của tôi là [Nguyễn Thị Thảo Nguyên](PERSON)
+    - Tên của tôi là [Trần Hoàng Minh Nguyệt](PERSON)
+    - Tên của tôi là [Nguyễn Thị Mai Nhi](PERSON)
+    - Tên của tôi là [Bùi Hoàng Ngọc Nhi](PERSON)
+    - Tên của tôi là [Đào Ngọc Quỳnh Như](PERSON)
+    - Tên của tôi là [Trương Thành Phát](PERSON)
+    - Tên của tôi là [Tạ Hòa Phong](PERSON)
+    - Tên của tôi là [Hứa Long Phú](PERSON)
+    - Tên của tôi là [Trần Hoàng Phúc](PERSON)
+    - Tên của tôi là [Hà Uyên Phương](PERSON)
+    - Tên của tôi là [Lê Giang Sơn](PERSON)
+    - Họ tên của tôi là [Nguyễn Văn Tâm](PERSON)
+    - Họ tên của tôi là [Phạm Hoàng Tuấn](PERSON)
+    - Họ tên của tôi là [Nguyễn Thanh Tuyền](PERSON)
+    - Họ tên của tôi là [Lê Thị Hoàng Thi](PERSON)
+    - Họ tên của tôi là [Đặng Võ Minh Thư](PERSON)
+    - Họ tên của tôi là [Võ Hoàng Minh Thư](PERSON)
+    - Họ tên của tôi là [Lê Minh Trí](PERSON)
+    - Họ tên của tôi là [Nguyễn Thanh Trúc](PERSON)
+    - Họ tên của tôi là [Phan Nguyễn Tường Vy](PERSON)
+    - Họ tên của tôi là [Trần Nguyễn Phương Uyên](PERSON)
+    - Họ tên của tôi là [Phan Trần Lan Anh](PERSON)
+    - Họ tên của tôi là [Lê Ngọc Tuyết Anh](PERSON)
+    - Họ tên của tôi là [Nguyễn Đan](PERSON)
+    - Họ tên của tôi là [Nguyễn Thị Ngọc Hân](PERSON)
+    - Họ tên của tôi là [Nishida Mai Hoa](PERSON)
+    - [Mạnh](PERSON)
+    - Tôi tên là [Nguyễn Hoàng Nam](PERSON)
+    - Tôi tên [Nguyễn Văn Nam](PERSON)
+    - [Nguyễn Minh Quang](PERSON)
+    - Tôi [29](age) tuổi
+    - Tôi năm nay [60](age)
+    - năm nay tôi [63](age) tuổi
+    - năm nay tôi [30](age) tuổi
+    - năm nay tôi [52](age) tuổi
+    - năm nay tôi [72](age) tuổi
+    - năm nay tôi [25](age) tuổi
+    - năm nay [60](age) tuổi
+    - nay tôi [60](age) tuổi
+    - Tôi năm nay [60](age) tuổi
+    - Tôi năm nay [60](age) tuổi rồi
+    - nay [60](age) tuổi rồi
+    - à năm nay [60](age) tuổi
+    - ừ tôi năm nay [60](age) tuổi
+    - ah nay tôi [60](age) tuổi
+    - ah tôi năm nay [60](age) tuổi
+    - [60](age) tuổi
+    - [60](age) nhé
+    - [55](age) rồi
+    - [18](age) ạ
+    - địa chỉ email của tôi [ahmedelsaye5@yahoo.com](email)
+    - địa chỉ mail của tôi [ahmedelsaye5@yahoo.com](email)
+    - địa chỉ mail là [ahmedelsaye5@yahoo.com](email)
+    - mail của tôi là [seanomally1998@gmail.com](email)
+    - mail là [seanomally1998@gmail.com](email)
+    - mail đây [seanomally1998@gmail.com](email)
+    - [allennonnyj_1308@hotmail.com](email)
+    - mail nè [seanomally1998@gmail.com](email)
+    - [ahmedelsaye5@yahoo.com](email)
+    - [halvardkounovskyk@gmail.com](email)
+    - [marge1999micronesian@gmail.com](email)
+    - [fendleyfendleyfendley@gmail.com](email)
+    - [irreversible19711971@gmail.com](email)
+    - [geter104tyrannous@gmail.com](email)
+    - [mangyserholzboogibex@gmail.com](email)
+    - [culturedunrealized@gmail.com](email)
+    - [adriaensadriaens19@gmail.com](email)
+    - [lipsett1976brazilian@gmail.com](email)
+    - [fitsgeraldsnowshoe1992@gmail.com](email)
+    - [austrian117dipaoera@gmail.com](email)
+    - [pakistanirainbowlory@gmail.com](email)
+    - [elbaz129129later1980@gmail.com](email)
+    - [zealous1996brockert@gmail.com](email)
+    - [baldeagle84sickened@gmail.com](email)
+    - [clampbengalvulture@gmail.com](email)
+    - [kifer268uzbekistani@gmail.com](email)
+    - [moroccan262uncomf@gmail.com](email)
+    - [weitercattledogle@gmail.com](email)
+    - [supersonic83supersonic@gmail.com](email)
+    - [deerexpressionless@gmail.com](email)
+    - [dungcam@gmai.com](email)
+    - Địa chỉ gmail của tôi là [austrian117dipaoera@gmail.com](email)
+    - Địa chỉ gmail của tôi là [pakistanirainbowlory@gmail.com](email)
+    - Địa chỉ gmail của tôi là [elbaz129129later1980@gmail.com](email)
+    - Địa chỉ gmail của tôi là [zealous1996brockert@gmail.com](email)
+    - Địa chỉ gmail của tôi là [baldeagle84sickened@gmail.com](email)
+    - Gmail của tôi là [clampbengalvulture@gmail.com](email)
+    - Địa chỉ email của tôi là [kifer268uzbekistani@gmail.com](email)
+    - Địa chỉ email của tôi là [moroccan262uncomf@gmail.com](email)
+    - Địa chỉ email của tôi là [weitercattledogle@gmail.com](email)
+    - Địa chỉ email của tôi là [supersonic83supersonic@gmail.com](email)
+    - Địa chỉ email của tôi là [deerexpressionless@gmail.com](email)
+    - Địa chỉ email của tôi là [dungcam@gmai.com](email)
+    - số điện thoại của tôi là [67642962](telephone_number)
+    - số điện là [67642962](telephone_number)
+    - số điện thoại của tôi [67642962](telephone_number)
+    - sđt của tôi là [67642962](telephone_number)
+    - sđt là [0676429620](telephone_number)
+    - sdt là [0676429620](telephone_number)
+    - phone là [067692962](telephone_number)
+    - my phone là [067642562](telephone_number)
+    - phone [067642462](telephone_number)
+    - số phone [067647962](telephone_number)
+    - [+84 674870707](telephone_number)
+    - it's [+61 7 7010 4502](telephone_number)
+    - Số cmnd [123232934](id_card)
+    - chứng minh thư là [123232934](id_card)
+    - Số cmnd là [123232934](id_card)
+    - Số cmnd của tôi là [123232934](id_card)
+    - Số cmnd của tôi là [123232934](id_card)
+    - Số cmnd của mình là [123232934](id_card)
+    - cmnt của tao là [123232934](id_card)
+    - Số cmnt của tớ là [123232934](id_card)
+    - là [123232934](id_card)
+    - Số cmnd [123232934](id_card)
+    - cmnt [123232934](id_card)
+    - tôi sống ở [Hà Đông,  Hà Nội](location)
+    - tôi đang ở [Hưng Yên](location)
+    - tôi ở [Hải Dương](location)
+    - [Bà Rịa Vũng Tàu](location)
+    - [Bạc Liêu](location)
+    - [Bắc Giang](location)
+    - [Bắc Kạn](location)
+    - [Bắc Ninh](location)
+    - [Bến Tre](location)
+    - [Bình Dương](location)
+    - [Bình Định](location)
+    - [Bình Phước](location)
+    - [Bình Thuận](location)
+    - [Cà Mau](location)
+    - [Cao Bằng](location)
+    - [Cần Thơ](location)
+    - [Đà Nẵng](location)
+    - [Đắk Lắk](location)
+    - [Đắk Nông](location)
+    - [Điện Biên](location)
+    - [Đồng Nai](location)
+    - [Đồng Tháp](location)
+    - [Gia Lai](location)
+    - [Hà Giang](location)
+    - [Hà Nam](location)
+    - [Hà Nội](location)
+    - [Hà Tĩnh](location)
+    - [Hải Dương](location)
+    - [Hải Phòng](location)
+    - [Hậu Giang](location)
+    - [Hòa Bình](location)
+    - [Thành phố Hồ Chí Minh](location)
+    - [Hưng Yên](location)
+    - [Khánh Hòa](location)
+    - [Kiên Giang](location)
+    - [Kon Tum](location)
+    - [Lai Châu](location)
+    - [Lạng Sơn](location)
+    - [Lào Cai](location)
+    - [Lâm Đồng](location)
+    - [Long An](location)
+    - [Nam Định](location)
+    - [Nghệ An](location)
+    - [Ninh Bình](location)
+    - [Ninh Thuận](location)
+    - [Phú Thọ](location)
+    - [Phú Yên](location)
+    - [Quảng Bình](location)
+    - [Quảng Nam](location)
+    - [Quảng Ngãi](location)
+    - [Quảng Ninh](location)
+    - [Quảng Trị](location)
+    - [Sóc Trăng](location)
+    - [Sơn La](location)
+    - [Tây Ninh](location)
+    - [Thái Bình](location)
+    - [Thái Nguyên](location)
+    - [Thanh Hóa](location)
+    - [Thừa Thiên Huế](location)
+    - [Tiền Giang](location)
+    - [Trà Vinh](location)
+    - [Tuyên Quang](location)
+    - [Vĩnh Long](location)
+    - [Vĩnh Phúc](location)
+    - [Yên Bái](location)
+    - [An Giang](location)
+    - Tôi hiện tại đang ở [Quảng Ngãi](location)
+    - Tôi hiện tại đang ở [Quảng Ninh](location)
+    - Tôi hiện tại đang ở [Quảng Trị](location)
+    - Tôi hiện tại đang ở [Sóc Trăng](location)
+    - Tôi hiện tại đang ở [Sơn La](location)
+    - Tôi hiện tại đang ở [Tây Ninh](location)
+    - Tôi hiện tại đang ở [Thái Bình](location)
+    - Tôi sống ở [Thái Nguyên](location)
+    - Tôi sống ở [Thanh Hóa](location)
+    - Tôi sống ở [Thừa Thiên Huế](location)
+    - Tôi sống ở [Tiền Giang](location)
+    - Tôi sống ở [Trà Vinh](location)
+    - Tôi sống ở [Tuyên Quang](location)
+    - Tôi sống ở [Vĩnh Long](location)
+    - Tôi ở [Vĩnh Phúc](location)
+    - Tôi ở [Yên Bái](location)
+    - Tôi ở [An Giang](location)
+    - công việc của tôi là [Trợ lý Hành chính](job_title)
+    - cv là [Trợ lý điều hành](job_title)
+    - cv của tui là [Giám đốc Tiếp thị](job_title)
+    - là [Kỹ sư phần mềm](job_title)
+    - cv của anh là [Quản lý kinh doanh](job_title)
+    - hiện tại tôi đang làm [Chuyên gia marketing](job_title)
+    - tôi đang làm [Giám đốc Tiếp thị](job_title)
+    - anh đang là [Giám đốc tiếp thị](job_title)
+    - chị đang làm [Người thiết kế đồ họa](job_title)
+    - mình đang làm [Nhà phân tích nghiên cứu tiếp thị](job_title)
+    - cv của mình là [Giám đốc Truyền thông Tiếp thị](job_title)
+    - tôi là [Cố vấn bán hàng](job_title)
+    - công việc của chị là [Giám đốc sản xuất](job_title)
+    - công việc của anh là [Quan hệ công chúng](job_title)
+    - công việc của mình là [Trợ lý truyền thông xã hội](job_title)
+    - mình hiện làm [Giám đốc thương hiệu](job_title)
+    - làm [Quản lý SEO](job_title)
+    - [Giám đốc Tiếp thị Nội dung](job_title)
+    - [Copywriter](job_title)
+    - [Người mua phương tiện](job_title)
+    - [Giám đốc tiếp thị kỹ thuật số](job_title)
+    - [Chuyên gia tiếp thị thương mại điện tử](job_title)
+    - [Nhà chiến lược thương hiệu](job_title)
+    - [Phó chủ tịch marketing](job_title)
+    - [Điều phối viên Quan hệ Truyền thông](job_title)
+    - [Trợ lý hành chính](job_title)
+    - [Lễ tân](job_title)
+    - [Quản lý văn phòng](job_title)
+    - [Thư ký Kiểm toán](job_title)
+    - [Kế toán](job_title)
+    - [Điều hành tài khoản](job_title)
+    - [Giám đốc chi nhánh](job_title)
+    - [Quản lý kinh doanh](job_title)
+    - [Điều phối viên kiểm soát chất lượng](job_title)
+    - [Quản lý hành chính](job_title)
+    - [Giám đốc điều hành](job_title)
+    - [Phân tích kinh doanh](job_title)
+    - [Quản lý rủi ro](job_title)
+    - [nguồn nhân lực](job_title)
+    - [Trợ lý văn phòng](job_title)
+    - [Thư ký](job_title)
+    - [Văn phòng thư ký](job_title)
+    - [Thư ký hồ sơ](job_title)
+    - [Người thu thập tài khoản](job_title)
+    - [Chuyên gia hành chính](job_title)
+    - [Trợ lý điều hành](job_title)
+    - [Quản trị viên chương trình](job_title)
+    - [Quản lý chương trình](job_title)
+    - [Nhà phân tích hành chính](job_title)
+    - [Trưởng nhóm](job_title)
+    - [Giám đốc](job_title)
+    - [Trợ lý giám đốc](job_title)
+    - [Điều hành](job_title)
+    - [Điều phối viên](job_title)
+    - [Người quản lý](job_title)
+    - [Bộ điều khiển](job_title)
+    - [Nhân viên văn phòng](job_title)
+    - [Người tổ chức](job_title)
+    - [Người giám sát](job_title)
+    - [Cái đầu](job_title)
+    - [Giám thị](job_title)
+    - [Trưởng phòng](job_title)
+    - [người cai](job_title)
+    - [Hiệu trưởng](job_title)
+    - [chủ tịch](job_title)
+    - [Nhà khoa học máy tính](job_title)
+    - [Dân IT chuyên nghiệp](job_title)
+    - [UX Designer & UI Developer](job_title)
+    - [Nhà phát triển SQL](job_title)
+    - [Nhà thiết kế web](job_title)
+    - [Nhà phát triển web](job_title)
+    - [Nhân viên bộ phận trợ giúp / Hỗ trợ máy tính để bàn](job_title)
+    - [Kỹ sư phần mềm](job_title)
+    - [Nhập dư liệu](job_title)
+    - [Kỹ sư DevOps](job_title)
+    - [Lập trình máy tính](job_title)
+    - [Quản trị mạng](job_title)
+    - [Nhà phân tích bảo mật thông tin](job_title)
+    - [Kỹ sư trí tuệ nhân tạo](job_title)
+    - [Kiến trúc sư đám mây](job_title)
+    - [Quản lý IT](job_title)
+    - [Chuyên gia kỹ thuật](job_title)
+    - [Nhà phát triển ứng dụng](job_title)
+    - [Giám đốc Công nghệ](job_title)
+    - [Giám đốc Thông tin](job_title)
+    - [Cộng tác viên bán hàng](job_title)
+    - [Đại diện bán hàng](job_title)
+    - [Công nhân bán lẻ](job_title)
+    - [Quản lý cửa hàng](job_title)
+    - [Môi giới bất động sản](job_title)
+    - [Thu ngân](job_title)
+    - [Quản lý bán hàng khu vực](job_title)
+    - [Chuyên viên Phân tích Bán hàng](job_title)
+    - [Kỹ sư bán hàng](job_title)
+    - [Cộng tác viên buôn bán](job_title)
+    - [Công nhân xây dựng](job_title)
+    - [Thợ sửa ống nước](job_title)
+    - [thợ mộc](job_title)
+    - [Thợ điện](job_title)
+    - [Họa sĩ](job_title)
+    - [Thợ hàn](job_title)
+    - [Thợ sắt](job_title)
+    - [Thợ nề](job_title)
+    - [Thợ sửa mái nhà](job_title)
+    - [Trợ lý ảo](job_title)
+    - [Dịch vụ khách hàng](job_title)
+    - [Hỗ trợ khách hàng](job_title)
+    - [Nhân viên trợ giúp đặc biệt](job_title)
+    - [Bộ phận trợ giúp](job_title)
+    - [Giám đốc dịch vụ khách hàng](job_title)
+    - [Nhân viên tư vấn tín dụng](job_title)
+    - [Chuyên viên phân tích kế toán](job_title)
+    - [Giám đốc kế toán](job_title)
+    - [Kiểm toán viên](job_title)
+    - [Nhà kinh tế học](job_title)
+    - [Thư ký tính lương](job_title)
+    - [Giám đốc tài chính](job_title)
+    - [Kỹ sư](job_title)
+    - [Kỹ sư cơ khí](job_title)
+    - [Kỹ sư xây dựng](job_title)
+    - [Kỹ sư điện](job_title)
+    - [kĩ sư hỗ trợ](job_title)
+    - [Kỹ sư Hoá học](job_title)
+    - [Kỹ sư trưởng](job_title)
+    - [Người soạn thảo](job_title)
+    - [Kĩ sư khoa học](job_title)
+    - [Kỹ sư địa chất](job_title)
+    - [Kỹ sư sinh học](job_title)
+    - [Kỹ sư bảo trì](job_title)
+    - [Kỹ sư mỏ](job_title)
+    - [Kỹ sư hạt nhân](job_title)
+    - [Kỹ sư dầu khí](job_title)
+    - [Kĩ sư nhà máy](job_title)
+    - [Kỹ sư sản xuất](job_title)
+    - [Kỹ sư chất lượng](job_title)
+    - [Kĩ sư an toàn](job_title)
+    - [Nhà nghiên cứu](job_title)
+    - [Trợ lý nghiên cứu](job_title)
+    - [Nhà phân tích dữ liệu](job_title)
+    - [Chuyên gia phân tích tài chính](job_title)
+    - [Nhà nghiên cứu thị trường](job_title)
+    - [Nhà phân tích chức danh](job_title)
+    - [Nghiên cứu y khoa](job_title)
+    - [Gia sư / Gia sư trực tuyến](job_title)
+    - [Giáo viên](job_title)
+    - [Trợ giảng](job_title)
+    - [Giáo viên dạy thay](job_title)
+    - [Giáo viên mầm non](job_title)
+    - [Giáo sư](job_title)
+    - [Trợ lý giáo sư](job_title)
+    - [Người thiết kế đồ họa](job_title)
+    - [Nhà thiết kế nội thất](job_title)
+    - [Nhà sản xuất video hoặc phim](job_title)
+    - [Nhà viết kịch](job_title)
+    - [Nhạc sĩ](job_title)
+    - [Tiểu thuyết gia / Nhà văn](job_title)
+    - [Nhiếp ảnh gia](job_title)
+    - [Kỹ sư âm thanh](job_title)
+    - [Diễn viên](job_title)
+    - [Nhà sản xuất âm nhạc](job_title)
+    - [Y tá](job_title)
+    - [Y tá hành nghề](job_title)
+    - [Bác sĩ](job_title)
+    - [Người chăm sóc](job_title)
+    - [Nhà trị liệu vật lý](job_title)
+    - [Dược sĩ](job_title)
+    - [Trợ lý Dược](job_title)
+    - [Quản trị viên y tế](job_title)
+    - [Trợ lý vật lý trị liệu](job_title)
+    - [Huấn luyện viên cá nhân](job_title)
+    - [Kỹ thuật Phòng thí nghiệm Y tế](job_title)
+    - [Nhân viên ghi chép y tế](job_title)
+    - [Y tá / Bác sĩ làm việc từ xa](job_title)
+    - [Người quản gia](job_title)
+    - [Tiếp viên hàng không](job_title)
+    - [Đại lý du lịch](job_title)
+    - [Chuyên gia giải trí](job_title)
+    - [Quản lý khách sạn](job_title)
+    - [Nhân viên lễ tân](job_title)
+    - [Quản lý lễ tân](job_title)
+    - [Quản lý Spa](job_title)
+    - [Điều phối viên đám cưới](job_title)
+    - [Người phục vụ tàu du lịch](job_title)
+    - [Máy chủ sòng bạc](job_title)
+    - [Nhân viên tiếp tân khách sạn](job_title)
+    - [Người đặt chỗ](job_title)
+    - [Người quản lý sự kiện](job_title)
+    - [Kế hoạch cuộc họp](job_title)
+    - [Quản lý nhà nghỉ](job_title)
+    - [Giám đốc Bảo trì](job_title)
+    - [Bồi bàn / Phục vụ bàn](job_title)
+    - [Người phục vụ](job_title)
+    - [Bếp trưởng](job_title)
+    - [Công nhân thức ăn nhanh](job_title)
+    - [Thợ pha cà phê](job_title)
+    - [Nhân viên quán cà phê](job_title)
+    - [Quản lý nhà hàng](job_title)
+    - [Điều hành chuỗi nhà hàng](job_title)
+    - [Đại diện Trung tâm cuộc gọi](job_title)
+    - [Tiếp thị qua điện thoại](job_title)
+    - Công việc của mình là [Giám đốc Bảo trì](job_title)
+    - Công việc của mình là [Bồi bàn / Phục vụ bàn](job_title)
+    - Công việc của mình là [Người phục vụ](job_title)
+    - Công việc của mình là [Bếp trưởng](job_title)
+    - Công việc của mình là [Công nhân thức ăn nhanh](job_title)
+    - Công việc của mình là [Thợ pha cà phê](job_title)
+    - Công việc của mình là [Nhân viên quán cà phê](job_title)
+    - tôi đang làm [Quản lý nhà hàng](job_title)
+    - tôi đang làm [Điều hành chuỗi nhà hàng](job_title)
+    - tôi đang làm [Đại diện Trung tâm cuộc gọi](job_title)
+    - tôi đang làm [Dịch vụ khách hàng](job_title)
+    - tôi đang làm [Tiếp thị qua điện thoại](job_title)
+    - tôi đang làm thu nhập của mình là [10 triệu đồng](income)
+    - mức lương hiện tại của mình là [12 triệu](income)
+    - thu nhập gần đây của mình là [8 triệu đồng](income)
+    - lương tháng của mình là [7 triệu](income)
+    - [9 triệu](income)
+    - [12 triệu](income)
+    - là [7 triệu](income)
+    - lương của tôi là [13 triệu](income)
+    - lương của anh là [11 triệu](income)
+    - lương của mình là [5 triệu](income)
+    - thu nhập một tháng của anh là [7 triệu](income)
+    - lương một tháng của mình là [9 triêu](income)
+    - lương mình là [8000000 vnd](income)
+    - lương tao là [7000000](income)
+    - lương anh chỉ có [9 triệu](income) thôi
+    - thu nhập của chị có [5 triệu](income) thôi
+    - mình chỉ có [5 triệu](income) thôi bot
+    - nguồn thu của tôi chỉ [5 triệu](income)
+    - lương chỉ có [9 triệu](income)
+    - [nhà chính chủ](house_type)
+    - [nhà thuê](house_type)
+    - [nhà đi thuê](house_type)
+    - [Nhà đi thuê](house_type)
+    - [nhà trọ](house_type)
+    - [nhà mướn](house_type)
+    - [Nhà chính chủ](house_type)
+    - [Nhà thuê](house_type)
+    - [nhà của mình](house_type)
+    - [Nhà của mình](house_type)
+    - 12 giờ đi em
+- intent: thankyou
+  examples: |
+    - Tuyệt vời, cảm ơn
+    - Tuyệt, cảm ơn
+    - Cảm ơn bạn
+    - Cảm ơn anh
+    - Cảm ơn chị
+    - Xin cảm ơn
+    - Trân thành cảm ơn
+    - Cảm ơn sự phục vụ của bạn
+    - ok nhé, cảm ơn
+    - Cảm ơn vì tất cả
+    - Cảm ơn vì sự giúp đỡ của bạn
+    - Cảm ơn vì thông tin bạn cung cấp
+    - Cảm ơn sự hợp tác của bạn
+    - Cảm ơn công ty
+    - Cảm ơn rất nhiều
+    - Cảm ơn sự trợ giúp của bạn
+    - cảm ơn
+    - thankyou
+    - Thanks
+    - thank you
+    - Cảm ơn nhiều
+    - Xin cảm ơn anh
+    - Xin cảm ơn chị
+    - Xin cảm ơn bạn
+    - Trân thành cảm ơn bạn
+    - Trân thành cảm ơn anh
+    - Trân thành cảm ơn chị
+    - Bạn thật nhiệt tình, cảm ơn
+    - Bạn thật tốt,cảm ơn
+    - làm tốt lắm, cảm ơn
+    - làm tốt lắm, thank you
+    - tôi thực sự cảm kích bạn
+- intent: help
+  examples: |
+    - Giúp tôi
+    - Giúp tôi với
+    - Tôi có thể hỏi bạn gì
+    - Cái gì tôi có thể hỏi bạn
+    - Hãy giúp tôi
+    - Bạn có thể giúp tôi chứ
+    - Tôi cần một số sự giúp đỡ, làm ơn
+    - Bạn có thể giúp không
+    - Tôi tự hỏi tôi có thể được trợ giúp gì
+    - Tôi cần một số sự giúp đỡ
+    - Em ơi giúp anh chút
+    - Anh cần giúp đỡ chút
+    - giúp [chị](gender_value) ít phút được không em
+    - Em ơi [chị](gender_value) nhờ cái này chút
+    - Giúp [chị](gender_value) với
+    - Giúp anh cái này với
+    - Em có thể giúp anh một chút không
+    - Cho a nhờ em một chút nhé
+    - Giúp anh cái này với
+    - em ơi giúp anh chút
+    - Anh có thể nhờ em chút việc không
+    - làm ơn giúp anh chút
+    - Cho anh nhờ chút việc nhé
+    - Em có thể giúp anh chút được không
+    - Cho mình nhờ chút việc nhé
+    - Giúp anh cái này với
+    - Anh cần em giúp cái này với
+    - Hỗ trợ mình cái này với
+    - Em có thể hỗ trợ anh chút việc không
+    - Cho chị nhờ e cái này với
+    - Em ơi giúp a chút
+    - E có thể giúp a chút việc không
+- intent: human_handoff
+  examples: |
+    - handoff
+    - Tôi muốn nói chuyện với người vận hành
+    - Tôi muốn nói chuyện với người
+    - Tôi có thể nói chuyện với người không
+    - Người thực, làm ơn đi
+    - Tôi có thể chat với người thật không
+    - Chuyển máy cho người thật
+    - Tôi muốn nói với một người hỗ trợ
+    - Chuyển máy cho người hộ trợ
+    - Tôi không muốn nói chuyện với bot
+    - TÔI cần một người thật
+    - Tôi thích nói chuyện với người hơn
+    - Làm ơn chuyển máy cho người thật
+    - Tôi có thể nói với người hỗ trợ không
+    - nói với người thật
+    - Tôi muốn một người hỗ trợ
+    - tôi có thể nói chuyện với một con người được không
+    - Tôi muốn nói chuyện với một con người
+    - tôi cần nói chuyện với một người thật
+    - Chuyển máy cuộc gọi cho một người thật
+    - Hãy cho tôi nói chuyện với một con người
+    - Làm ơn cho tôi nói chuyện với một con người
+    - Tôi cần nói chuyện với một người thật sự
+    - Tôi cần chat với một người thật sự
+    - Tôi không thích nói chuyện với bot
+    - Tôi có thể nói chuyện với một người đại diện không
+    - Kết nối máy với một người hỗ trợ, làm ơn
+    - làm ơn kết nối máy với một người hỗ trợ
+    - Làm ơn chuyển máy cho một người thật
+    - Tôi thích nói chuyện với người hơn hệ thống tự động
+    - Tôi thích nói chuyện với người hơn bot
+    - Tôi cần chat với người hơn là bot
+    - Tôi cần nói chuyện với người hơn hệ thống tự động
+    - Tôi cầm nói chuyện với người hơn bot
+    - Tôi thích chat với người hơn là bot
+    - Tôi cần nhắn tin với người hơn hệ thống tự động
+    - Tôi cầm nhắn tin chuyện với người hơn bot
+    - Tôi thích nhắn tin với người hơn là bot
+    - Cho tôi nói chuyện với một con người đi
+    - Cho tôi nói chuyện với người thật đi
+    - Cho tôi nhắn tin với người thật đi
+    - Chuyển máy cuộc gọi cho người thật
+- intent: out_of_scope
+  examples: |
+    - Mình muốn gọi đồ
+    - '2 + 2 bằng mấy'
+    - Tổng thống Mỹ là ai?
+    - '1 + 1'
+    - Trần Đức Bo là ai
+    - Bình phương của 5 là bao nhiêu?
+    - Tôi muốn biết thời tiết hôm này như thế nào?
+    - ý nghĩa thực sự của cuộc sống
+    - Tôi đang chạy bộ
+    - Tivi của tôi hiện không hoạt động
+    - Tôi muốn ăn pizza
+    - Máy giặt của tôi đang bị hỏng
+    - Năm nay là năm bao nhiêu
+    - mua pizza
+    - Tôi muốn mua một chiếc pizza
+    - Tôi không thích bóng đá lắm
+    - tôi thích mua sắm
+    - tôi muốn chơi game
+    - Ngôi nhà đã hoàn tất chưa
+    - Bố mẹ bạn thế nào rồi
+    - Tôi lanh quá
+    - Tôi đang học đại học
+    - Tôi ghét loại bánh này
+    - Tôi đã sửa chiếc xe đạp
+    - Tôi ghét anh ấy
+    - Cô ta thật xấu tính
+    - Anh ta đi làm chưa
+    - thời tiết thật khó chịu
+    - Đường đang bị tắc nghẹn
+    - Có một vụ tai nạn xảy ra gần đây
+    - Tôi sử dụng Facebook thường xuyên
+    - Anh ấy thích nấu ăn
+    - Bố tôi muốn một chiếc bánh mì thịt
+    - Bộ phim thật ý nghĩa
+    - Đăng kí giúp tôi một chuyến xe
+    - Bạn trông thật xinh xắn
+    - Chiếc xe này nhìn rất hợp với bạn
+    - Tôi sẽ đi đám cưới vào cuối tuần này
+    - Tôi thích du lịch
+    - London là một thành phố tuyệt vời
+    - Con mèo này thật đẹp
+    - Cho tôi một ly cafe nhé
+    - Chiếc váy thật lộng lẫy
+    - Trời nắng to thật
+    - Bên ngoài đang mưa to
+    - Thời tiết hôm nay đẹp thật
+    - Anh tôi đang đá bóng
+    - Những người nhân viên đang liên hoan
+    - mình muốn biết về python
+    - Sort array
+    - công nghệ thông tin là gì
+    - test
+    - ngoài c++ ra bạn còn biết về ngôn ngữ lập trình nào nữa không ?
+    - trứng có trước hay gà có trước
+    - toán rời rạc là gì
+    - Cho mình thêm vài câu châm ngôn đi
+    - printf_s
+    - bla bla
+    - làm sao để qua môn
+    - A
+    - Rớt môn rồi làm sao bây giờ
+    - Frf
+    - cấu trúc rời rạc là gì
+    - Haha.
+    - .
+    - python
+    - Học gì để đạt điểm cao nhập môn lập trình?
+    - Bạn biết thầy Đỗ Văn Tiến không?
+    - Làm sao để lấy ra dãy tăng dần trong mảng
+    - Bạn có biết tìm lỗi trong code không ?
+    - nó chạy như thế noà
+    - hmmm is this a bug ??
+    - Ăn tết chưa ạ
+    - Câu ăn tết ạ
+    - Tìm kiếm nhị phân
+    - Câu châm ngôn hay
+    - Kĩ thuật cắm cờ
+    - Chủ của bạn có biết gì về câu chuyện giữa hai chúng ta không?
+    - Hàm conio làm gì
+    - uit
+    - --version
+    - .cpp là gì
+    - Không ý tôi là "<string>, <string.h>, <cstring> Nên xài cái nào"
+    - Kế thừa trong C++
+    - Bot có biết dạng đề thi học kì không?
+    - Con trỏ trong C++ chiếm bao nhiêu bộ nhớ và kích thước của chúng có bằng nhau không?
+    - Con trỏ trong C++ chiếm bao nhiêu bộ nhớ?
+    - con cặc là gì
+    - Vì sao trời mưa!
+    - Cho mình xin tại liệu c++
+    - Học c++ xong, ra làm gì?
+    - Hàm khác thủ tục chỗ nào?
+    - Phạm vi biến
+    - Noi gi do yeu thuong toi di !
+    - Noi gi do yeu thuong tui di.
+    - Ngôn ngữ Tiếng Anh được không
+    - wecode là gì
+    - cout << "hello"
+    - Netflix là gì
+    - ki?u d? li?u là gì
+    - bí mật của vũ trụ là gì
+    - thay Do Tien
+    - dịch từ c++ sang python được không
+    - Cho mình xin tài liệu c++?
+    - Mình cần người yêu
+    - Biet toi la ai khong ?
+    - Sao cứ càng code càng bug vậy bro
+    - /câu 3
+    - Dhsjsjsjska
+    - đề bài
+    - Jejeksskajs
+    - /hi
+    - /q
+    - X += 1;
+    - Thế biết tên mình không?
+    - Ông chặn tui đi
+    - 1 cộng 1 bằng?
+    - 1+1=?
+    - \quit
+    - Cách lập trình AI
+    - Machine learning là gì
+    - Làm sao để master lập trình vậy
+    - donald trump
+    - Donald Trump
+    - bầu cử tổng thống Mỹ
+    - asfasfsdbfdbheqwer
+    - Thế nào là point er
+    - Thực là gì?
+    - Bạn có thể debug giúp tôi không?
+    - Haha
+    - Mình cười haha
+    - what dose the fox say?
+    - hihi
+    - haha
+    - machine learning
+    - machine learning là gì
+    - ư ư ư
+    - ó ó ó
+    - bố ơi mình đi đâu thế
+    - mấy giờ rồi?
+    - cho tui hỏi mấy giờ rồi vậy?
+    - tui k biết phải hỏi gì hết
+    - hôm nay ngày mấy?
+    - thời tiết hôm nay là gì
+    - thời tiết hôm nay tại thủ đức
+    - cho hỏi mấy giờ rồi
+    - t đánh mày bây giờ
+    - cho tui hỏi các kiếm người yêu
+    - làm sao để kiếm người iu ạ
+    - nay có họp k
+    - nay họp team ở đâu v
+    - làm sao để làm trùm trường
+    - thích coi phim k
+    - làm bạn gái a nha
+    - làm bạn trai e nha
+    - iu nhau k
+    - kể câu chuyện vui đi
+    - hải quay xe
+    - 16 typh on the mic
+    - làm sao để làm trùm lập trình
+    - cách để thành trùm lập trình
+    - làm sao để thành lập trình viên giỏi
+    - bao giờ thì có bồ
+    - hát cho tui nghe đi
+    - chở tui đi chơi với nha
+    - cách lái xe máy
+    - thi bằng lái xe ở đâu
+    - ngày mai t có tiết lúc mấy giờ nhỉ
+    - ngày mai có tiết k ta
+    - tin tức hôm nay
+    - thời sự hôm nay
+    - bầu cử tổng thống mỹ 2020
+    - hát cho t nghe đi
+    - biết kiếm tiền k
+    - biết hát auto tune k
+    - đánh nhau ko
+    - dạy t làm AI đi
+    - chỉ t machine learning đi
+    - dạy tôi deep learning
+    - machine learning cái gì vậy
+    - deep learning là cái gì
+    - làm sao để thành kỹ sư AI
+    - cách hết nợ môn
+    - làm sao để hết nợ môn
+    - cách qua môn
+    - chỉ t cách qua môn
+    - ăn kem thủ đức ở quán nào thì ngon
+    - ò ó o o
+    - ăn kem ko
+    - babe
+    - em ăn cơm chưa?
+    - bạn ăn cơm chưa?
+    - đánh liên quân đê
+    - tốc chiến đê
+    - như bạn đã thấy tôi với bạn đều là dân chơi
+    - show trình đi
+    - ngày ăn được mấy chén cơm
+    - solo yasuo k
+    - 232131255468787690
+    - 1234567890
+    - qwerty
+    - anh yêu em
+    - em muốn lái chị
+    - ianh iu iem
+    - em iu anh
+    - em iu em
+    - t iu ma
+    - ai la con di cua anh nao
+    - ai là con đĩ của anh nào
+    - làm sao để master lập trình vậy bro
+    - thuật toán sắp xếp
+    - thuật toán phân loại
+    - dynamic programming
+    - Hôm nay là ngày mấy
+    - má mày tên là ngọc ông già mày tuấn anh
+    - Abc
+    - 1 + 1
+    - Dạy mình cách lập trình AI
+    - Hihihihi
+    - /restart
+    - Postflix là gì
+    - Mảnh
+    - Jsjskskskajsbs
+    - Iwiwiwiwoejieue
+    - 1 + 1 = 2 đúng không?
+    - Mật khẩu facebook của chủ mầy là gì ?
+    - RAM là gì?
+    - ram là cái gì ?
+    - Doi net ve nha tho Xuan Dieu.
+    - Doi net ve Do Tien
+    - thay Do Tien thuong noi gi khi tre deadlines
+    - what the fox say
+    - trễ deadline là gì ?
+    - mikami là ai
+    - cộng là gì
+    - how to print hello world
+    - làm sao in hello world trên c++
+    - cấu trúc dữ liệu và giải thuật
+    - fix bug giúp tao với
+    - lỗi is not declared
+    - Đếm các số nguyên tố nhỏ hơn 10000
+    - Đề bài đó
+    - Bạn giải bài giúp mình được không?
+    - lập trình hướng đối tượng là gì
+    - toán rời rạc
+    - 1
+    - contrỏ dùng làm gì
+    - 3
+    - 69
+    - Cấu trúc dữ liệu giải thuật
+- intent: information_company
+  examples: |
+    - Công ty bạn là gì
+    - VNDC hợp pháp như thế nào?
+    - Sản phẩm của VNDC là gì?
+    - Giới thiệu qua về công ty bạn được không
+    - [VNDC](company) là công ty tài chính à
+    - Công ty anh là công ty gì
+    - Công ty chị là gì
+    - Cho tôi biết thông tin của công ty bạn
+    - Cho tôi biết thông tin của công ty anh
+    - Cho tôi biết thông tin của công ty chị
+    - Làm ơn cho tôi biết thông tin công ty bạn
+    - Làm ơn cho tôi biết thông tin công ty bạn được không?
+    - Làm ơn cho tôi biết thông tin công ty bạn nhé
+    - Cho tôi biết thêm một số thông tin của công ty bạn
+    - Cho tôi biết thêm một số thông tin của công ty bạn nhé
+    - Tôi muốn biết một vài thông tin của công ty bạn
+    - Tôi muốn biết thông tin của công ty bạn
+    - Thông tin của công ty bạn
+    - Cho tôi một số thông tin của công ty bạn
+    - Đưa cho tôi một vài thông tin của công ty bạn
+    - Làm ơn đưa tôi một vài thông tin của công ty bạn
+    - Đưa tôi một số thông tin của công ty bạn đi
+    - Tôi muốn một thông tin của công ty bạn
+    - Tôi cần một số thông tin của công ty bạn
+    - Công ty bạn là công ty gì thế
+    - Có thể cho tôi biết một chút thông tin về công ty bạn không?
+    - Đưa ra một vài thông tin về công ty bạn đi
+    - Tôi không biết công ty bạn, có thể nói rõ được không
+    - Tôi không biết gì về công ty bạn, có thể cho tôi vài thông tin được không?
+    - hãy cho tôi một chút thông tin về công ty bạn
+    - hãy cho tôi một chút thông tin về công ty bạn đi
+    - Tôi không rõ về công ty bạn, cho tôi một chút thông tin đi
+    - Tôi không rõ về công ty bạn, cho tôi một chút thông tin
+    - Thông tin công ty của bạn
+    - Thông tin công ty bạn
+    - Giới thiệu công ty bạn được không?
+    - Cung cấp một vài thông tin về công ty bạn đi
+    - Trình bày một vài thông tin về công ty bạn
+    - Công ty bạn hoạt động trong lĩnh vực gì
+    - Công ty [VNDC](company) là công ty gì?
+    - Tôi không rõ lắm về công ty bạn?
+    - Tôi cần thông tin về công ty bạn
+    - Tôi cần thông tin về công ty anh
+    - Tôi cần thông tin về  công ty chị
+    - Tôi muốn biết thông tin về  công ty chị
+    - Tôi muốn biết thông tin về  công ty anh
+    - mình cần hỏi thông tin về  công ty chị
+    - xin chút thông tin công ty bạn
+    - hãy cho tôi biết công ty bạn
+    - mình muốn biết thông tin công ty bạn
+    - hãy đưa tôi chút thông tin công ty bạn xem nào
+    - cho tôi thông tin công ty đi
+    - cho tôi info cty bạn nhé
+    - tôi muốn biết info cty bạn
+    - cho xin info cty đi
+    - gửi tôi info cty bạn
+    - gửi mình chút info cty bạn đi
+    - xem info công ty bạn như thế nào
+    - đưa tôi ít thông tin cty bạn
+    - đưa tôi info công ty của anh nhé
+    - Tôi thấy trên mạng tràn lan thông tin về các trang web đen, tín dụng đen, lãi suất cắt cổ, tôi không tin tưởng về các trang web online lắm, công ty của anh chị thì sao?
+    - Tôi có thể tin tưởng công ty anh chị không
+    - Tại sao tôi có thể tin tưởng công ty anh chị
+    - Có rất nhiều công ty tín dụng đen lừa đảo, làm sao tôi có thể tin tưởng công ty anh chị
+    - [VNDC](company) là gì
+    - Bên mình là công ty nào thế em
+    - Bên em là công ty nào vậy
+    - Công ty e là công ty nào vậy
+- intent: adress_company
+  examples: |
+    - Công ty bạn ở đâu thế?
+    - Đia chỉ công ty bạn ở đâu thế?
+    - Công ty bạn nằm ở đâu?
+    - Công ty [VNDC](company) nằm ở đâu
+    - Địa chỉ công ty [VNDC](company) là gì?
+    - Địa chỉ của công ty bạn là gì thế?
+    - Địa chỉ công ty bạn
+    - Cho tôi địa chỉ công ty bạn
+    - Cho tôi địa chỉ công ty bạn được không
+    - Cho tôi địa chỉ công ty bạn nhé
+    - Cung cấp cho tôi địa chỉ công ty bạn
+    - Bạn có thể cung cấp địa chỉ công ty của bạn được không?
+    - Bạn có thể cung cấp địa chỉ công ty [VNDC](company) được không?
+    - Cho tôi biết địa chỉ của công ty bạn đi
+    - Công ty mình nằm ở đâu vậy chị
+    - Công ty mình nằm ở đâu vậy bạn
+    - Tôi muốn thông tin địa chỉ công ty của bạn
+    - Tôi muốn thông tin địa chỉ công ty [VNDC](company)
+    - Tôi cần bạn cung cấp địa chỉ công ty [VNDC](company)
+    - Tôi cần bạn cung cấp địa chỉ của công ty bạn?
+    - Địa chỉ trụ sở công ty bạn ở đâu thế?
+    - Địa chỉ công ty [VNDC](company) ở đâu vậy?
+    - Địa chỉ công ty [VNDC](company) ở đâu?
+    - Tôi có thể gặp mặt trực tiếp các bạn ở đâu?
+    - Cho tôi địa chỉ của công ty bạn được không?
+    - Có thể cho tôi địa chỉ của công ty bạn không?
+    - Nếu cần, tôi có thể gặp mặt trực tiếp các bạn ở đâu?
+    - Tôi có thể tìm kiếm công ty ở đâu?
+    - Thông tin địa chỉ của công ty [VNDC](company)
+    - Thông tin địa chỉ của công ty của bạn
+    - Có thể cho tôi thông tin địa chỉ của công ty bạn không?
+    - Công ty [VNDC](company) nằm ở đâu thế?
+    - Vị trí của công ty ở đâu thế?
+    - vị trí của công ty ở đâu vậy?
+    - hãy cho tôi biết thông tin về địa chỉ của công ty đi
+    - Vị trí của công ty [VNDC](company)
+    - Vị trí công ty bạn nằm ở đâu thế
+    - Trụ sở hoạt động của công ty bạn ở đâu?
+    - Trụ sở chính của [VNDC](company) nằm ở đâu
+    - Tôi muốn biết thông tin địa chỉ của công ty bạn
+    - Tôi muốn biết thông tin địa chỉ của [VNDC](company)
+    - Tôi muốn biết địa chỉ của công ty bạn
+    - Tôi cần thông tin địa chỉ của công ty bạn
+    - Tôi có thể trực tiếp đến công ty ở đâu?
+    - Hãy cho tôi địa chỉ của công ty
+    - Hãy cho tôi địa chỉ của công ty [VNDC](company)
+    - Nếu muốn gặp mặt trực tiếp, tôi có thể đến đâu?
+    - Sàn cho vay bạn ở đâu thế
+    - Địa chỉ công ty ở đâu vậy
+- intent: interest_rate
+  examples: |
+    - Lãi suất của VNDC là bao nhiêu?
+    - Mức phí cho các khoản vay của VNDC là bao nhiêu
+    - Tiền lãi của VNDC là bao nhiêu
+    - Mức phí vay tiền của VNDC là bao nhiêu
+    - Phí vay tiền là bao nhiêu
+    - Phí vay tiền như thế nào em
+    - Phí vay tiền cho các khoản vay như thế nào nhỉ
+    - Lãi suất các khoản vay như thế nào?
+    - Lãi suất các khoản vay là bao nhiêu?
+    - Về khoản lãi suất, mức phí là bao nhiêu
+    - Lãi suất vay là bao nhiêu
+    - Lãi suất vay như thế nào
+    - Mức phí lợi nhuận tôi phải trả là bao nhiêu?
+    - Mức lãi là bao nhiêu
+    - Mức lãi cho khoản vay là bao nhiều
+    - Khoản vay có mức lãi là bao nhiêu?
+    - Tôi cần thanh toán mức lãi như thế nào?
+    - Mức lãi của khoản vay là bao nhiêu phần trăm?
+    - Mức lãi của khoản vay là bao nhiêu %?
+    - Cho tôi biết về mức phí vay tiền?
+    - Mức phí cho khoản vay là bao nhiêu?
+    - Mức phí là bao nhiêu một tháng?
+    - Mức phí được áp dụng cho khoản vay là bao nhiêu?
+    - Cho tôi thông tin về mức lãi của khoản vay này
+    - Cho tôi thông tin về mức phí của khoản vay này
+    - Cho tôi thông tin về mức lãi suất của khoản vay này
+    - Thông tin về mức lãi của khoản vay là bao nhiêu
+    - Thông tin về mức phí áp dụng cho khoản vay
+    - Nếu vay, tôi phải trả mức lãi suất là bao nhiêu?
+    - Tôi cần thông tin về mức phí lãi suất cho các khoản vay
+    - Tôi muốn thông tin mức phí vay tiền của bạn
+    - Tôi muốn thông tin mức phí lãi suất
+    - Tôi cần bạn cung cấp thông tin về mức lãi suất
+    - Tôi cần trả bao nhiêu một tháng cho khoản vay này
+    - Nêu thực hiện khoản vay, tôi phải trả bao nhiêu tiền một tháng
+    - Số tiền lãi tôi phải trả một tháng là bao nhiêu?
+    - Mức phí như thế nào
+    - Mức lãi như thế nào?
+    - Các mức lãi cho khoản vay
+    - Chi tiết về mức lãi cho khoản vay
+    - Tôi muốn biết chi tiết về thông tin mức lãi suất cho khoản vay
+    - Mức lãi suất được áp dụng là bao nhiêu?
+    - Mức lãi suất của khoản vay là bao nhiêu %?
+    - mức lãi suất là bao nhiêu %?
+    - Mức lãi suất khoản vay là bao nhiêu phần trăm?
+    - Cụ thể mức lãi suốt cho khoản vay là bao nhiêu?
+    - Mỗi tháng tôi phải trả mức lãi là bao nhiêu tiền?
+    - Số tiền tôi phải trả là bao nhiều một tháng
+    - Cách tính lãi cho các khoản vay như thế nào?
+    - Lãi xuất thì như thế nào
+- intent: interest_payment_period
+  examples: |
+    - Chính sách thanh toán và trả phí bên công ty như thế nào
+    - Chính sách thanh toán và trả phí bên VNDC như thế nào
+    - Thanh toán và trả phí hàng tháng như thế nào vậy
+    - Tôi phải thanh toán và trả phí như thế nào
+    - Nếu vay tiền tôi phải thanh toán và trả phí như thế nào
+    - Số tiền gốc, phí  và lãi suất tôi phải trả hàng tháng hay trả một lần vào cuối đợt vay?
+    - Khi nào tôi phải trả tiền lãi
+    - Tôi muốn trả tiền lãi sớm có được không
+    - Trả tiền lãi muộn có được ko
+    - Tôi phải trả số tiền lãi hàng tháng à
+    - Tất cả các khoản tiền được thanh toán lúc nào
+    - Thời gian trả tiền lãi như thế nào
+    - Tôi muốn trả lãi sớm có được không
+    - Trả trước hạn có mất phí không
+    - Thời gian tôi phải trả lãi như thế nào
+    - Lãi suất được trả vào thời điểm nào
+    - Anh có thể trả lãi khoản vay vào lúc nào
+    - Trả lãi khoản vay vào thời điểm thanh toán nợ à em
+    - Mình trả lãi khoản vay hàng tháng hay một lần em nhỉ
+    - Trả lãi khoản vay hàng tháng à em
+    - Lãi khoản vay được cộng dồn trả một lần à em
+    - Trả lãi cùng với khoản vay có được không
+    - Khoản lãi được trừ trước hay sau khi thanh toán nợ thế
+    - Chính sách trả tiền lãi bên em như thế nào
+    - Chính sách trả lãi bên em như thế nào
+    - Tiền lãi được trả lúc nào em nhỉ
+- intent: not_interest
+  examples: |
+    - Xin lỗi, tôi không có hứng thú vay tiền
+    - Tôi không quan tâm lắm
+    - không quan tâm lắm
+    - Tôi không có nhu cầu vay tiền
+    - Tôi không có nhu cầu, cảm ơn
+    - Tôi không muốn vay
+    - Tôi không muốn vay, cảm ơn
+    - Xin lỗi, tôi không vay mượn gì cả
+    - Tôi không cần vay
+    - Tôi không cần vay, xin đừng làm phiền
+    - Tôi không có nhu cầu
+    - Tôi không quan tâm và không muốn vay
+    - Tôi không quan tâm, xin đừng làm phiền
+    - tôi không có nhu cầu vay
+    - Tôi không muốn vay tiền
+    - Tôi không muốn bất kì khoản vay nào cả
+    - Tôi không cần bất kì khoản vay nào
+    - Tôi nhiều tiền và không cần vay
+    - tôi không muốn vay mượn gì cả
+    - Tôi không muốn vay mượn
+    - Không vay mượn gì cả
+    - Không có nhu cầu
+    - Tôi không quan tâm
+    - Không muốn vay mượn gì cả, cảm ơn
+    - không có nhu cầu vay
+    - Đừng làm phiền tôi vì tôi không có nhu cầu vay
+    - Không cần bất kì khoản vay nào cả
+    - Không hứng thú, cảm ơn
+    - Tôi không phải vay tiền
+    - [Anh]{"entity": "gender_value", "value": "anh"} không muốn vay tiền đâu em
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} không muốn vay mượn gì cả nữa
+- intent: payback_time
+  examples: |
+    - Tôi có thể trả trước hạn không
+    - Khoản vay của tôi còn 20 ngày nữa mới đến hạn, tôi có thể thanh toán trước hạn không
+    - Tôi thanh toán khoản vay sớm có được không
+    - Thanh toán sớm khoản vay có được không em
+    - Kì hạn cho vay là bao nhiêu lâu
+    - Thời gian được vay là bao lâu?
+    - Thời gian cần hoàn trả khoản vay là bao nhiêu ngày?
+    - Thời gian cần hoàn trả khoản vay là bao nhiêu lâu?
+    - Khoản vay cần hoàn trả trong bao nhiêu ngày?
+    - Khoản vay cần hoàn trả trong bao nhiêu lâu?
+    - Thông tin về thời gian cho khoản vay như thế nào?
+    - Vui lòng cung cấp thông tin về thời gian cho vay
+    - Hãy cung cấp thêm cho tôi thông tin về thời gian cho khoản vay
+    - Hãy cung cấp thông tin về thời gian khoản vay cho tôi
+    - Có giới hạn thời gian trả lại khoản vay không?
+    - Có giới hạn về thời gian hoàn trả khoản vay không?
+    - Sau bao nhiêu lâu phải trả lại khoản vay?
+    - Sau bao lâu tôi phải trả lại khoản tiền vay?
+    - Thời gian lâu nhất tôi có thể vay là bao lâu?
+    - Thời gian lâu nhất trước khi tôi phải trả lại khoản vay là bao lâu?
+    - Sau bao lâu tôi phải hoàn trả số tiền?
+    - Thời gian hoàn trả lại khoản vay là bao lâu
+    - Tôi phải hoàn trả lại số tiền trong vòng bao lâu?
+    - Bao nhiêu lâu thì tôi phải hoàn trả lại số tiền?
+    - Tôi cần hoàn trả lại số tiền trong vòng bao nhiêu ngày?
+    - Số ngày tôi phải hoàn trả lại số tiền
+    - Thời gian lâu nhất tôi phải hoàn trả lại số tiền là bao lâu?
+    - Thời gian bao lâu tôi phải hoàn trả lại số tiền
+    - Thời gian tôi có thể vay là bao lâu?
+    - Tôi có thể vay trong bao nhiêu lâu?
+    - cho tôi thông tin về thời gian khoản vay
+    - Cung cấp cho tôi thêm thông tin về thời gian khoản vay
+    - Có yêu cầu gì về thời gian đáo hạn không?
+    - Có yêu cầu gì về thời gian vay không?
+    - Thời gian vay thì như thế nào?
+    - Thời gian đáo hạn của khoản vay là bao lâu?
+    - Thời gian đáo hạn của khoản vay như thế nào?
+    - Có giới hạn thời gian vay không?
+    - Thời gian đáo hạn vay là bao lâu?
+    - Sau bao lâu tôi phải trả tiền?
+    - Thời gian tôi phải trả khoản vay là bao lâu?
+    - Số tiền cần được trả trong vòng bao nhiêu lâu?
+    - Tôi phải trả lại số tiền trong vòng bao nhiêu lâu?
+    - Thời gian vay tối đa là bao lâu?
+    - Thời hạn vay là bao nhiêu ngày
+    - Thời hạn vay là bao nhiều lâu thế em
+    - Thời hạn vay tối đa là bao nhiêu ngày
+    - Thời hạn vay tối đa là bao nhiêu lâu vậy em
+- intent: borrow_money
+  examples: |
+    - Tôi muốn đăng ký vay nhưng chưa biết đăng ký chỗ nào?
+    - Đăng ký khoản vay như thế nào em nhỉ
+    - Đăng ký khoản vay ở đâu em nhỉ
+    - Làm sao để đăng ký khoản vay ở đâu thế
+    - tôi đang hết tiền tiêu
+    - [Anh]{"entity": "gender_value", "value": "anh"} muốn vay tiền bên công ty em
+    - [Anh]{"entity": "gender_value", "value": "anh"} cần vay tiền bên công ty em
+    - [Anh]{"entity": "gender_value", "value": "anh"} cần thực hiện một khoản vay
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} muốn vay tiền bên em
+    - Tôi muốn thực hiện một khoản vay
+    - Tôi muốn vay tiền từ công ty bạn
+    - tôi đang kẹt quá
+    - mình muốn vay tiền ngay
+    - mình muốn mượn tiền
+    - mình đang cần mượn tiền
+    - mình đang muốn vay tiền
+    - tao đang cần vay
+    - tao muốn vay tiền
+    - tôi muốn vay
+    - tôi đang cần tiền
+    - tôi đang cháy túi, tôi cần vay tiền
+    - tôi đang cần vay nóng
+    - tôi muốn mượn tiền
+    - Tôi cần vay tiền
+    - Tôi muốn vay một khoản tiền
+    - Tôi muốn vay một khoản
+    - Chương trình hấp dẫn đó, tôi muốn vay
+    - Nghe hay đó, tôi đang cần vay một khoản tiền
+    - Tôi cần một khoản tiền
+    - Tôi muốn một khoản tiền
+    - Tôi cần vay một triệu đồng
+    - Tôi muốn vay 2000000 VND
+    - Tôi muốn vay ngay số tiền năm triệu đồng
+    - tôi cần một số tiền
+    - Tôi muốn vay tiền thì như thế nào
+    - Cần vay 2500000
+    - Tôi cần vay bốn triệu đồng
+    - Tôi muốn vay 2000000 vào hôm nay
+    - Tôi cần vay gấp một khoản tiền
+    - Tôi cần ứng một số tiền
+    - Tôi muốn thực hiện khoản vay 5000000
+    - Tôi muốn thực hiện khoản vay ba triệu đồng
+    - Tôi cần thực hiện một khoản vay 1000000VND
+    - Tôi muốn vay số tiền lớn nhất bên công ty có thể cung cấp
+    - Tôi cần vay 2 triệu
+    - Tôi có thể vay 5 triệu không?
+    - tôi có thể vay 5000000 không?
+    - Tôi muốn vay gấp một khoản tiền
+    - Muốn vay 3000000
+    - Muốn vay ba triệu
+    - Muốn vay 3 triệu
+    - Cần vay 2000000
+    - Tôi cần số tiền 1500000
+    - Tôi muốn thực hiện giao dịch vay tiền
+    - Tôi muốn được cung cấp một khoản vay
+    - Tôi đang hết tiền và muốn thực hiện một khoản vay
+    - Tôi muốn thực hiện một giao dịch vay tiền nhỏ
+    - hãy cho tôi vay một khoản tiền
+    - Tôi cần mượn một khoản tiền
+    - Tôi muốn mượn 3000000
+    - Tôi muốn mướn 3000000
+    - Tôi đang cần vay gấp 1600000
+    - Tôi cần vay tiền thì đăng ký kiểu gì
+    - Muốn vay tiền thì tôi cần làm gì
+    - Tôi muốn đăng ký vay thì ở đâu
+    - Thực hiện đăng ký vay tiền ở đâu thế em
+    - Tôi có thể vay tiền bằng cách nào
+    - Đăng ký hồ sơ vay tiền ở đâu thế
+- intent: surcharge
+  examples: |
+    - Những phụ phí nào tôi phải chịu khi thực hiện khoản vay
+    - Các khoản phụ phí tôi phải chịu là gì
+    - [Anh]{"entity": "gender_value", "value": "anh"} phải thanh toán những khoản phí nào nhỉ
+    - Những khoản phí nào tôi phải trả ngoài tiền vay
+    - Ngoài tiền lãi ra tôi phải trả phí gì nữa
+    - Có khoản phí không minh bạch nào tôi phải thanh toán không
+    - Có khoản phí nào không rõ ràng chưa được liệt kê ở đây không
+    - Tôi có phải chịu những phụ phí nào
+    - Những phí nào tôi phải chịu khi sử dụng dịch vụ của VNDC
+    - Bên em có bị mất phí bảo hiểm khoản vay không?
+    - Cho [anh](gender_value) biết các phụ phí phải trả khi vay tiền là gì
+    - Có khoản phí nào tôi phải trả
+    - Tôi phải trả những phụ phí gì thế
+    - Khi đăng ký khoản vay tôi phải chịu những phụ phí gì
+    - những khoản phụ phí nào tôi phải chịu khi vay tiền thế
+    - Có các khoản tiền phụ nào tôi phải trả khi vay không
+    - Có khoản phụ phí nào không rõ ràng khi vay không
+    - Những khoản phụ phí tôi cần trả là gì
+    - Còn có khoản phụ phí nào tôi không biết không
+    - Người dùng cần trả những khoản phụ phí nào
+    - Còn có khoản phụ phí nào tôi phải trả không
+    - Cho tôi biết những khoản phụ phí bên mình là gì
+    - Có khoản phụ phí không rõ ràng nào chưa được liệt kê không
+    - Có phat sinh thêm chi phí gì không
+    - Đây là tất cả à em, có phát sinh thêm chi phí gì không
+    - Đó là tất cả tiền [anh](gender_value) phải trả à, có phát sinh thêm chi phí gì không em
+    - Có khoản phụ phí nào nữa không em
+    - [chị](gender_value) có phải chịu mức phụ phí gì nữa không
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} có phải trả phụ phí gì nữa không?
+    - Ngoài khoản đó ra, còn chi phí nào nữa không em
+- intent: overdue_interest
+  examples: |
+    - Phí thanh toán chậm như thế nào
+    - Nếu tôi thanh toán chậm thì phải chịu phí như thế nào
+    - Lãi quá hạn như thế nào em nhỉ
+    - Phí quá hạn như thế nào em nhỉ
+    - Phí quá hạn tính như thế nào em
+    - Lãi quá hạn tính như thế nào em nhỉ
+    - Trong trường hợp không trả kịp, phát sinh thêm lãi như thế nào
+    - Mức phí phát sinh khi không trả kịp là bao nhiêu
+    - Phát sinh lãi như thế nào nếu không trả kịp
+    - Nếu thanh toán chậm tôi có mất phí không
+    - Tôi muốn biết rõ các loại phí mà mình phải trả khi vay tiền
+    - Cho tôi biết bên bạn áp dụng các loại phí gì cho các khoản vay thế
+    - Phí quá hạn như thế nào vậy
+    - Phí thanh toán chậm được tính như thế nào
+    - Thanh toán chậm phải trả phí không vậy
+    - Mức phí thanh toán chậm được tính như thế nào em
+    - Thế còn lãi suất trả chậm thì như thế nào
+    - Nếu trả muộn thì phát sinh lãi như thế nào em
+    - Lãi trả chậm tính như thế nào em nhỉ
+    - Phí và lãi quá hạn như thế nào nhỉ em
+    - phí trả chậm là bao nhiêu em
+    - Lãi trả chậm tính như thế nào em nhỉ
+    - Bên phí tính phí trả chậm như thế nào vậy
+- intent: incentives
+  examples: |
+    - Hiện tại công ty có những chính sách ưu đãi gì
+    - Công ty có chính sách ưu đãi gì với người đã từng vay hay không
+    - Hiện tại công ty có chinh sách ưu đãi gì không
+    - Các chính sách ưu đãi cho khách hàng của công ty là gì
+    - bên công ty có hỗ trợ gì với người đã từng vay tại VNDC không
+    - Tôi là khách hàng đang vay ở VNDC, công ty có chính sách ưu đãi gì không tôi muốn vay thêm
+    - Tôi muốn vay thêm thì có chính sách ưu đãi gì không nhỉ
+    - Tôi đã từng là khách hàng của VNDC, lịch sử trả nợ rất tốt, liệu tôi có nhận được ưu đãi gì không
+    - Tôi giới thiệu các khách hàng mới cho VNDC tôi có được khuyến mãi gì không
+    - Dịch bệnh như này công ty có chế độ giảm lãi xuất gì không em nhỉ
+    - Những chính sách ưu đãi của công ty em là gì
+    - Các chính sách ưu đãi của VNDC là gì
+    - Chính sách hỗ trợ người vay của bên công ty em như thế nào
+    - Ưu đãi của công ty em cho người đã từng vay là gì
+    - bên em có chính sách ưu đãi gì hấp dẫn không
+    - Bên mình có ưu đãi gì đặc biệt không nhỉ
+    - Đợt này có gói vay nào khuyến mãi không em
+    - Chương trình khuyến mãi của VNDC có không em
+    - Có giảm lãi suất cho khách hàng quen không em
+    - Chính sách khuyến mãi của bên em là gì
+    - [Anh]{"entity": "gender_value", "value": "anh"} vay nhiều lần rồi có được ưu đãi gì không nhỉ
+    - Mình thấy nhiều bên cho vay có nhiều ưu đãi hấp dẫn, bên em có không nhỉ
+    - Bên mình có chính sách ưu đãi gì mới không
+    - Các chính sách ưu đãi của bên em là gì thế
+    - Hiện nay bên em có chính sách ưu đãi gì cho khách hàng thân thiết không
+    - Anh là người vay thường xuyên bên em thì liệu có được ưu đãi không nhỉ
+    - Công ty có chính sách gì đặc biệt cho khách quen không em
+    - Sinh viên có được ưu đãi gì không chị ơi
+    - Sinh viên có được ưu đãi gì không anh ơi
+    - Dạo này có chương trình khuyến mãi gì không em nhỉ
+    - Anh có thể xem thông tin ưu đãi ở đâu thế em
+    - Công ty có chính sách gì ưu đãi cho những khách hàng quen không em
+    - Dạo này có gói vay nào khuyến mãi không thế em
+    - Đợt này a thấy nhiều bên có ưu đãi các gói vay, bên em thì như thế nào vậy
+    - Giới thiệu khách hàng mới thì có được ưu đãi gì không thế em
+    - Bên em hiện nay có chính sách gì ưu đãi thế
+    - Có gói vay nào đang được ưu đãi không em
+    - Anh từng vay thì được ưu đãi gì không em nhỉ
+    - Cho anh hỏi đợt này có công ty em có chính sách ưu đãi khoản vay nào không
+    - Bên e có những chính sách ưu đãi gì không
+    - Người mới vay có được ưu đãi gì không em
+    - Thành viên mới đăng ký tài khoản vay có được ưu đãi gì không em
+    - Cho anh hỏi có ưu đãi gì cho người mới vay không em
+- intent: lending_area
+  examples: |
+    - Khi ra nước ngoài tôi có thể sử dụng dịch vụ của VNDC không?
+    - VNDC có hỗ trợ người dùng là người nước ngoài không?
+    - VNDC hỗ trợ cho vay tại khu vực nào?
+    - Công ty có giới hạn khu vực vay không?
+    - VNDC có giới hạn khu vực cho vay tiền không
+    - Các khoản vay được áp dụng tại nơi đâu
+    - Áp dụng khoản vay cho các tỉnh thành nào
+    - Những tỉnh thành nào có thể vay tiền
+    - Tôi đang ở Hải Phòng có thể vay tiền không
+    - Tôi đang sống ở Hải Dương có thể vay tiền không
+    - Những địa phương nào mà công ty bạn cho vay thế
+    - Công ty cho vay ở những thành phố nào thế
+    - Công ty em chỉ cho vay tại Hà Nội thôi à
+    - VNDC cho vay ở những tỉnh, thành phố nào
+    - Công ty em cho vay ở những thành phố nào
+    - Công ty em có cho vay toàn quốc không vậy
+    - [Anh]{"entity": "gender_value", "value": "anh"} ở Quảng Ninh thì có thể vay được không em nhỉ
+    - Công ty em có giới hạn khu vực cho vay không
+    - Những tỉnh, thành phố nào nằm trong danh sách cho vay của công ty thế
+    - Có tỉnh, thành phố nào không được cho vay không em
+    - Công ty cung cấp các khoản vay cho các tỉnh thành phố nào vậy
+    - [Anh]{"entity": "gender_value", "value": "anh"} ở tận tp Hồ chí minh thì có thể đăng ký vay được không em
+    - Những khu vực nào có thể vay tiền thế em nhỉ
+    - Bên em cho vay ở những khu vực nào thế 
+    - VNDC cho vay ở những khu vực nào vậy
+    - Bên em cho vay ở các tỉnh nào thế
+    - Công ty có giới hạn địa phương cho vay không em
+    - Bên em cho vay ở những khu vực nào thế
+    - Tôi không ở Hà Nội thì có thể vay tiền không
+    - Công ty cho vay nhưng các thành phố nào thế em
+    - Danh sách các tỉnh thành phố mà bên em cho vay tiền là gì
+    - Công ty cho vay trên toàn quốc chứ em
+    - Công ty em có giới hạn địa phương cho vay không
+    - Các khoản vay có thể vay ở những chỗ nào thế
+    - Bên em hỗ trợ khoản vay trên cả nước chứ
+    - Người Việt bên nước ngoài có thể vay không em
+- intent: sign_contract
+  examples: |
+    - Quy trình kí hợp đồng như thế nào
+    - Bên em ký hợp đồng như thế nào
+    - Quá trình ký hợp đồng như thế nào em nhỉ
+    - Thực hiện ký kết hợp đồng diễn ra như thế nào
+    - ký kết hợp đồng giữa 2 bên như thế nào em nhỉ
+    - Hợp đồng giữa 2 bên được ký kết như nào
+    - Hợp đồng ký như thế nào
+    - Bên mình ký hợp đồng online luôn à
+    - [Anh]{"entity": "gender_value", "value": "anh"} ký hợp đồng với công ty như thế nào
+    - Quy trình ký hợp đầu tiến hành như thế nào vậy em
+    - ký hợp đồng gồm những bước nào em nhỉ
+    - Bên em ký hợp đồng với khách hàng như thế nào
+    - Các bước trong quá trình ký hợp đồng như thế nào
+    - hai bên sẽ tiến hành ký hợp đồng kiểu gì
+    - Các bước ký hợp đồng gồm những bước nào
+    - Ký hợp đồng có online không em
+    - Khách hàng ký hợp đồng với công ty như thế nào em nhỉ
+    - Chị ký hợp đồng với công ty em bằng cách nào
+    - Quá trình ký hợp đồng kiểu gì em nhỉ
+    - [Anh]{"entity": "gender_value", "value": "anh"} thực hiện ký hợp đồng kiểu gì thế
+    - Hợp đồng hai bên ký thế nào
+    - Cho mình hỏi hai bên ký hợp đồng kiểu gì
+    - Cho mình hỏi hợp đồng ký như thế nào
+    - Hợp đồng giữa 2 bên được ký như thế nào em
+    - Cho anh hỏi hợp đồng 2 bên được ký như thế nào
+    - Cho chị hỏi hợp đồng của 2 bên ký như thế nào em
+    - bên em ký hợp đồng với khách hàng như thế nào
+    - Ký hợp đồng online hả em
+    - Ký hợp đồng online đúng không em
+    - Anh sẽ ký hợp đồng với công ty như thế nào
+    - Ký kết hợp đồng như thế nào em nhỉ
+    - Quá trình ký kết hợp đồng diễn ra như thế nào 
+    - Quá trình ký hợp đồng như thế nào em nhỉ
+    - Quá trình ký hợp đồng như thế nào em
+    - Các bước ký hợp đồng diễn ra như thế nào
+    - Bên mình ký hợp đồng bằng phương thức nào em
+    - Hai bên ký kết hợp đồng kiểu gì thế em
+    - Hai bên ký hợp đồng bằng phương thức nào vậy
+    - Chị ký hợp đồng với bên em như thế nào
+    - Các thức ký hợp đồng của 2 bên diễn ra như thế nào
+- intent: borrower
+  examples: |
+    - Khách hàng cần bao nhiêu tuổi thì mới có thể được vay
+    - Độ tuổi yêu cầu để có thể vay tiền là bao nhiêu
+    - Bao nhiêu tuổi mới có thể vay tiền tại VNDC
+    - VNDC có cho doanh nghiệp vay vốn không?
+    - Doanh nghiệp có thể vay vốn ko
+    - VNDC có cho doanh nghiệp vay vốn không? Nếu có tôi cần cung cấp những thông tin gì?
+    - Bao nhiêu tuổi thì được làm hồ sơ vay tại công ty?
+    - Ai có thể sử dụng dịch vụ của VNDC?
+    - Ai có thể sử dụng dịch vụ vay tiền của VNDC
+    - Người nào có thể sử dụng dịch vụ của VNDC
+    - VNDC phục vụ những khách hàng nào
+    - Các đối tượng khách hàng của VNDC là ai
+    - Những ai có thể sử dụng dịch vụ của VNDC
+    - Những ai có thể sử dụng dịch vụ vay tiền của VNDC
+    - Những ai có thể sử dụng dịch vụ vay tiền này
+    - Đối tượng nào có thể vay tiền?
+    - kinh doanh tự do có được vay tiền không
+    - Những đối tượng nào có thể vay tiền
+    - Ai có thể vay tiền
+    - Em là sinh viên có thể vay tiền không
+    - Sinh viên có thể vay tiền không
+    - ai có thể được vay tiền
+    - những ai có thể vay tiền được
+    - những ai có thể vay tiền
+    - Những đối tượng nào đủ điều kiện vay tiền
+    - Tôi là sinh viên có thể vay tiền không
+    - Ai có đủ điều kiện vay tiền
+    - Ngành nghề nào không được hỗ trợ vay tại Công ty?
+    - Điều kiện với người muốn vay là gì em
+    - Bên em có điều kiện gì với người muốn vay không
+    - Người muốn vay cần có những điều kiện gì em nhỉ
+    - Mình là lao công thì có thể vay tiền không
+    - Công việc anh không ổn định lắm thì có được vay tiền không nhỉ
+    - Những đối tượng nào có thể vay được tiền thế em
+    - Người nào có thể vay tiền bên em vậy
+    - Những đối tượng nào có thể vay thế em
+    - Bên em phục vụ các đối tượng khách hàng nào
+    - Mình không sinh sống tại Việt Nam thì có thể vay không
+    - Em chưa đủ 18 tuổi thì có thể vay tiền không
+    - Đối tượng nào có thể được vay tiền em nhỉ
+    - Bên em phục vụ những đối tượng khách hàng nào thế
+    - Các đối tượng khách hàng bên em là gì
+    - Độ tuổi của khách hàng là bao nhiêu thế em
+    - Em mới 17 tuổi thì có được vay tiền không
+    - Công việc mình không ổn định lắm thì có được vay tiền không
+- intent: loan_helper
+  examples: |
+    - Tôi có thể nhờ người khác đứng ra vay tiền được không
+    - Người khác làm thủ tục vay tiền giúp tôi được không
+    - Tôi có thể nhờ người thân làm thủ tục vay tiền hộ không
+    - Người khác đăng ký vay giúp tôi được không
+    - Tôi có việc bận, người khác đăng ký vay giúp tôi được khônh
+    - Bạn tôi đứng ra làm thủ tục đăng ký vay giúp tôi được không
+    - Anh có thể nhờ bạn bè làm thủ tục đăng ký vay giúp được không
+    - Người khác đứng ra làm thủ tục hộ [anh](gender_value) thì có được không nhỉ
+    - Người thân mình đăng ký vay tiền hộ được không
+    - Người thân của mình thay mặt đăng ký vay tiền hộ được không
+    - Người thân của [anh](gender_value) đăng ký vay tiền giúp được chứ
+    - Tôi nhờ người thân làm hồ sơ vay hộ được không
+    - Tôi nhờ người thân đăng ký vay hộ được chứ
+    - Tôi nhờ người thân làm thủ tuc đăng ký vay hộ được chứ
+    - Tôi nhờ người thân đăng ký khoản vay hộ được chứ
+    - Người khác có thể thay mặt tôi làm hồ sơ vày không
+    - Người khác có thể thay mặt tôi đăng ký khoản vay không
+    - [Anh]{"entity": "gender_value", "value": "anh"} nhờ người thân làm hồ sơ vay được chứ em
+    - [Chị]{"entity": "gender_value", "value": "chị"} nhờ người thân đăng ký khoản vay được chứ nhỉ
+    - bên em có chấp nhận người khác đăng ký khoản vay hộ không
+    - Làm sao để người khác thay mặt mình đăng ký khoản vay hộ
+    - Người khác có thể thay mặt mình đăng ký khoản vay giúp được chứ
+    - Thủ tục đăng ký khoản vay của tôi có thể được người khác làm hộ không
+    - Hồ sơ vay của tôi có thể nhờ người khác làm hộ không
+    - Công ty có chấp nhận người khác đăng ký vay hộ không
+    - Làm sao để người thân tôi có thể đứng ra làm thủ tục vay hộ
+    - Tôi có thể làm hồ sơ vay hộ người thân không
+    - Bạn bè tôi nhờ làm thủ tục vay hộ có được không
+    - Bạn bè tôi nhờ đăng ký vay hộ có được không
+    - Người thân tôi nhờ đăng ký vay hộ có được không
+    - Bên em chấp nhận người khác làm thủ tục đăng ký hồ sơ vay hộ không
+    - [Anh]{"entity": "gender_value", "value": "anh"} có thể đăng ký vay hộ không
+    - Anh nhờ người khác vay tiền hộ mình được không em nhỉ
+    - Anh nhờ người khác làm hồ sơ vay hộ mình được không e nhỉ
+    - Mình có thể nhờ bạn bè đăng ký vay hộ được không
+    - Bên e có chấp nhận vay hộ không thế
+    - Tôi không thể trược tiếp đăng ký được, nhờ người khác làm thay được không
+    - Anh nhờ người khác đăng ký khoản vay giúp được không
+    - Anh có việc không trược tiếp đăng ký vay được, nhờ người khác được không em
+    - Chị nhờ người khác đăng ký vay được không em nhỉ
+    - Có thể vay hộ không em nhỉ
+    - Có thể làm thủ tục vay hộ người khác không em nhỉ
+    - Có thể vay hộ người khác không thế em
+    - Có thể đăng ký hồ sơ vay hộ người khác không em ơi
+    - Công ty có cho phép đăng ký vay hộ không em
+    - Công ty có cho phép làm hồ sơ vay hộ không em nhỉ
+    - Người khác thay mặt anh đăng ký khoản vay được không em
+    - Công ty có chấp nhận đăng ký vay hộ người khác không thế em
+    - Công ty có chấp nhận làm thủ tục vay hộ người khác ko thế
+- intent: information_provided
+  examples: |
+    - [Anh]{"entity": "gender_value", "value": "anh"} bị mất chứng minh thư thì có thể vay không
+    - Mình bị mất căn cước thì có thể vay không
+    - Bên em có yêu cầu gì về các thông tin cần cung cấp không
+    - Công ty có yêu cầu gì về việc cung cấp số điện thoại khi vay tiền không
+    - Thẻ ngân hàng của tôi bị mất thì tôi có vay được tiền không
+    - Tôi đăng ký bằng số điện thoại của người khác có được không
+    - Những thông tin gì phải cung cấp để vay tiền
+    - Hồ sơ vay gồm có những gì?
+    - Làm hồ sơ vay cần những điều kiện gì
+    - Điều kiện để thực hiện các khoản vay là gì
+    - Tôi cần cung cấp những giấy tờ gì để vay tiền
+    - Để vay cần cung cấp những giấy tờ gì
+    - Vay tiền phải cung cấp những giấy tờ gì
+    - Muốn vay thì cần những gì
+    - Những thông tin gì cần cung cấp trên hồ sơ đăng ký vay thế em
+    - Điều kiện để vay tiền là gì
+    - Khi điền thông tin cho vay cần những yêu cầu gì em
+    - điều kiện để vay tiền là gì?
+    - Để vay tiền cần có những điều kiện gì
+    - Tôi cần có điều kiện gì để vay tiền
+    - Những điều kiện gì tôi phải đáp ứng để thực hiện khoản vay
+    - Bên bạn có cần thế chấp không?
+    - Làm sao mới có thể vay tiền
+    - Tôi cần cung cấp những gì để đủ điều kiện vay tiền
+    - Để thực hiện khoản vay tôi cần đáp ứng những điều kiện gì
+    - Cần những điều kiện gì để có thể thực hiện vay tiền từ bên bạn?
+    - Để vay tiền, tôi cần đáp ứng những gì
+    - Nếu vay tiền tôi có cần thế chấp không?
+    - Làm sao để tôi có thể vay tiền
+    - Bên bạn cần những điều kiện gì để thực hiện cho vay
+    - Tôi cần đưa những gì cho bên bạn khi thực hiện khoản vay
+    - Để thực hiện vay tiền tôi phải đáp ứng những gì
+    - bên bạn cần những điều kiện gì để có thể vay tiền
+    - Công ty có yêu cầu gì đối với người vay tiền?
+    - Tôi có cần đặt cọc hay thế chấp gì cho công ty không?
+    - Cho tôi biết có cần thế chấp thứ gì không để thực hiện vay tiền
+    - bên công ty có cần những điều kiện gì không
+    - Bên bạn có cần điều kiện gì không?
+    - Có cần thế chấp khi thực hiện khoản vay ở công ty không?
+    - Tôi có cần thế chấp thứ gì để thực hiện khoản vay này không?
+    - Có thể cung cấp cụ thể hơn điều kiện để thực hiện khoản vay không?
+    - Tôi phải làm gì để có thể vay tiền
+    - Tôi muốn vay tiền thì làm thế nào
+    - Vay tiền thế nào vậy
+    - Sổ hộ khẩu nhà tôi bị mất tôi có vay được không?
+    - hồ sơ vay cần những thông tin gì thế em
+- intent: income_condition
+  examples: |
+    - Anh muốn đăng ký vay 5 triệu nhưng thu nhập [anh](gender_value) khoảng 6-7 triệu một tháng thôi thì bên em cho vay không?
+    - Lương tôi hơi thấp thì có được vay không
+    - Tôi chưa có lương thì có thể vay không
+    - Tôi đang thất nghiệp thì có thể vay không
+    - Hiện tại tôi đang không có việc làm tôi có thể vay tại VNDC không?
+    - Hiện tại tôi không có thu nhập tôi có thể vay tại VNDC không
+    - Tôi phải chứng minh thu nhập như thế nào để có thể vay tại VNDC
+    - Chưa có thu nhập có thể vay tiền không
+    - Em chưa có thu nhập thì có thể vay tiền không
+    - Em chưa có thu nhập, có thể vay tiền không
+    - Tôi không có thu nhập có thể vay tiền không
+    - Thu nhập trung bình bao nhiêu một tháng mới có thể vay
+    - Thu nhập bao nhiêu mới có thể vay tại VNDC
+    - Mức lương bao nhiêu mới thỏa mãn yêu cầu cho vay tại VNDC
+    - Mức lương là bao nhiêu thì được cho vay tại VNDC
+    - Mức lương như thế nào thì được vay tiền
+    - Thu nhập thấp có được vay tiền không
+    - Thu nhập bao nhiêu tiền trên tháng mới được vay vậy
+    - Công ty có điều kiện gì về thu nhập của người vay không
+    - Cho [anh]{"entity": "gender_value", "value": "anh"} hỏi điều kiện thu nhập như thế nào mới vay được thế
+    - Anh có thu nhập không ổn định thì có thể vay không
+    - Lương tháng bao nhiêu thì mới vay được tiền thế
+    - Bên công ty em có yêu cầu về thu nhập như thế nào mới vay được không
+    - Điều kiện về mức lương để vay là bao nhiêu e
+    - Cho [Anh]{"entity": "gender_value", "value": "anh"} hỏi mức lương bao nhiêu thì mới vay được vậy
+    - Công ty có yêu cầu gì về mức lương người vay không
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} không có việc làm mấy tháng nay liệu có vay được không
+    - Đợt này bị covid, [chị](gender_value) không có việc thì có vay được không
+    - Trước kia thu nhập [chị](gender_value) khá cao, nhưng mấy tháng này không có việc thì có thể vay được không em
+    - Thu nhập anh rất thất thường thì liệu có được vay không thế em
+    - Thu nhập bao nhiêu thì mới được vay thế
+    - Điều kiện về mức thu nhập của khách hàng là gì thế
+    - Mức thu nhập bao nhiêu thì mới có thể vay bên em thế
+    - Cần có điều kiện gì về thu nhập để có thể vay không em nhỉ
+    - Anh có cần chứng minh thu nhập của mình để có thể vay không em
+    - Điều kiện về mức lương để có thể vay tiền bên em là gì
+    - Bên công ty em có điều kiện gì về mức lương để có thể vay tiền không vậy
+    - Mức thu nhập bao nhiêu mới thỏa mãn điều kiện vay của công ty em thế
+    - Anh thuộc diện thu nhập thấp thì có thể vay tiền không em
+- intent: fill_info_request
+  examples: |
+    - số điện thoại của mình không chính chủ thì có thể vay được không
+    - Chứng minh thư của tôi bị mất tôi có thể chụp ảnh chứng minh thư photo được không
+    - Tôi có thể chụp ảnh chứng minh thư photo công chứng được không
+    - Chứng minh thư của tôi bị mất, tôi có thể chụp ảnh chứng minh thư công chứng được không?
+    - Khi vay tiền tôi cung cấp số tài khoản nhận tiền không phải của tôi có được không
+    - Tôi cung cấp số tài khoản nhận tiền không phải của tôi có được không
+    - Tôi cung cấp số tài khoản của người thân có được không
+    - Khi vay tiền tôi cung cấp số tài khoản không của người thân có được không
+    - Số điện thoại tôi không chính chủ có được không
+    - Số điện thoại tôi cung cấp đăng ký vay không chính chủ có được không
+    - Khi vay tiền tôi cung cấp số điện thoại của người thân tôi có được không
+    - Tôi đăng kí số điện thoại của người khác để vay tiền có được không
+    - Tôi đăng ký chứng mình thư của người thân tôi có được không nhỉ
+    - Tôi lấy thông tin của người thân đăng ký vay có được không
+    - Chứng minh thư của tôi bị mất có đăng ký vay được không
+    - Số điện thoại tôi đăng ký không dùng nữa có đăng ký được không
+    - Ảnh chụp chứng mình thư bản sao có được không em
+    - Đăng ký số điện thoại của người khác có được không em
+    - Đăng ký số điện thoại của người nhà có được không em
+    - Thẻ của anh bị mất anh có thể cung cấp số thẻ của vợ anh được không
+    - Có thể cung cấp số thẻ của người khác được không em
+    - Số điện thoại của anh không chính chủ có được không em
+    - Anh bị rơi mất chứng mình thư, anh có thể chụp chứng mình thư bản photo được không
+    - Mình cung cấp số điện thoại không chính chủ có được không
+    - Chứng mình thư của mình hết hạn liệu có sao không
+    - Số điện thoại không phải của tôi thì có ảnh hưởng gì không
+    - Tài khoản cung cấp không phải của tôi thì có ảnh hưởng gì không
+    - Tôi cung cấp chứng minh thư của vợ tôi thì có được không
+    - Có thể cung cấp số chứng minh thư của vợ tôi không
+    - Tôi cung cấp số chứng minh thư của người nhà có được không
+    - Cung cấp thông tin của người khác có được không em nhỉ
+    - Mình cung cấp thông tin sổ hộ khẩu được không
+    - Số hộ chiếu được không em
+    - Anh cung cấp số hộ chiếu được không em
+    - Mình cung cấp số hộ chiếu thay thế được không
+    - Em mất chứng mình thư, dùng thẻ sinh viên được không
+    - Em dùng số thẻ sinh viên được không
+- intent: loan_appraisal
+  examples: |
+    - Công ty có gọi điện thoại cho người thân của tôi để thẩm định thông tin không?
+    - Công ty có gọi điện cho người thân không thẩm đinh không
+    - Bên công ty thẩm định khoản vay như thế nào
+    - Hình thức thẩm định của công ty như thế nào
+    - Công ty có đến tận nhà để tiến hành thẩm định hay không
+    - VNDC có gọi điện cho người thân để thẩm định không
+    - Phương thức thẩm định của VNDC như thế nào
+    - Cách thức thẩm định khoản vay của VNDC như thế nào
+    - Bên em thẩm định khoản vay như thế nào
+    - Quy trình thẩm định vay như thế nào
+    - Quá trình thẩm định diễn ra như thế nào
+    - Công ty có đến tận nhà để tiến hành thẩm định không
+    - Quá trình thẩm định công ty có đến nhà tôi không
+    - Công ty có đến nhà tôi thẩm định hay không
+    - VNDC thẩm định như thế nào
+    - bên em tiến hành quá trình thẩm định như thế nào
+    - Quá trình thẩm định khoản vay của công ty thế nào
+    - Bên em thẩm định có lâu không
+    - Công ty có gọi điên cho người thân để tiến hành thẩm định không
+    - Tôi cần cung cấp những thông tin gì trong quá trình thẩm định
+    - Công ty em thẩm định kiểu gì thế
+    - Quá trình thẩm định công ty diễn ra như thế nào
+    - Cách thức thẩm định của công ty như thế nào
+    - Cho [Anh]{"entity": "gender_value", "value": "anh"} hỏi bên em thẩm định kiểu gì thế
+    - Cho [chị](gender_value) hỏi bên em thẩm định như thế nào vậy
+    - Thẩm định khoản vay như thế nào vậy
+    - Quy trình thẩm định của công ty diễn ra như thế nào
+    - VNDC thẩm định các khoản vay như thế nào
+    - Quá trình thẩm định diễn ra lâu không
+    - Thời gian thẩm định như thế nào em
+    - Bên em thẩm đinh trực tiếp hay online thế
+    - Các thủ tục khi thẩm định như thế nào
+    - Quá trình thẩm định online như thế nào
+    - Hình thức thẩm định của bên em như thế nào vậy
+    - Thẩm định online thì kiểu gì em
+    - Quy trình thẩm định được tiến hành như thế nào
+    - Bên e có gọi điện cho người thân bạn bè của anh chị khi tiến hành thẩm định không thế
+    - Quy trình thẩm định của bên em tiến hành kiểu gì
+    - Bên công ty thẩm định khách hàng như thế nào vậy
+    - Quá trình thẩm định diễn ra lâu không em
+- intent: bad_debt
+  examples: |
+    - Tôi đang nợ tiền ngân hàng thì có vay được không
+    - Trước đây tôi có nợ xấu, tôi có thể vay tiền bên VNDC không
+    - Trước đây tôi nợ xấu, nhưng đã thanh toán đầy đủ, tôi có thể vay tiền bên công ty không
+    - Tôi đã tưng nằm trong danh sách nợ xấu của CIC, tôi có thể vay tiền không?
+    - Người nợ xấu có được vay tiền không
+    - Đang dư nợ thẻ tín dụng thì có thể vay tiền không
+    - Nợ tín dụng thì có thể vay tiền không
+    - Nợ xấu thì có thể vay tiền không
+    - Tôi phải chứng mình thu nhập như thế nào để có thể vay tại VNDC
+    - Người thân của tôi bị nợ xấu thì tôi có được vay không?
+    - Người thân bạn bè tôi bị nợ xấu tôi có thể vay không
+    - Gia đình tôi có người bị nợ xấu tôi có thể vay không
+    - Tôi đang vay ở mấy nơi rồi tôi có vay được tiếp ở VNDC không?
+    - Hiện taị tôi có nợ xấu tại CIC thì tôi có thể vay không
+    - Nợ xấu tại CIC có thể vay không em
+    - Công ty có cho người có nợ xấu vay không
+    - Chính sách cho vay đối với người nợ xấu như thế nào
+    - Trước đây tôi nợ xấu, bây giờ tôi có thể vay bên công ty không
+    - Nợ xấu thì có thể đăng ký khoản vay không
+    - Tôi có lịch sử từng bị nợ xấu thì có vay tiền được không
+    - Công ty có cho người bị nợ xấu vay tiền không
+    - Hiện tại tôi có vay một số nơi khác thì tôi có thể tiếp tục vay tại VNDC không
+    - [Anh]{"entity": "gender_value", "value": "anh"} đã từng nợ xấu nhưng đã thanh toán đầy đủ thì công ty có cho vay tiền không
+    - Tôi nợ tiền ngân hàng thì có thể vay được không
+    - Chồng [chị](gender_value) bị nợ xấu thì chị có thể vay tiền không
+    - Người trong gia đình tôi bị nợ xấu thì tôi có được vay tiền không
+    - Bên em có cung cấp các khoản vay cho người từng bị nợ xấu không
+    - Người nợ xấu có được vay bên em không thế
+    - Chính sách áp dụng với người đã từng bị nợ xấu bên em là gì
+    - Người nợ xấu có được vay bên em không vậy
+    - Tôi đang nợ tiền ngân hàng thì có thể vay bên VNDC không
+    - VNDC có yêu cầu gì về người nợ xấu không
+    - Nợ xấu có được vay tiền không em
+    - Mình đã từng nợ xấu thì có thể vay tiền không nhỉ
+    - Công ty có cho vay với người bị nợ xấu không
+    - Nợ xấu thì có thể đăng ký vay tiền không
+    - người nợ xấu có thể làm hồ sơ vay tiền không
+    - Bên em có cho các cá nhân bị nợ xấu vay tiền không thế
+    - Bạn bè anh nợ xấu có ảnh hưởng đến anh không
+    - Người trong gia đình anh nợ xấu thì anh có thể vay tiền hay không
+    - Anh đang vay nợ ngân hàng thì có thể vay bên em không
+    - Mình có vay một số khoản tiền bên ngân hàng nhưng giờ chưa trả thì có vay được không
+    - Em có vay tiền của một số bên khác thì có thể tiếp tục vay bên mình không
+    - VNDC có cung cấp các khoản vay cho người bị nợ xấu không
+    - Anh hiện đang bị nợ xấu liệu có được vay không
+    - Tôi đã từng bị nợ xấu nhưng đã trả đầy đủ thì có thể vay được không
+    - Làm sao để người nợ xấu có thể vay tiền thế
+    - Nợ xấu có ảnh hưởng tới khả năng vay không em ơi
+    - Người nợ xấu có bị ảnh hưởng tới khả năng vay không em
+    - Những cá nhân nợ xấu có được vay bên công ty em không
+    - Tôi bị nợ xấu và có tên trên CIC thì liệu có được vay không
+    - Công ty em có yêu cầu gì về nợ xấu không vậy
+- intent: payment_methods
+  examples: |
+    - Người khác trả nợ cho tôi được không
+    - Tôi có thể nhờ người khác trả nợ được không
+    - Tôi có thể thanh toán khoản vay như nào để nhanh chóng và tiện lợi nhất?
+    - Tôi không có thời gian để ra ngân hàng trả nợ, người khác trả nợ cho tôi được không?
+    - Tôi đang bị ốm và không có ai giúp trả tiền khoản vay, công ty có thể hỗ trợ người qua lấy được không
+    - Những cách nào để trả lại các khoản vay
+    - Tôi có thể thanh toán khoản nợ qua website hoặc qua app của công ty không?
+    - Thanh toán khoản nợ qua website của công ty được không em?
+    - Tôi có thể thanh toán khoản nợ qua app của công ty không vậy?
+    - Tôi có thể trả lại tiền ở đâu
+    - Tôi có thể thanh toán khoản vay ở đâu
+    - Có thể thanh toán khoản vay trước hạn không
+    - Thanh toán trước hạn sẽ ảnh có sao không
+    - Phương thức trả nợ là gì
+    - phương thức trả nợ như thế nào
+    - phương thức trả khoản vay như thế nào
+    - phương thức trả các khoản vay là gì
+    - Hình thức trả nợ như thế nào
+    - Hình thức trả nợ là gì
+    - Hình thức trả nợ được áp dụng của công ty em là gì
+    - Các hình thức trả nợ của công ty em là gì
+    - Tôi trả nợ cho công ty như nào
+    - Tôi trả nợ cho công ty như thế nào
+    - [Anh]{"entity": "gender_value", "value": "anh"} có thể trả nợ cho bên em như thế nào
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} có thể trả nợ cho bên em như thế nào
+    - Anh có thể trả nợ cho công ty bằng hình thức nào
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} có thể trả nợ cho công ty bằng hình thức nào
+    - Thanh toán các khoản vay như thế nào
+    - Làm sao để thanh toán khi đến kì hạn
+    - Bên bạn có hỗ trợ thanh toán online không?
+    - Thanh toán khoản vay như thế nào
+    - Tôi có thể thanh toán khoản vay như thế nào
+    - Tôi có thể thanh toán khoản vay bằng cách nào
+    - Tôi có thể trả lại khoản vay như thế nào
+    - Tôi có thể trả lại khoản vay bằng cách nào
+    - Tôi có thể thanh toán cho công ty như thế nào
+    - Làm sao để thanh toán khoản vay
+    - Khi muốn trả lại khoản vay, tôi cần làm những gì
+    - Công ty hỗ trợ những hình thức thanh toán nào
+    - Tôi sẽ trả lại số tiền vay bằng cách nào
+    - Tôi sẽ trả lại số tiền vay như thế nào
+    - Các hình thức thanh toán của công ty là gì
+    - Làm sao để thanh toán cho bên công ty
+    - Khoản vay sẽ được hoàn trả bằng những phương thức nào
+    - Công ty có những phương pháp thanh toán nào
+    - Công ty cung cấp những hình thức thanh toán nào
+- intent: loan_extension
+  examples: |
+    - Gia hạn khoản nợ như thế nào
+    - Làm sao để gia hạn khoản nợ
+    - [Anh]{"entity": "gender_value", "value": "anh"} muốn gia hạn khoản nợ thì như thế nào
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} muốn gia hạn khoản nợ thì làm cách nào
+    - Gia hạn nợ như thế nào em
+    - Gia hạn khoản nợ như thế nào em nhỉ
+    - làm sao để gia hạn khoản nợ hả em
+    - làm sao để [anh](gender_value) gia hạn được khoản nợ thế
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} gia hạn khoản nợ bằng cách nào
+    - Gia hạn khoản nợ thì cần làm những gì
+    - Gia hạn khoản nợ thì cần làm như thế nào
+    - [chị](gender_value) gia hạn khoản nợ thì cần làm những gì
+    - Cách nào để gia hạn khoản nợ em nhỉ
+    - Làm sao để gia hạn khoản vay nợ của công ty
+    - Gia hạn vay nợ bên công ty như thế nào
+    - Gia hạn nợ bên công ty như thế nào
+    - Phương thức để gia hạn nợ như thế nào
+    - Mình muốn gia hạn nợ thì phải làm gì
+    - Để có thể gia hạn nợ thì phải làm gì em
+    - Để có thể gia hạn nợ thì làm như thế nào
+    - Làm như thế nào để gia hạn nợ
+    - Vậy làm như thế nào để gia hạn nơ
+    - Vậy tôi phải làm gì để gia hạn nợ
+    - Cần làm gì để gia hạn nợ vậy em
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} có thể gia hạn thời gian vay được không
+    - Gia hạn hợp đồng như thế nào em nhỉ
+    - Gia hạn khoản vay bằng cách nào thế em
+    - Nếu hết thời gian vay mình có thể gia hạn nợ được không
+    - Gia hạn nợ bằng cách nào vậy em
+    - Sắp tới anh muốn gia hạn nợ thì đăng ký như thế nào
+    - Anh sắp đến kì trả nợ nhưng muốn gia hạn thêm được không
+    - Gia hạn nợ thì đăng ký ở đâu thế
+    - Chị gia hạn vay nợ bên em được không
+    - Chị gia hạn nợ thì phải làm gì
+    - Tôi làm cách nào để có thể gia hạn nợ
+    - Có thể gia hạn khoản nợ không em
+    - Gia hạn nợ thì mất phí bao nhiêu thế
+    - Gia hạn nợ có mất phí không
+    - Gia hạn nợ thì mất bao nhiêu tiền
+    - Gia hạn nợ thì thêm bao nhiêu ngày thế em
+    - Phí gia hạn nợ là bao nhiêu tiền vậy
+- intent: late_payment
+  examples: |
+    - Nếu tôi vay nhưng không trả nợ được thì sao? Có bị phạm tội không?
+    - Tôi trả nợ một nửa có được không
+    - Nếu tôi không trả nợ được thì sao
+    - Tôi không trả nợ được thì sao
+    - Tôi có thể thanh toán trễ hạn không
+    - Bất lợi khi thanh toán trễ hạn hoặc thanh toán thiếu
+    - Nếu thanh thoán thiếu tôi sẽ phải gặp những bất lợi gì
+    - Tôi sẽ bị ảnh hưởng gì nếu thanh toán muộn hoặc thiếu
+    - Điều gì sẽ xảy ra nếu tôi thanh toán trễ hạn
+    - Nếu tôi thanh toán trễ hạn thì điều gì sẽ xảy ra
+    - Nếu tôi thanh toán thiếu thì điều gì sẽ xảy ra
+    - Tôi có bị phạt nếu thanh toán trễ không?
+    - Nếu thanh toán muộn thì sao
+    - Thanh toán muộn thì sao
+    - Thanh toán thiếu thì bị sao
+    - Trường hợp tôi thanh toán thiếu thì sao
+    - Trường hợp tôi thanh toán muộn thì sao
+    - Nếu thanh toán thiếu thì sẽ có ảnh hưởng gì
+    - Điều gì sẽ xảy ra nếu tôi thanh toán muộn
+    - Nếu tôi không thanh toán đúng hạn thì sao
+    - Điều gì sẽ xảy ra nếu tôi thanh toán thiếu
+    - Bất lợi khi khách hàng thanh toán muộn
+    - Bất lợi khi khách hàng thanh toán thiếu
+    - Nếu tôi thanh toán muộn thì điều gì sẽ xảy ra
+    - Công ty sẽ có chính sách gì nếu khách hàng thanh toán muộn
+    - Công ty sẽ có chính sách gì nếu khách hàng thanh toán thiếu
+    - Có khoản phạt nào không nếu tôi thanh toán bị trễ
+    - Có khoản phạt nào không nếu tôi thanh toán bị thiếu
+    - Nếu tôi thanh toán bị thiếu thì điều gì sẽ xảy ra
+    - Nếu tôi thanh toán bị trễ thì điều gì sẽ xảy ra
+    - Tôi có thể trả nợ muộn không?
+    - Mình có thể trả nợ muộn không
+    - [Anh]{"entity": "gender_value", "value": "anh"} trả nợ muộn có được không
+    - Trả nợ muộn thì có sao không
+    - Trường hợp sau 35 ngày mà không trả đủ thì có phát sinh thêm lãi không em
+    - Không trả nợ đúng hạn có phát sinh thêm lãi không em
+    - Trả nợ không đúng hạn có phát sinh lãi ko
+    - Nếu thanh toán chậm thì có các giải quyết gì không em
+    - Thanh toán muộn thì ảnh hưởng những gì
+    - Nếu anh thanh toán muộn thì có bị phạt gì không
+    - Đến kì hạn nhưng thanh toán chưa đủ thì có ảnh hưởng gì không em
+    - Tôi thanh toán thiếu thì có mất thêm phí không
+    - Thanh toán thiếu thì mất thêm phí gì
+- intent: loan_consulting
+  examples: |
+    - Tôi có thể hỏi bạn một số thứ được không?
+    - Tôi có một số thắc mắc về vay tiền
+    - Tôi có một số thắc mắc về khoản vay
+    - [Anh]{"entity": "gender_value", "value": "anh"} có một số thắc mắc cần hỏi
+    - Giải đáp giúp mình một số thông tin nhé
+    - Tôi có một số thắc mắc về đăng kí khoản vay
+    - Tôi có một số thắc mắc
+    - Anh có một vài thắc mắc
+    - Tư vấn tôi về dịch vụ cho vay tiền mặt?
+    - Tôi muốn biết một số thông tin về dịch vụ vay tiền mặt
+    - Cho [chị](gender_value) một số thông tin về dịch vụ vay tiền bên em nhé
+    - Tư vấn giúp [anh](gender_value) một số vấn đề về dịch vụ nhé
+    - Giúp anh tư vấn một số vấn đề về vay tiền nhé
+    - Cho [anh](gender_value) hỏi một số vấn đề về vay tiền nhé
+    - Giải đáp giúp [chị](gender_value) một vài thắc mắc em nhé
+    - Tư vấn giúp mình với
+    - Mình cần tư vấn một số vấn đề về vay tiền
+    - Em ơi [chị](gender_value) có vài vấn đề cần từ vấn
+    - Anh có vài vấn đề cần tư vấn
+    - Tôi có vài vấn đề cần tư vấn về khoản vay
+    - [Anh]{"entity": "gender_value", "value": "anh"} có vài vấn đề về khoản vay cần tư vấn
+    - Giups tôi tư vấn về dịch vụ vay bên mình nhé
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} có vài vấn đề thắc mắc cần tư vấn kĩ hơn
+    - [Anh]{"entity": "gender_value", "value": "anh"} có vài vấn đề thắc mắc cần giải đáp kĩ hơn
+    - [Anh]{"entity": "gender_value", "value": "anh"} có vài vấn đề cần giải đáp rõ ràng hơn
+    - Em có thể giải đáp cho anh kĩ một vài vấn đề không
+    - Em giúp anh giải đáp vài vấn đề nhé
+    - Anh cần em giải đáp rõ ràng hơn một số vấn đề về dịch vụ vay
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} cần em giải thích rõ ràng hơn một vài điều
+    - Tư vấn cụ thể cho [chị](gender_value) về khoản vay nhé
+    - Tư vấn cụ thể cho anh về dịch vụ vay nhé
+    - Cho anh giải đáp cụ thể về các dich vụ vay bên mình nhé
+    - Giải đáp giúp anh một vài thắc mắc về dịch vu vay bên mình nhé
+    - Tư vấn giúp [chị](gender_value) thông tin vay nhé
+    - Tư vấn giúp [chị](gender_value) một số thắc mắc nhé
+    - Tư vấn giúp chi một số thắc mắc nhé
+    - Cho anh hỏi một số vấn đề được không
+    - Giải đáp giúp [chị](gender_value) một số thắc mắc về khoản vay
+- intent: cost_consulting
+  examples: |
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} muốn vay 2 triệu thì chi phí phải trả là bao nhiêu?
+    - [chị](gender_value) muốn vay 4 triệu thì số tiền lãi phải trả là bao nhiêu
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} phải trả lãi là bao nhiêu nếu vay 3000000 VND
+    - Bây giờ [chị](gender_value) vay 5 triệu thì chi phí là bao nhiêu
+    - Chị vay bên em 2500000 thì số tiền phải trả là bao nhiêu
+    - Anh muốn vay 5 triệu thì anh phải trả lãi thế nào
+    - A vay bên em 1 triệu thì lãi bao nhiêu thế
+    - Tôi vay 2 triệu thì tôi phải trả công ty bao nhiêu tiền
+    - Tôi vay 3500000 VND thì tôi phải trả tổng bao nhiêu tiền
+    - Số tiền lãi trả khi tôi vay 4 triệu là bao nhiêu
+    - Số tiền lãi anh phải trả khi vay 2 triệu là bao nhiêu
+    - Bây giờ [chị](gender_value) muốn vay 5 triệu thì tiền lãi là bao nhiêu
+    - Bây giờ anh vay 4 triệu thì lãi và phí như thế nào nhỉ
+    - Anh vay 3 triệu thì lãi và phí như thế nào
+    - Lãi và phí phát sinh phải trả khi anh vay 3 triệu là bao nhiêu
+    - Tiền lãi khi anh vay bên VNDC 3 triệu là bao nhiêu
+    - Anh phải trả bao nhiêu nếu muốn vay 2 triệu
+    - Anh vay 5 triệu thì tiền lãi và phí trả cho công ty là bao nhiêu
+    - Chi phí và lãi phải trả nếu anh vay 1 triệu là bao nhiêu
+    - Số tiền lãi và phí anh phải trả nếu vay bên em 3 triệu là bao nhiêu
+    - Tôi vay bên công ty 2 triệu thì lãi tôi trả là bao nhiêu thế
+    - Số tiền phí tôi phải trả nếu vay bên VNDC 2 triệu là bao nhiêu
+    - Chi phí và lãi phát sinh khi chị vay khoản vay 5 triệu là bao nhiêu tiền
+    - Bao nhiêu tiền phí và lãi tôi phải trả nếu vay 3 triệu
+    - Em vay 2000000 thì lãi và phí tính như thế nào
+    - Anh muốn vay 3000000 thì lãi và phí là bao nhiêu
+    - số tiền lãi và phí nếu anh vay 2000000VND
+    - Anh tiến hành vay 6 triệu thì lãi và phí như thế nào
+    - Lãi và phí được tính như thế nào nếu anh vay 2 triệu 
+- intent: loan_information
+  examples: |
+    - Thông tin về dịch vụ vay tiền mặt của VNDC
+    - Tôi muốn biết thông tin về các khoản vay bên bạn?
+    - Cung cấp thông tin về các khoản vay bên bạn
+    - Công ty cho cung cấp các gói vay nào?
+    - Tôi có thể vay bao nhiêu tiền
+    - Bên công ty em cho vay bao nhiêu tiền
+    - Anh có thể vay bao nhiêu tiền
+    - Em có thể vay bao nhiêu tiền
+    - Số tiền vay là bao nhiêu
+    - Số tiền có thể vay là bao nhiêu
+    - Số tiền lớn nhất có thể vay là bao nhiêu
+    - Gói vay của công ty là bao nhiêu
+    - Những gói vay bên công ty bạn là gì
+    - Thông tin các gói vay bên công ty là gì
+    - Những gói vay bên công ty em là gì
+    - Hiện tại bên công ty em cung cấp các gói vay nào
+    - Cho anh biết các gói vay bên công ty em nhé
+    - Tôi muốn biết thông tin cụ thể của các khoản vay
+    - Các khoản vay mà công ty cung cấp
+    - Công ty bạn cung cấp các khoản vay như thế nào
+    - Bên em cung cấp những khoản vay nào
+    - Cho tôi thông tin cụ thể hơn về các khoản vay
+    - hãy cho tôi thông tin cụ thể hơn về các khoản vay đi
+    - Những khoản vay nào mà công ty bên bạn cung cấp?
+    - Cụ thể hơn về các khoản vay bên bạn đi
+    - Hạn mức vay là bao nhiêu
+    - Hạn mức vay công ty em là bao nhiêu
+    - Có thể nói cụ thể hơn về các khoản vay bên bạn không
+    - Hình thức vay và các khoản vay bên bạn như thế nào
+    - Cho tôi biết cụ thể hơn về khoản vay bên bạn đi
+    - Các hình thức cho vay bên bạn như thế nào
+    - Số tiền nhỏ nhất bên bạn cho vay là bao nhiêu?
+    - Số tiền lớn nhất bên bạn cung cấp là bao nhiêu?
+    - Hình thức cho vay tiền của công ty bạn như thế nào?
+    - Các hình thức vay tiền của công ty như thế nào?
+    - Các gói vay tiền bên bạn cung cấp là gì?
+    - Các gói vay mà công ty bạn có thể cung cấp là gì
+    - Có thể nói qua về các khoản vay bên bạn không?
+    - Các khoản vay bên bạn là gì
+    - Thông tin các khoản vay bên em là gì
+    - Số tiền công ty cho vay tối đa là bao nhiêu?
+    - Số tiền tối đa VNDC cho vay là bao nhiêu
+    - Số tiền tối thiểu VNDC cho vay là bao nhiêu
+    - Bên em có những khoản vay nào
+    - bên em có những khoản vay nào thế
+    - Em ơi bên mình có những khoản vay nào thế
+    - Các khoản vay của công ty là gì
+    - bên em vay như thế nào
+    - Công ty có những khoản vay nào vậy
+    - Cho anh hỏi bên em có những khoản vay nào thế
+- intent: loan_process
+  examples: |
+    - Vậy quy trình bên VNDC như thế nào
+    - Quy trình bên công ty VNDC như thế nào
+    - Các bước khi thực hiện vay là gì
+    - Quá trình kí kết hợp đồng như thế nào
+    - Quá trình kí kết hợp đồng online như thế nào
+    - Để thực hiện vay cần làm những gì
+    - Quy trình các bước vay tiền là gì
+    - Quy trình các bước vay tiền như thế nào?
+    - Quy trình thực hiện khoản vay như thế nào?
+    - Các bước của quy trình thực hiện khoản vay?
+    - Các bước để thực hiện khoản vay như thế nào?
+    - Tiến trình thực hiện khoản vay như thế nào?
+    - Tiến trình các bước thực hiện khoản vay như thế nào?
+    - tiến trình thực hiện khoản vay gôm những bước nào?
+    - Quy trình vay như thế nào
+    - Các bước của quy trình vay như thế nào
+    - Quy trình vay bên công ty như thế nào bạn
+    - Cho mình hỏi quy trình vay bên công ty bạn như thế nào?
+    - Cho tôi hỏi trình tự vay tiền bên công ty bạn như thế nào?
+    - Quy trình vay tiền thế nào vậy em
+    - Quy trình vay bên em như thế nào
+    - Các bước của quá trình ký kết hợp đồng như thế nào vậy
+    - Các bước quá trình thực hiện vay
+    - Các bước quá trình thực hiện vay là gì
+    - Các bước của quy trình vay
+    - Cần phải làm gì để thực hiện vay được
+    - Quy trình thực hiện khoản vay diễn ra như thế nào
+    - Khi vay cần thực hiện những bước nào
+    - Quy trình vay như thế nào em nhỉ
+    - Các bước trong quy trình vay là gì em nhỉ
+    - Anh muốn vay cần thực hiện các bước nào
+    - Các bước cần thực hiện để tiến hành vay tiền là gì
+    - Quy trình vay cần gồm những bước nào thế em
+    - Cho anh hỏi quy trình vay gồm những bước nào vậy em
+    - Quy trình vay tiến hành như thế nào vậy
+    - Các bước tuần tự của quá trình vay là gì
+    - Các bước cần tiến hành để vay là gì
+    - Các bước cần tiến hành để vay tiền bên công ty em là gì
+    - Quá trình thực hiện khoản vay gồm những bước nào thế
+    - A cần phải làm gì để có thể thực hiện khoản vay
+    - Anh cần thực hiện những bước gì để có thể vay bên em
+    - Tiến trình vay bao gồm những bước nào thế
+    - Các bước thực hiện để vay tiền là gì
+- intent: detail_loan
+  examples: |
+    - Tôi muốn biết thông tin cụ thể của gói vay [MoneyCat](loan_name)
+    - Tôi muốn biết thông tin cụ thể của gói vay [Tamo](loan_name)
+    - Tôi muốn biết thông tin cụ thể của gói vay [Senmo](loan_name)
+    - Tôi muốn biết thông tin cụ thể của gói vay [Takomo](loan_name)
+    - Tôi muốn biết thông tin cụ thể của gói vay [Cash24](loan_name)
+    - Thông tin cụ thể gói [MoneyCat](loan_name)
+    - Thông tin cụ thể gói [Tamo](loan_name)
+    - Thông tin cụ thể gói [Senmo](loan_name)
+    - Thông tin cụ thể gói [Takomo](loan_name)
+    - Thông tin cụ thể gói [Cash24](loan_name)
+    - Gói [MoneyCat](loan_name) cụ thể như thế nào
+    - Gói [Senmo](loan_name) cụ thể như thế nào
+    - Gói [Takomo](loan_name) cụ thể như thế nào
+    - Gói [Cash24](loan_name) cụ thể như thế nào
+    - Cho tôi biết thông tin cụ thể gói [MoneyCat](loan_name)
+    - Cho tôi biết thông tin cụ thể gói [Tamo](loan_name)
+    - Cho tôi biết thông tin cụ thể gói [Senmo](loan_name)
+    - Cho tôi biết thông tin cụ thể gói [Takomo](loan_name)
+    - Cho tôi biết thông tin cụ thể gói [Cash24](loan_name)
+    - Bạn có thể nói rõ thông tin cụ thể gói vay [Tamo](loan_name)
+    - Chi tiết cụ thể gói vay [Tamo](loan_name)
+    - Hãy cho tôi biết cụ thể gói vay [MoneyCat](loan_name)
+    - Hãy cho tôi biết cụ thể gói vay [Tamo](loan_name)
+    - Hãy cho tôi biết cụ thể gói vay [Senmo](loan_name)
+    - Hãy cho tôi biết cụ thể gói vay [Takomo](loan_name)
+    - Hãy cho tôi biết cụ thể gói vay [Cash24](loan_name)
+    - Anh có thể cho tôi thông tin đầy đủ của gói vay [Tamo](loan_name) không
+    - Hãy cung cấp cho tôi nhiều thông tin hơn về gói vay [Senmo](loan_name)
+    - Bạn hãy nói chi tiết hơn về gói vay [Senmo](loan_name) đi
+    - Nói rõ hơn về gói vay [MoneyCat](loan_name) đi bạn
+    - Nói rõ hơn về gói vay [Tamo](loan_name) đi bạn
+    - Nói rõ hơn về gói vay [Senmo](loan_name) đi bạn
+    - Nói rõ hơn về gói vay [Takomo](loan_name) đi bạn
+    - Nói rõ hơn về gói vay [Cash24](loan_name) đi bạn
+- intent: interrupt_loan
+  examples: |
+    - Thôi [chị](gender_value) không có nhu cầu vay nữa đâu em
+    - Tôi không muốn thực hiện khoản vay nữa
+    - Tôi không muốn tiếp tục thực hiện khoản vay
+    - Tôi không muốn tiếp tục vay nữa
+    - Phức tạp quá vậy, tôi không muốn vay nữa
+    - Mình xin lỗi, mình không muốn thực hiện vay bên bạn nữa
+    - Tôi xin lỗi, tôi không muốn vay tiền nữa
+    - Cảm ơn nhé, tôi không muốn vay tiền nữa
+    - Tôi xin lỗi, tôi không muốn thực hiện vay nữa
+    - Tôi không vay nữa nhé
+    - mình không vay nữa nhé
+    - Mình không có nhu cầu vay nữa nhé
+    - Mình không vay nữa đâu, cảm ơn
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} không vay nữa nhé em
+    - mình khôn vay nữa đâu
+    - mình không có nhu cầu vay nữa đâu
+    - Anh không vay nữa đâu
+    - Anh vay chỗ khác được rồi, anh không vay nữa nhé
+    - Anh có tiền rồi, không vay nữa đâu
+    - Mình không muốn vay bên bạn nữa
+    - Mình vay bên khác rồi, mình không muốn vay nữa nhé
+    - Thôi mình ko vay nữa đâu
+    - Mình thu xếp được tiền rồi, mình không vay nữa nhé
+    - Cảm ơn vì đã hỗ trợ mình ko có nhu cầu vay nữa nhé
+    - Mình không đăng ký vay nữa nhé
+    - Bên mình hơi phức tạp, anh ko vay nữa nhé
+    - Anh không có nhu cầu vay nữa đâu
+    - Thôi mình không vay nữa nhé
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} thu sếp được tiền rôi, không cần vay nữa e nhé
+    - [chị](gender_value) không cần vay nữa em nhé, cảm ơn em
+    - Chị vay được bên khác rồi em nhé, chị không có nhu cầu vay nữa
+    - Chị hủy khoản vay nhé em
+    - Chị muốn hủy khoản vay nhé
+    - Thôi anh không muốn vay nữa đâu
+- intent: loan_type
+  examples: |
+    - Hình thức vay tiền tại VNDC cụ thể là như thế nào?
+    - Hình thức vay tiền công ty em như thế nào
+    - Hình thức vay tiền của bên công ty là gì
+    - Công ty em cho vay theo hình thức gì
+    - Hình thức vay tiền tại VNDC là gì
+    - Loại hình vay tiền bên VNDC là gì
+    - Hình thức vay là gì
+    - Hình thức vay bên bạn là gì
+    - Kiểu cho vay bên công ty bạn là gì
+    - Kiểu cho vay như thế nào
+    - Kiểu vay bên công ty bạn là gì
+    - Hình thức cho vay bên công ty em là gì
+    - Bên em cung cấp các loại cho vay nào, tín chấp hay thế chấp
+    - Loại cho vay bên công ty em là gì
+    - Các hình thức cho vay bên công ty em là gì
+    - Vay tín chấp hay thế chấp
+    - Bên mình cho vay như thế nào
+    - Vay tín chấp à
+    - Vay online à
+    - Vay online là gì?
+    - Hình thức vay online là gì?
+    - Hình thức vay online là như thế nào?
+    - Vay online là như thế nào?
+    - Cho tôi biết vay online là gì
+    - Dịch vụ hỗ trợ tài chính trực tuyến là gì?
+    - Hình thức hỗ trợ tài chính trực tuyến là gì?
+    - Vay online khác bới vay thường gì?
+    - Tại sao lại là vay online?
+    - Cho tôi chút thông tin về vay online đi
+    - Hình thức vay gì nhỉ
+    - Vay kiểu gì thế
+    - Hình thức vay như thế nào
+    - Công ty em cho vay tín chấp hay thế chấp
+    - Bên em cho vay hình thức gì thế
+    - Công ty em cho vay hình thức gì vậy
+    - Bên mình cung cấp những hình thức vay gì thế em
+    - Bên e cho vay hình thức gì thế
+    - Vay hình thức gì thế
+    - VNDC cho vay hình thức gì thế em
+    - Kiểu cho vay của công ty em là gì
+    - Hình thức cho vay bên công ty em là gì thế
+    - Vay thế chấp hay vay tín chấp vậy em
+    - Bên em cho vay hình thức gì thế
+    - Cách thức cho vay bên em là gì thế
+    - Loại hình thức cho vay bên em là gì
+    - Công ty em cho vay tín chấp à
+    - Hình thức cho vay bên em là tín chấp hay thế chấp thế
+    - Bên em cho vay tín chấp đúng không
+    - Các loại hình thức cho vay của bên em là gì vậy
+    - Hình thức cho vay bên em như thế nào
+    - Bên em cho vay không cần thế chấp đúng không
+    - bên em cho vay trực tuyến à
+    - Vay bên em là vay trực tuyến đúng không
+    - Hình thức vay bên em là vay tín chấp à
+- intent: contact_information
+  examples: |
+    - Tôi có thể liên hệ ai trong trường hợp cần hỗ trợ sử dụng dịch vụ VNDC?
+    - Tôi muốn liên hệ tổng đài thì có thể liên hệ qua số nào
+    - Số điện thoại hỗ trợ khách hàng của bên em là gì
+    - Tôi có thắc mắc muốn giải đáp trực tiếp thì liên hệ qua số nào
+    - Thời gian làm việc của VNDC như thế nào
+    - Số hotline của công ty là bao nhiêu
+    - Tôi cần tư vấn trực tiếp thì liên hệ số nào
+    - Tôi muốn thông tin liên lạc của bên công ty để được tư vấn trực tiếp
+    - Số điện thoại tư vấn của khách hàng là bao nhiêu vậy em
+    - Tôi có thể liên hệ ai nếu muốn được tư vấn
+    - Bộ phận chăm sóc khách hàng của bạn có số là bao nhiêu
+    - Số điện thoại bộ phận chăm sóc khách hàng của công ty là bao nhiêu vậy?
+    - Số điện thoại tư vấn khách hàng bên em là gì
+    - Mình muốn liên hệ tư vấn thì phải làm như thế nào
+    - Khung giờ làm việc của VNDC như thế nào
+    - Số điện thoại bên VNDC là bao nhiêu
+    - Tổng đài tư vấn bên em là gì
+    - Bên em làm việc lúc mấy h thế
+    - Anh muốn tư vấn trực tiếp thì có thể đến đâu
+    - Văn phòng của bên em hoạt động đến mấy h thế
+    - Anh có thể đến văn phòng em để được tư vấn trực tiếp không
+    - Bên em tư vấn trực tiếp như thế nào
+    - Công ty hỗ trợ tư vấn trực tiếp như thế nào
+    - Chị muốn được hỗ trợ thêm thông tin cụ thể thì liên hệ ai
+    - Số điện thoai tổng đài bên em là gì
+    - Bộ phận chắm sóc khách hàng có số điện thoại là bao nhiêu thế
+    - Số tổng đài tư vấn bên em là bao nhiêu thế
+    - Anh có thể liên hệ tổng đài tư vấn qua số nào
+    - Nếu muốn tư vấn trực tiếp thì a có thể đến văn phòng ở đâu
+    - Cho anh số điện thoại hotline của công ty nhé
+    - Anh có thể liên hệ qua số điện thoại của công ty là gì
+    - bên mình phục vụ số hotline 24/24 chứ
+    - Chị muốn tư vấn cụ thể hơn thì liên hệ ai thế
+    - thông tin số điện thoại liên lạc bên em là gì
+    - Số điện thoại hotline của VNDC là bao nhiêu
+    - Anh muốn tư vấn qua số điện thoại hotline của công ty
+- intent: time_get_money
+  examples: |
+    - Anh tải hồ sơ lên thì trong bao lâu anh nhận được tiền?
+    - Khi nào thì tôi có thể nhận được tiền giải ngân?
+    - Làm thế nào để tôi biết khoản vay của tôi đã được giải ngân hay chưa?
+    - Thời gian nhận được tiền là bao lâu
+    - Sau bao lâu thì tôi nhận được tiền
+    - Thời gian nhận được tiền vay là bao lâu
+    - Bao lâu thì nhận được tiền
+    - Thời gian bao lâu thì nhận được tiền
+    - Thời gian giải ngân là bao lâu?
+    - Thời gian giải ngân như thế nào
+    - Tôi sẽ nhận được tiền sau bao lâu
+    - Nhận tiền sau bao nhiêu lâu thế
+    - Thời gian nhận được tiền sau bao lâu
+    - Phải chờ bao lâu để nhận được tiền
+    - Chờ bao lâu để nhận được tiền
+    - Chờ bao lâu thì được giải ngân
+    - Thời gian chờ bao lâu để nhận được tiền
+    - Tôi phải chờ bao lâu để được giải ngân tiền
+    - Anh phải chờ bao lâu để được giải ngân tiền
+    - Khoảng thời gian chờ để được giải ngân tiền là bao lâu
+    - Giải ngân tiền trong vòng bao lâu thế em
+    - THời gian giải ngân tiền là bao lâu vậy
+    - Giải ngân tiền mất lâu không vậy
+    - Tôi phải chờ bao nhiêu lâu để nhận được tiền giải ngân
+    - Thời gian tiền về tài khoản là bao lâu thế
+    - Chờ bao lâu tiền mới giải ngân vậy em
+    - Mất bao lâu thì tiền mới được giải ngân vậy
+    - Thời gian đến khi tiền về tài khoản là bao lâu vậy em
+    - Bao nhiêu lâu thì anh nhận được khoản vay thế
+    - Bên em bao nhiêu lâu thì giải ngân khoản vay thế
+    - Bao nhiêu lâu thì anh nhận được tiền
+    - Bao lâu thì nhận được tiền thế em
+    - Tôi phải chờ bao nhiêu lâu để nhận được khoản vay
+    - Mất bao lâu thì tiền được chuyển vào tài khoản ngân hang
+- intent: loan_error
+  examples: |
+    - Tôi chuyển khoản thanh toán đúng số tài khoản nhưng quên nhập cú pháp thì xử lý thì tôi phải làm sao
+    - Tôi quên nhắn tin cú pháp khi thanh toán tiền thì xử lý như thế nào
+    - Tôi đã thanh toán nợ nhưng sao trên app vẫn báo chưa là sao
+    - Tôi đã trả tiền nhưng sao trên app vẫn báo chưa thanh toán
+    - Tôi chưa nhận được tiền từ công ty mặc dù đã có thông báo giải ngân
+    - Tại sao tôi chưa nhận được tiền mặc dù đã báo giải ngân
+    - Hình như có lỗi gì, tôi chưa nhận được khoản tiền nào
+    - Có tin nhắn báo giải ngân nhưng tôi chưa nhận được tiền là sao
+    - Tôi chưa nhận được khoản tiền nào mặc dù đã báo giải ngân
+    - Tôi nhận được thông báo giải ngân tuy nhiên tối không hề nhận được tiền từ công ty, tôi phải làm gì
+    - Tôi nhận được tin nhắn giải ngân nhưng ko hề nhận được tiền
+    - Tôi không nhận được tiền mặc dù đã có thông báo giải ngân
+    - Tại sao tôi thanh toán rồi mà công ty vẫn báo chưa thanh toán
+    - Tôi đã thanh toán khoản vay nhưng sao lại báo tôi chưa thanh toán
+    - Tôi đã trả nợ qua tài khoản nhưng sao bên công ty lại báo tôi chưa thanh toán
+    - Tôi thanh toán rồi mà công ty vẫn báo là chưa thanh toán
+    - Tôi nhận được tin nhắn thông báo nhận được tiền nhưng chưa thấy tài khoản có tiền là sao
+    - Anh thanh toán rồi mà app vẫn báo chưa thanh toán này
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} đã trả đầy đủ tiền cho bên công ty mà sao app vẫn báo chưa trả tiền là sao
+    - Hệ thống lãi hay sao mà anh không thể đăng nhập được vào tài khoản
+    - Anh không thể đăng nhập được vào tài khoản của mình em ơi
+    - Kiểm tra giúp anh, anh không đăng nhập được vào tài khoản của mình
+    - Anh rõ ràng đã thanh toán khoản vay nhưng sao app vẫn báo là chưa vậy
+    - Chị chưa nhân được tiền mặc dù đã có thông báo giải ngân
+    - Tôi chưa nhân được khoản tiền nào mặc dù đã nhận được tin nhắn giải ngân
+    - mình nhận được tin nhắn đã giải ngân nhưng chưa nhận được tiền
+    - Tại sao mình nhận được thông báo đã giải ngân nhưng chưa nhận được tiền vậy
+- intent: methob_get_money
+  examples: |
+    - Hồ sơ tôi được duyệt vay nhưng tôi không có thời gian ra ngân hàng giải ngân, tôi ủy quyền cho người khác được không
+    - Người khác có thể nhận tiền cho tôi được không
+    - Tôi có thể cung cấp số tài khoản của người khác để nhận tiền giải ngân không
+    - Tôi bị duyệt khoản vay nhưng thể ngân hàng của tôi bị lỗi, không rút được tiền tôi phải làm gì
+    - Tôi đến nhận tiền ở đâu
+    - Tôi có thể nhận được khoản vay bằng cách nào
+    - Anh có thể nhận khoản vay bằng cách nào?
+    - Làm sao để tôi biết đã nhận được khoản vay
+    - Phương thức cho vay như thế nào
+    - Nhận tiền vay như thế nào
+    - Tôi có thể nhận tiền vay như thế nào
+    - Bên công ty cho vay qua tài khoản ngân hàng à
+    - Nhận tiền như thế nào thế
+    - Tiền vay được nhận như thế nào
+    - Khoản vay được nhận như thế nào
+    - Tôi có thể nhận tiền như thế nào
+    - Tôi có thể nhận khoản vay bằng cách nào
+    - Tiền vay được nhận bằng cách nào
+    - Nhận tiền vay theo hình thức nào thế
+    - Tôi nhận tiền giải ngân bằng cách nào
+    - Khách hàng nhận tiền giải ngân như thế nào
+    - Công ty có yêu cầu mở tài khoản tại ngân hàng nào cụ thể để chuyển tiền thanh toán vào tài khoản đó không?
+    - Tiền giải ngân được lấy bằng cách nào
+    - Tiền vay được chuyển tới khách hàng như thế nào
+    - VNDC giải ngân bằng phương thức nào
+    - Làm sao để người vay nhận tiền từ VNDC
+    - Làm sao người vay nhận được tiền giải ngân từ công ty
+    - Khách hàng nhận tiền giải ngân như thế nào em nhỉ
+    - Cách để người vay nhận được tiền như thế nào
+    - Làm sao để người vay nhận được tiền từ bên công ty
+    - Người vay nhận được khoản giải ngân như thế nào
+- intent: not_accept
+  examples: |
+    - Tôi vừa đăng ký hồ sơ vay trên web, tôi vừa đăng ký đã bị từ chối rồi
+    - Tại sao hồ sơ của tôi lại bị từ chối nhanh vậy
+    - Hồ sơ vay của tôi bị từ chối, tôi có thể vay được nữa không
+    - Tại sao hồ sơ vay của tôi lại bị từ chôi
+    - Tại sao bên công ty lại không chấp nhận hồ sơ vay của tôi
+    - Tôi đăng ký lần đầu nhưng ko được chấp nhận khoản vay, tôi có thể đăng ký khoản vay nữa không
+    - Lần đầu tôi không đăng ký được khoản vay, tôi có thể đăng ký được nữa không
+    - Bị từ chối khoản vay thì có thể đăng ký nữa không
+    - Tại sao tôi lại bị từ chối vay thế
+    - Công ty không chấp nhận hồ sơ vay của tôi, tôi có thể vay lại được không
+    - Anh bị từ chối vay thì có thể vay nữa không
+    - Khoản vay của [chị](gender_value) bị từ chối thì có thể vay khoản khác không
+    - Khoản vay của anh sao lại bị từ chối nhỉ
+    - Bên công ty không chấp nhận cho vay thì tôi có thể vay được nữa không
+    - Tôi bị từ chối khoản vay 5 triệu thì có thể vay 3 triệu được không
+    - Tôi nhận được thống báo từ chối khoản vay, bao lâu nữa thì tôi có thể đăng ký vay lại
+    - Từ chối lần đầu thì có thể vay tiếp được không em
+    - Anh bị từ chối vay lần đầu tiên thì có thể đăng ký vay nữa không
+    - Anh có thể đăng ký vay nữa không nếu lần đầu bị từ chối
+    - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} có thể làm hồ sơ vay nữa không nếu lần đầu bị từ chối vay
+    - Bị từ chối khoản vay thì đăng ký vay được nữa không em
+- intent: debt_collection_policy
+  examples: |
+    - Công ty thu hồi nợ như thế nào
+    - Bên công ty em đòi nợ như thế nào
+    - VNDC có đến công ty/nhà tôi làm việc để đòi nợ không?
+    - Công ty có đến nhà tôi đòi nợ không
+    - Công ty có đến chỗ làm việc tôi đòi nợ không
+    - Chính sách thu nợ của công ty như thế nào thế em
+    - Chính sách thu nợ của VNDC như thế nào vậy
+    - Khoản vay tôi chưa đến hạn tại sao rôi lại nhận được nhiều tin nhắn nhắc hạn thanh toán vậy
+    - Bên công ty đòi nợ thế nào vậy
+    - Công ty em thu hồi nợ bằng cách nào
+    - quy định thu hồi nợ của công ty như thế nào em
+    - Bên e có đến tận nhà đòi nợ không
+    - Bên e có đến nơi làm việc đòi nợ không
+    - Bên em có đến nhà thu hồi nợ không
+    - Mình thấy thu hồi nợ nhiều bên rất thiếu văn hoá, bên em thì như thế nào
+    - Cách thức thu hồi nợ bên em thế nào
+    - Đội ngũ thu hồi nợ bên em như thế nào
+    - Anh thấy đội thu hồi nợ nhiều bên làm phiền rất nhiều khách hàng, bên em thì sao
+    - bên em thu hồi khoản vay có lịch sự không
+    - Nhiều bên thu hồi nợ rất thiếu văn minh, bên em thì như thế nào
+    - Chính sách thu hồi khoản vay của bên em như thế nào
+    - Chính sách thu hồi khoản vay của VNDC như thế nào
+- intent: purpose_information
+  examples: |
+    - Em ơi, sao bên em lấy thông tin người thân của [chị](gender_value) làm gì?
+    - Bên công ty lấy số điện thoại của người thân định gọi điện cho người thân đòi nợ à?
+    - Làm sao để hồ sơ được duyệt cao hơn
+    - Công ty có quy định mục đích của khoản vay không
+    - Vay với mục đích gì thì không được duyệt khoản vay
+    - Tôi có nhu cầu vay nhưng muốn bảo mật khoản vay, nhưng không muốn cung cấp thông tin thân nhân được không?
+    - Tôi không muốn cung cấp thông tin của thân nhân được không
+    - Không cung cấp thông tin thân nhân có được vay tiền không
+    - Tôi không muốn cung cấp một số thông tin thân nhân có vay tiền được không
+    - Tôi có phải chứng minh mục đích sử dụng sau khi vay khoản vay không?
+    - Có cần chứng minh mục đích sử dụng vốn không
+    - Tôi có cần chứng mình mục đích sử dụng vốn làm gì không
+    - Tôi có phải trình bày mục đích của khoản vay không
+    - Tôi có trách nhiệm giải trình khoản vay không
+    - Tôi có phải nói mục đích khoản vay không
+    - bên công ty có cần biết mục đích khoản vay không
+    - Tôi cần trình bay mục đích khoản vay không
+    - Cần trình bày mục đích khoản vay không
+    - tôi không cần trình bày mục đích khoản vay chứ
+    - Tôi không cần nói mục đích khoản vay làm gì chứ
+    - Tôi có cần nói mục đích khoản vay làm gì không
+    - Tôi có cần chứng minh mục đích sử dụng khoản vay không
+    - Anh có cần nói rõ mục đích sử dụng khoản vay của mình không
+    - Chị có cần cung cấp mục đích sử dụng khoản vay không em
+    - Anh không muốn cung cấp thông tin người thân có được không em
+    - Không cung cấp thông tin người thân cho bên em có được không
+    - Mình thấy nhiều bên để lộ thông tin của khách hàng, anh không muốn cung cấp thông tin của người thân anh
+    - thông tin của người thân có bắt buộc không em
+    - Có nhất thiết phải cung cấp mục đích sử dụng khoản vay không e
+- intent: accept_or_not
+  examples: |
+    - Sau bao lâu tôi nhận được kết quả tra soát từ VNDC?
+    - Làm sao để biết tôi có được chấp nhận khoản vay không
+    - Thông tin chấp thuận khoản vay được thông báo ở đâu
+    - Làm sao để biết được có được vay hay không
+    - Làm sai tôi biết có được vay hay không
+    - Tôi biết có được vay hay không như thế nào
+    - Tôi biết có được vay hay không bằng cách nào
+    - Có thông báo được chấp thuận khoản vay không
+    - Bên em thông báo có được chấp thuận khoản vay thế nào
+    - Để biết có được chấp thuận khoản vay hay không tôi phải làm thế nào
+    - Để biết có được chấp thuận vay hay không, anh phải làm gì
+    - Làm sao chị biết có được vay không
+    - Sau khi đăng kí thông tin vay thì bao nhiêu lâu thì nhận được kết quả vay
+    - Thời gian nhận được kết quả vay là bao nhiêu lâu
+    - Làm thế nào để tôi biết khoản vay của tôi đã được giải ngân hay chưa?
+    - Làm sao biết khoản vay đã được giải ngân hay chưa
+    - Làm sao biết công ty đã giải ngân khoản vay
+    - Thông tin giải ngân có thể xem ở đâu
+    - Tôi có thể biết khoản vay giải ngân hay chưa như thế nào
+    - Tôi có thể biết hồ sơ khoản vay có được chấp thuận hay không như thế nào
+    - Kiểm tra thông tin khoản vay có bị từ chối hay không như thế nào
+    - Bên em thông báo khoản vay có được chấp thuận tới khách hàng như thế nào
+    - Công ty thông báo khoản vay có được chấp thuận hay không bằng cách nào
+    - bao lâu thì anh biết khoản vay có được chấp thuận hay không
+    - Làm sao để a biết mình có được vay không
+    - Bao lâu thì anh biết mình có được vay không
+    - Tôi có thể biết khoản vay đã được giải ngân chưa như thế nào
+    - Kiểm tra thông tin khoản đã đã được giải ngân chưa bằng cách nào
+    - Bên em thông báo khoản vay đã được giải ngân tới khách hàng như thế nào
+    - Công ty thông báo khoản vay đã được giải ngân hay không bằng cách nào
+    - bao lâu thì anh biết khoản vay đã được giải ngân hay không
+    - Làm sao để a biết mình đã được giải ngân không
+    - Bao lâu thì anh biết mình đã được giải ngân không
+- intent: mortgage
+  examples: |
+    - Công ty có chấp nhận thế chấp tài sản không
+    - Bên em có nhận thế chấp tài sản để cho vay nhiều hơn không
+    - Mình muốn thế chấp tài sản có được không
+    - Bên em không chấp nhận thế chấp à
+    - Bên em cho vay thế chấp không
+    - Bên e không có hình thức vay thế chấp à
+    - Anh muốn vay thế chấp thì có được không
+    - Anh muốn vay nhiều hơn bằng cách thế chấp có được ko
+    - Thế chấp tài sản được không em
+    - Bên mình có chấp nhận thế chấp không em
+    - Công ty có cho vay thế chấp không e
+    - Bên em có hình thức vay thế chấp không
+    - Anh thế chấp tài sản được ko
+    - VNDC có chấp nhận thế chấp tài sản không em
+    - Thế chấp tài sản có thể vay nhiều tiền hơn không em
+    - Bên em không chấp nhận hình thức vay thế chấp à
+    - Công ty ko có hình thức vay thế chấp à
+    - VNDC ko có hình thức vay thế chấp à em
+    - Anh muốn vay thế chấp có được không
+    - Chị thế chấp tài sản có được không
+    - Bên em không cung cấp hình thức vay thế chấp à
+    - Chị vay thế chấp được không nhỉ
+    - Hình thức vay thế chấp bên em như thế nào
+    - Bên mình chỉ chấp nhận hình thức vay tín chấp thôi à
+    - Công ty không chấp nhận hình thức vay thế chấp à
+- intent: loan_security
+  examples: |
+    - Bảo mật khoản vay bên công ty như thế nào
+    - Chính sách bảo mật khoản vay công ty như nào
+    - Làm sao để tôi tin tưởng khả năng bảo mật thông tin của công ty
+    - Khả năng bảo mật thông tin của công ty như thế nào
+    - Tôi muốn bảo mật khoản vay không để bạn bè người thân biết có được không
+    - Tôi không muốn ai biết mình đang vay tiền có được không
+    - Nếu tôi cung cấp thông tin các nhân thì có an toàn không
+    - Tôi cung cấp những thông tin như chứng minh thư liệu có an toàn không
+    - Tôi không yên tâm khi cung cấp những thông tin cá nhân của mình cho bên công ty
+    - Liệu cung cấp những thông tin cá nhân cho công ty có an toàn không
+    - Tôi không an tâm khi cung cấp thông tin cá nhân cho bên công ty
+    - Bên mình bảo mật thông tin như thế nào
+    - VNDC bảo mật thông tin khách hàng như thế nào
+    - Bên em có giữ bảo mật thông tin của khách hàng không
+    - Thông tin của anh liệu có được giữ bảo mật không thế
+    - Liệu thông tin anh cung cấp cho bên công ty có an toàn hay không
+    - Làm sao đảm bảo thông tin tôi cung cấp được an toàn
+    - Chính sách bảo mật thông tin có được ghi trong hợp đồng ko
+    - Thông tin cung cấp có được công ty giữ an toàn không
+    - Bên công ty có đảm bảo thông tin của tôi không bị mất cắp không
+    - Bên em liệu có bán thông tin cho bên ngoài không
+    - Anh thấy rất nhiều bên để lộ thông tin của khách hàng, bên em thì sao
+    - Có gì để đảm bảo thông tin a cung cấp cho bên em không bị lộ không
+    - Bên em giữ an toàn thông tin khách hàng như thế nào
+    - Khả năng bảo mật thông tin của VNDC có tốt không
+    - vay bên em có an toàn không
+- intent: cic_introduce
+  examples: |
+    - CIC là gì thế
+    - Tôi thấy nhiều chỗ nhắc đến CIC, nó là gì thế
+    - CIC là gì vậy em
+    - CIC là gì
+    - Nhiều bên cho vay đều nhắc đến CIC, nó là gì
+    - CIC là tổ chức gì thế
+    - Tôi không biết CIC là gì
+    - Có thể nói cho tôi biết CIC là gì không
+    - Giải thích giúp mình CIC là gì thế
+    - Cho anh hỏi CIC là tổ chức gì
+    - CIC có nghĩa là gì thế
+- intent: disbursement
+  examples: |
+    - Tôi muốn vay 5 triệu nhưng chỉ được duyệt 3 triệu, tôi muốn vay đủ thì làm thế nào
+    - Tôi có thể vay thêm hồ sơ không
+    - Anh có thể vay tối đa mấy khoản vay
+    - Tôi có thể vay thêm nhiều khoản vay không
+    - Bên em cho mỗi khách hàng vay tối đa mấy khoản thế
+    - Có thể vay nhiều khoản vay một lúc không
+    - Có thể vay nhiều khoản vay cùng lúc được không
+    - Anh có thể vay nhiều hơn số tiền được duyệt không
+    - Tôi có thể vay ít hơn số tiền duyệt không
+    - Tôi có thể vay nhiều khoản vay cùng lúc không
+    - Anh có thể đăng ký nhiều khoản vay cùng lúc không
+    - Khách hàng có thể đăng ký nhiều khoản vay không em
+    - mỗi người được vay tối đa mấy khoản vay
+    - Tôi có thể thay đổi số tiền đăng kí vay được không
+    - Anh có thể thay đổi số tiền muốn vay được không
+    - Thay đổi số tiền muốn vay được không
+    - Anh được duyệt vay 3 triệu nhưng muốn vay 5 triệu thì có được không
+    - Chị được duyệt vay 2tr nhưng muốn vay 4tr thì được không em
+    - Anh muốn vay 5tr nhưng chỉ được duyệt 2tr vậy có cách nào không em
+    - Vay ít hơn số tiền được duyệt có được không
+    - Tôi muốn vay ít hơn thì làm như thế nào
+    - Tôi có thể vay nhiều hơn số tiền được duyệt vay không
+    - Mỗi người có thể vay tối đa mấy hồ sơ
+    - Tôi được duyệt khoản vay nhưng tôi không muốn vay nữa thì làm thế nào
+    - Tôi đăng ký vay 5 triệu và đã được duyệt nhưng tôi chỉ muốn vay 3 triệu thôi có được không
+- intent: contract_information
+  examples: |
+    - Tôi không nhớ số hợp đồng của tôi, vui lòng kiểm tra lại giúp tôi
+    - Tôi không nhớ ngày trả nợ hợp đồng của tôi, kiểm tra lại giúp tôi với
+    - Cung cấp giúp anh thông tin hợp đồng của anh nhé, anh quên mất rồi
+    - Kiểm tra lại giúp anh các thông tin của hợp đồng nhé
+    - Ngày đáo hạn hợp đồng của anh là ngày bao nhiêu thế
+    - Tôi có thể kiểm tra số tiền phải trả là bao nhiêu không
+    - Để kiểm tra số tiền phải trả là bao nhiêu, tôi làm cách nào
+    - Em có thể kiểm tra lại hợp đồng giúp anh không
+    - Em có thể giúp anh kiểm tra lại thông tin hợp đồng không
+    - Giúp chị kiểm tra lại thông tin hợp đồng nhé
+    - Kiểm tra giúp chị ngày đáo hạn hợp đồng là ngày bao nhiêu thế
+    - Số tiền mình phải trả cho hợp đồng là bao nhiêu thế
+    - Check giúp anh thông tin hợp đồng được không em
+    - Kiểm tra giúp anh ngày trả nợ nhé
+    - Em giúp anh kiểm tra lại thông tin hơp đồng A1123123 với
+    - Kiểm tra giúp anh ngày thanh toán trong hợp đồng với
+    - Check giúp anh thông tin hợp đồng khoản vay 2137123ASDS với
+    - Tổng số tiền anh phải trả trong hợp đồng là bao nhiêu
+    - Giúp mình kiểm tra tổng số tiền mình phải trả khi đáo hạn hợp đồng là bao nhiêu với
+    - Tra cứu giúp anh số hợp đồng vay bên mình với, anh quên mất rồi
+    - Xem giúp anh thông tin hợp đồng 76ASDSD2376 với
+    - Giúp anh kiểm tra thông tin hợp đồng 9348JKFHA83 nhé
+    - Kiểm tra ngày đáo hạn của hợp đồng 87221ASSDH32 nhé e
+    - Em giúp anh xem số tiền phải trả của hợp đông 6323JDAS83 nhé
+    - Giúp a kiểm tra lại thông tin hợp đồng của anh với
+    - Anh bị quên mất mã hợp đồng, em hỗ trợ anh lấy lại được không
+    - Check giúp chị số hợp đồng với, chị quên mất rồi
+    - Chị không vào app được, check giúp chị thông tin hợp đồng 732ASJSF32324 nhé
+    - Kiểm tra giúp anh số tiền phải trả của hợp đồng 32727SAJH4124 nhé
+    - Kiểm tra hộ anh thông tin ngày trả nợ của hợp đồng 8212JSA823, anh không vào app được
+    - Giúp anh kiểm tra lại ngày trả nợ của hợp đồng 8233JKAS882 nhé
+    - Anh không đăng nhập được vào app, giúp anh kiểm tra lại thông tin hơp đồng 83282WJW823 nhes
+- intent: exclamation_sentence
+  examples: |
+    - Thế á
+    - Thật à
+    - Thật không
+    - Thật vậy ư
+    - Thật thế à
+    - Chính xác như thế à
+    - Như thế ư
+    - Đúng vậy ư
+    - Quả thật như vậy ạ
+    - Có đúng không đấy em
+    - Như vậy thật à
+    - Đúng không đó em
+    - Thiệt hả em
+    - Ồ, thật sự như vậy à
+    - Thật như vậy luôn
+    - Really
+- intent: exchange_fee
+  examples: |
+    - Phí dịch vụ kết nối sàn như thế nào em nhỉ
+    - Phí kết nối sàn như thế nào em
+    - Lại còn có phí kết nối sàn hả em
+    - Mức phí kết nối sàn như thế nào em
+    - phí dịch vụ sàn kết nối là bao nhiêu thế em
+    - Cho anh hỏi mức phí dịch vụ để kết nối sàn là bao nhiêu
+    - Mức phí để kết nối sàn là bao nhiêu
+    - Mức phí anh phải trả để kết nối sàn là bao nhiêu
+    - Mức phí kết nối sàn cho các khoản vay có khác nhau không
+    - Anh phải trả mức phí kết nối sàn là bao nhiêu
+    - Mức phí kết nối sàn là bao nhiêu tiền thế em
+    - Cho anh hỏi mức phí kết nối sàn là bao nhiêu tiền vậy em
+    - phí kết nối sàn tính thế nào vậy em
+    - Bên em thu phí kết nối sàn là bao nhiêu
+    - Phí kết nối sàn là như thế nào e nhỉ
+    - Mức phí kết nối sàn VNDC là bao nhiêu
+    - Mức phí kết nối sàn cụ thể như thế nào em
+    - Cho chị hỏi mức phí kết nối sàn là bao nhiêu tiền
+    - Số tiền chị phải trả cho sàn kết nối là bao nhiêu
+    - Cho hỏi mức phí trả cho sàn là bao nhiêu
+    - VNDC thu phí kết nối sàn là bao nhiêu
+    - Tiền kết nối sàn phải trả là bao nhiêu
+    - Phí kết nối sàn cho các khoản vay có giống nhau không
+    - Mức phí trả cho sàn là boa nhiêu vậy
+    - Để có thể vay trên sàn a phải trả bao nhiêu tiền
+    - Tiền môi giới của sàn cho vay là bao nhiêu thế
+    - Mình phải mất mức phí cho sàn giao dịch là bao nhiêu
+    - Mức phí kết nối sàn mà em phải trả cho sàn là bao nhiêu
+    - Mức phí anh phải trả để tham gia sàn VNDC là bao nhiêu
+    - Anh phải chịu mức phí cho sàn kết nối là bao nhiêu tiền
+    - A phải chịu mức phí cho sàn kết nối là bao nhiêu tiền
+    - Số tiền phí kết nối sàn là bao nhiêu thế em
+    - Số tiền phí kết nối sàn là bao nhiêu thế e
+    - Mức phí kết nối sàn cho các khoản vay là bao nhiêu
+- intent: high_interest
+  examples: |
+    - Phí bên em cao thế
+    - Sao lãi suất bên em cao vậy
+    - Anh thấy lãi suất và phí bên em cao thế
+    - Tại sao phí bên em lại cao như vậy
+    - Bên em có gì hơn khác bên cho vay khác mà phí cao như vậy
+    - Vì sao tổng lãi suất và chi phí phải trả cho bên em lại cao hơn so với bên khác vậy
+    - Lãi suất và phí bên công ty e cao thế
+    - Tại sao phí bên VNDC lại cao vâyh
+    - Mình thấy nhiều bên cho vay mà ko thấy lãi cao như bên em
+    - Phí bên em mắc quá
+    - Lãi suất bên công ty em cao quá
+    - Mức lãi suất bên em cao quá vậy
+    - Chất lượng cho vay bên em như thế nào mà lãi cao quá vậy
+    - Bên em cho vay nặng lãi à
+    - Làm gì mà lãi cao quá thế
+    - Mình vay nhiều bên mà chưa bên nào lãi cao như bên em
+    - Công ty e thu lãi suất cao quá
+    - Số tiền lãi và phí cao quá vậy
+    - Lãi bên em cao hơn so với nhiều bên cho vay khác vậy
+    - Tại sao anh lại phải trả lãi cho bên em cao quá vậy
+    - Bên em tính lãi suất cao vậy
+    - Bên em hơn các bên cho vay khác gì mà lãi suất cao thế
+    - Anh chưa thấy bên nào lãi suất cao như bên em luôn
+    - Công ty em tính lãi cao quá
+    - Chất lượng dịch vụ như nào mà lãi xuất cao quá vậy em
+    - Lãi suất bên em gì mà cao thế
+    - Tại sao lãi suất bên em cao hơn so với các bên khác thế
+    - Lãi suất gì mà cao thế em
+    - bên em lãi xuất cáo quá đó
+    - Bên e hơn các bên cho vay khác gì mà phí và lãi suất cao vậy
+    - Phí bên em cao quá đó
+    - Lãi suất cao thế
+    - Tính lãi gì mà cao vậy em
+    - Chất lượng dịch vụ như thế nào mà phí cao vậy 
+- intent: check_loan_amount
+  examples: |
+    - Vay 20 triệu có được không em
+    - Anh muốn vay 30 triệu có được không
+    - Vay 100 triệu có được không em
+    - Anh có thể vay 200 triệu không
+    - Anh vay 2 triệu có được không
+    - Anh muốn vay chỉ 1 triệu có được không
+    - Anh có thể vay 1 tỉ không
+    - Anh vay số tiền 100 triệu có được không
+    - Anh có thể vay 40 triệu không
+    - Tôi vay 230 triệu được không
+    - Tôi có thể vay 200 triệu được không
+    - Chị có thể vay 120 triệu khônng
+    - Chị vay 10 triệu được không
+    - Em muốn vay 10 triệu có được không
+- synonym: anh
+  examples: |
+    - Anh
+- synonym: chị
+  examples: |
+    - Chị
+# - synonym: MoneyCat
+#   examples: |
+#     - moneyCat
+# - synonym: Tamo
+#   examples: |
+#     - tamo
+# - synonym: Senmo
+#   examples: |
+#     - senmo
+# - synonym: Takomo
+#   examples: |
+#     - takomo
+# - synonym: Cash24
+#   examples: |
+#     - cash24
+# - synonym: nhà thuê
+#   examples: |
+#     - Nhà thuê
+#     - nhà đi thuê
+#     - Nhà đi thuê
+#     - nhà trọ
+#     - nhà mướn
+# - synonym: nhà chính chủ
+#   examples: |
+#     - Nhà chính chủ
+#     - nhà của mình
+#     - Nhà của mình

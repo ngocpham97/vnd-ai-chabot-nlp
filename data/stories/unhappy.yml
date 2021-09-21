@@ -1,0 +1,56 @@
+# version: "2.0"
+# stories:
+# - story: say ok when user affirms after utter_help
+#   steps:
+#   - action: utter_help
+#   - intent: affirm
+#   - action: utter_ok
+  
+# - story: Story from inform, affirm start 
+#   steps:
+#   - or:
+#     - intent: affirm
+#     - intent: info
+#     - intent: deny
+#   - action: utter_ask_rephrase
+
+# - story: Story check_human + unhappy
+#   steps:
+#   - intent: check_human
+#   - action: utter_bot
+#   - or:
+#     - intent: affirm
+#     - intent: info
+#     - intent: deny
+#   - action: utter_ask_rephrase
+
+# - story: Story check_human + unhappy
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_help
+#   - or:
+#     - intent: affirm
+#     - intent: info
+#     - intent: deny
+#   - action: utter_ask_rephrase
+
+# - story: Story check_human + unhappy
+#   steps:
+#   - intent: help
+#   - action: utter_help
+#   - or:
+#     - intent: affirm
+#     - intent: info
+#     - intent: deny
+#   - action: utter_ask_rephrase
+
+# - story: Story check_human + unhappy
+#   steps:
+#   - intent: exclamation_sentence
+#   - action: utter_exclamation_sentence
+#   - or:
+#     - intent: affirm
+#     - intent: info
+#     - intent: deny
+#   - action: utter_ask_rephrase

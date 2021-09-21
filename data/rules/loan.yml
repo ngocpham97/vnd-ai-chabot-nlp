@@ -1,0 +1,209 @@
+version: "2.0"
+
+rules:
+- rule: Ask payback time
+  steps:
+  - intent: payback_time
+  - action: action_show_payback_time
+  
+- rule: Ask interest rate
+  steps:
+  - intent: interest_rate
+  - action: action_show_interest_rate
+
+- rule: Late payment
+  steps:
+  - intent: late_payment
+  - action: action_late_payment
+
+- rule: Show payment methobs
+  steps:
+  - intent: payment_methods
+  - action: action_payment_methods
+
+- rule: not interest
+  steps:
+  - intent: not_interest
+  - action: action_not_interest
+
+
+- rule: Show loan information
+  steps:
+  - intent: loan_information
+  - action: action_show_all_loan
+
+- rule: online loan type
+  steps:
+  - intent: loan_type
+  - action: action_loan_type
+
+- rule: loan_process
+  steps:
+  - intent: loan_process
+  - action: action_loan_process
+
+- rule: detail_loan
+  steps:
+  - intent: detail_loan
+  - action: action_show_detail_loan
+  - action: action_reset_all_slots
+
+
+- rule: Ask time to get money
+  steps:
+  - intent: time_get_money
+  - action: action_time_get_money
+
+- rule: Ask methob get money
+  steps:
+  - intent: methob_get_money
+  - action: action_methob_get_money
+
+- rule: Ask accept_or_not
+  steps:
+  - intent: accept_or_not
+  - action: action_accept_or_not
+
+
+- rule: Ask incentives
+  steps:
+  - intent: incentives
+  - action: action_incentives
+
+- rule: Ask loan_appraisal
+  steps:
+  - intent: loan_appraisal
+  - action: action_loan_appraisal
+
+- rule: Ask bad_debt
+  steps:
+  - intent: bad_debt
+  - action: action_bad_debt
+
+- rule: Ask contact_information
+  steps:
+  - intent: contact_information
+  - action: action_contact_information
+
+- rule: Ask loan_error
+  steps:
+  - intent: loan_error
+  - action: action_loan_error
+
+- rule: Ask not_accept
+  steps:
+  - intent: not_accept
+  - action: action_not_accept
+
+- rule: Ask debt_collection_policy
+  steps:
+  - intent: debt_collection_policy
+  - action: action_debt_collection_policy
+
+- rule: Ask utter_income_condition
+  steps:
+  - intent: income_condition
+  - action: action_income_condition
+
+- rule: Ask fill_info_request
+  steps:
+  - intent: fill_info_request
+  - action: action_fill_info_request
+
+- rule: Ask surcharge
+  steps:
+  - intent: surcharge
+  - action: action_surcharge
+
+- rule: Ask mortgage
+  steps:
+  - intent: mortgage
+  - action: action_mortgage
+
+- rule: Ask utter_loan_security
+  steps:
+  - intent: loan_security
+  - action: action_loan_security
+
+
+- rule: Ask disbursement
+  steps:
+  - intent: disbursement
+  - action: action_disbursement
+
+- rule: Ask contract_information
+  steps:
+  - intent: contract_information
+  - action: action_contract_information
+
+- rule: Ask interest_payment_period
+  steps:
+  - intent: interest_payment_period
+  - action: action_interest_payment_period
+
+- rule: Ask borrower
+  steps:
+  - intent: borrower
+  - action: action_borrower
+
+- rule: Ask cic_introduce
+  steps:
+  - intent: cic_introduce
+  - action: action_cic_introduce
+
+- rule: Ask purpose_information
+  steps:
+  - intent: purpose_information
+  - action: action_purpose_information
+
+- rule: Ask information_provided
+  steps:
+  - intent: information_provided
+  - action: action_information_provided
+
+- rule: Ask sign_contract
+  steps:
+  - intent: sign_contract
+  - action: action_sign_contract
+
+- rule: Ask loan_helper
+  steps:
+  - intent: loan_helper
+  - action: action_loan_helper
+
+- rule: Ask lending_area
+  steps:
+  - intent: lending_area
+  - action: action_lending_area
+
+- rule: Ask loan_extension
+  steps:
+  - intent: loan_extension
+  - action: action_loan_extension
+
+- rule: Ask overdue_interest
+  steps:
+  - intent: overdue_interest
+  - action: action_overdue_interest
+
+- rule: Ask cost_consulting
+  steps:
+  - intent: cost_consulting
+  - action: action_cost_consulting
+
+
+- rule: Ask loan_consulting
+  steps:
+  - intent: loan_consulting
+  - action: action_loan_consulting
+
+- rule: Ask exchange_fee
+  steps:
+  - intent: exchange_fee
+  - action: action_exchange_fee
+
+- rule: Ask high_interest
+  steps:
+  - intent: high_interest
+  - action: action_high_interest
+

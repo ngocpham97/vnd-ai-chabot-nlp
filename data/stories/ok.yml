@@ -1,0 +1,243 @@
+version: "2.0"
+stories:
+
+- story: Ask payback time
+  steps:
+  - intent: payback_time
+  - action: action_show_payback_time
+  - intent: affirm
+  - action: utter_ask_whatelse
+  
+- story: Ask interest rate
+  steps:
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Late payment
+  steps:
+  - intent: late_payment
+  - action: action_late_payment
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Show payment methobs
+  steps:
+  - intent: payment_methods
+  - action: action_payment_methods
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: not interest
+  steps:
+  - intent: not_interest
+  - action: action_not_interest
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+
+- story: Show loan information
+  steps:
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: online loan type
+  steps:
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: loan_process
+  steps:
+  - intent: loan_process
+  - action: action_loan_process
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: detail_loan
+  steps:
+  - intent: detail_loan
+  - action: action_show_detail_loan
+  - action: action_reset_all_slots
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+
+- story: Ask time to get money
+  steps:
+  - intent: time_get_money
+  - action: action_time_get_money
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask methob get money
+  steps:
+  - intent: methob_get_money
+  - action: action_methob_get_money
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask accept_or_not
+  steps:
+  - intent: accept_or_not
+  - action: action_accept_or_not
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+
+- story: Ask incentives
+  steps:
+  - intent: incentives
+  - action: action_incentives
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask loan_appraisal
+  steps:
+  - intent: loan_appraisal
+  - action: action_loan_appraisal
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask bad_debt
+  steps:
+  - intent: bad_debt
+  - action: action_bad_debt
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask contact_information
+  steps:
+  - intent: contact_information
+  - action: action_contact_information
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask loan_error
+  steps:
+  - intent: loan_error
+  - action: action_loan_error
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask not_accept
+  steps:
+  - intent: not_accept
+  - action: action_not_accept
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask debt_collection_policy
+  steps:
+  - intent: debt_collection_policy
+  - action: action_debt_collection_policy
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask utter_income_condition
+  steps:
+  - intent: income_condition
+  - action: action_income_condition
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+- story: Ask fill_info_request
+  steps:
+  - intent: fill_info_request
+  - action: action_fill_info_request
+
+- story: Ask surcharge
+  steps:
+  - intent: surcharge
+  - action: action_surcharge
+
+- story: Ask mortgage
+  steps:
+  - intent: mortgage
+  - action: action_mortgage
+
+- story: Ask utter_loan_security
+  steps:
+  - intent: loan_security
+  - action: action_loan_security
+
+
+- story: Ask disbursement
+  steps:
+  - intent: disbursement
+  - action: action_disbursement
+
+- story: Ask contract_information
+  steps:
+  - intent: contract_information
+  - action: action_contract_information
+
+- story: Ask interest_payment_period
+  steps:
+  - intent: interest_payment_period
+  - action: action_interest_payment_period
+
+- story: Ask borrower
+  steps:
+  - intent: borrower
+  - action: action_borrower
+
+- story: Ask cic_introduce
+  steps:
+  - intent: cic_introduce
+  - action: action_cic_introduce
+
+- story: Ask purpose_information
+  steps:
+  - intent: purpose_information
+  - action: action_purpose_information
+
+- story: Ask information_provided
+  steps:
+  - intent: information_provided
+  - action: action_information_provided
+
+- story: Ask sign_contract
+  steps:
+  - intent: sign_contract
+  - action: action_sign_contract
+
+- story: Ask loan_helper
+  steps:
+  - intent: loan_helper
+  - action: action_loan_helper
+
+- story: Ask lending_area
+  steps:
+  - intent: lending_area
+  - action: action_lending_area
+
+- story: Ask loan_extension
+  steps:
+  - intent: loan_extension
+  - action: action_loan_extension
+
+- story: Ask overdue_interest
+  steps:
+  - intent: overdue_interest
+  - action: action_overdue_interest
+
+- story: Ask cost_consulting
+  steps:
+  - intent: cost_consulting
+  - action: action_cost_consulting
+
+
+- story: Ask loan_consulting
+  steps:
+  - intent: loan_consulting
+  - action: action_loan_consulting
+
+- story: Ask exchange_fee
+  steps:
+  - intent: exchange_fee
+  - action: action_exchange_fee

@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+- rule: Show company information
+  steps:
+  - intent: information_company
+  - action: action_information_company
+
+- rule: show adress of company
+  steps:
+  - intent: adress_company
+  - action: utter_adress_company

@@ -1,0 +1,97 @@
+version: "2.0"
+stories:
+
+- story: Story from Conversation ID dc200269b536492891cdb4a5cee1aafc
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: payback_time
+    entities:
+    - time: '2021-08-17T12:00:00.000-07:00'
+  - slot_was_set:
+    - time: '2021-08-17T12:00:00.000-07:00'
+  - action: action_show_payback_time
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: loan_information
+    entities:
+    - time: '2021-08-17T12:00:00.000-07:00'
+  - slot_was_set:
+    - time: '2021-08-17T12:00:00.000-07:00'
+  - action: action_show_all_loan
+  - intent: bad_debt
+  - action: action_bad_debt
+
+- story: Story from Conversation ID 4cd633e735c94717bd97fb18a9fcaefe
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: late_payment
+  - action: action_late_payment
+  - intent: loan_extension
+  - action: action_loan_extension
+  - intent: overdue_interest
+  - action: action_overdue_interest
+
+- story: Story from Conversation ID ec255f8b21884f549157ca07f78ed464
+  steps:
+  - intent: late_payment
+  - action: action_late_payment
+  - intent: overdue_interest
+  - action: action_overdue_interest
+  - intent: loan_extension
+  - action: action_loan_extension
+
+- story: Story from Conversation ID 90c712b7983a42a7b976060c83d9ad46
+  steps:
+  - intent: loan_consulting
+  - action: action_loan_consulting
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: cost_consulting
+  - action: action_cost_consulting
+  - intent: surcharge
+  - action: action_surcharge
+  - intent: overdue_interest
+  - action: action_overdue_interest
+  - intent: loan_extension
+  - action: action_loan_extension
+
+- story: Story from Conversation ID 70dd298413d24f3e9936e7c5d04cd0e1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: information_provided
+  - action: action_information_provided
+  - intent: bad_debt
+  - action: action_bad_debt
+  - intent: out_of_scope
+  - action: action_out_of_scope
+  - intent: bad_debt
+  - action: action_bad_debt
+  - intent: cost_consulting
+  - action: action_cost_consulting
+  - intent: surcharge
+  - action: action_surcharge
+  - intent: overdue_interest
+  - action: action_overdue_interest
+  - intent: loan_extension
+  - action: action_loan_extension
+

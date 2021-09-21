@@ -1,0 +1,72 @@
+version: "2.0"
+
+rules:
+
+- rule: Activate borrow_money_form when no other form is active
+  condition:
+  # this condition allows stories to handle form switching
+  - active_loop: null
+  steps:
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+
+- rule: Submit borrow_money_form while not switched from previous form
+  condition:
+  - active_loop: borrow_money_form
+  steps:
+  - action: borrow_money_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_borrow_money
+
+- rule: Deactivate borrow_money_form when in a borrow money
+  condition:
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - previous_form_name: null
+  steps:
+  - intent: borrow_money
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_verify_user_confirm
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+
+
+- rule: Story change borrow money form of form
+  condition:
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - previous_form_name: null
+  steps:
+  - or:
+    - intent: change_person
+    # - intent: change_email
+    # - intent: change_location
+    # - intent: change_age
+    - intent: change_telephone_number
+    - intent: change_id_card
+    - intent: change_amount_of_money
+    # - intent: change_income
+    # - intent: change_job_title
+    # - intent: change_date_of_birth
+    # - intent: change_facebook_name
+    # - intent: change_house_type
+  - action: action_change_inform
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: borrow_money_form
+  - active_loop: borrow_money_form
+
+- rule: Story interrupt borrow money
+  condition:
+  - active_loop: borrow_money_form
+  - slot_was_set:
+    - previous_form_name: null
+  steps:
+  - intent: interrupt_loan
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_interrupt_borrow_confirm
+
