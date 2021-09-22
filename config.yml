@@ -10,7 +10,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 200
+    epochs: 50
     constrain_similarities: true
     model_confidence: softmax
   - name: EntitySynonymMapper
@@ -86,7 +86,7 @@ policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
     max_history: 5
-    epochs: 200
+    epochs: 50
     constrain_similarities: true
   - name: RulePolicy
     core_fallback_threshold: 0.1
