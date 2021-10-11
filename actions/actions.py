@@ -6,7 +6,7 @@ from dateutil import parser
 import sqlalchemy as sa
 import re
 import uuid
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 from rasa_sdk.interfaces import Action
 from rasa_sdk.events import (
@@ -30,29 +30,34 @@ from actions.parsing import (
 	parse_duckling_currency,
 )
 
-from actions.posgresql import PostgreSQL
+# from actions.posgresql import PostgreSQL
 
 from actions.custom_forms import CustomFormValidationAction
 
-from constant import ENVIRONMENT_CONFIG_FILE
-from constant import loan_information_table, loan_information_columns, loan_register_table, loan_register_columns
+from actions.constant import ENVIRONMENT_CONFIG_FILE
+from actions.constant import loan_information_table, loan_information_columns, loan_register_table, loan_register_columns
  
-load_dotenv(dotenv_path=ENVIRONMENT_CONFIG_FILE)
+# load_dotenv(dotenv_path=ENVIRONMENT_CONFIG_FILE)
 
 
 logger = logging.getLogger(__name__)
 
-host                	 = os.environ['host']
-port                	 = os.environ['port']
-username            	 = os.environ['username']
-password            	 = os.environ['password']
-database            	 = os.environ['database']
+# host                	 = os.environ['host']
+# port                	 = os.environ['port']
+# username            	 = os.environ['username']
+# password            	 = os.environ['password']
+# database            	 = os.environ['database']
 
+# host                     = "10.1.21.3"
+# port                     = 5432
+# username                 = "postgres"
+# password                 = "postgres"
+# database                 = "postgres"
 
-global conn 
-conn = PostgreSQL(host=host, port=port, username=username, 
-					password=password, database=database
-				)
+# global conn 
+# conn = PostgreSQL(host=host, port=port, username=username, 
+# 					password=password, database=database
+# 				)
 
 NEXT_FORM_NAME = {
 	"borrow_money": "borrow_money_form",
@@ -81,8 +86,8 @@ class ActionBorrowMoney(Action):
 		id_card = tracker.get_slot('id_card')
 		telephone_number = tracker.get_slot('telephone_number')
 		# insert user infomation to db
-		if user_name != None and amount_of_money != None and id_card != None and id_card != telephone_number:
-			conn.insert(table_name=loan_register_table, columns=loan_register_columns, values=[id, user_name, id_card, telephone_number, amount_of_money])
+		# if user_name != None and amount_of_money != None and id_card != None and id_card != telephone_number:
+		# 	conn.insert(table_name=loan_register_table, columns=loan_register_columns, values=[id, user_name, id_card, telephone_number, amount_of_money])
 
 		slots = {
 			"AA_CONTINUE_FORM": None,
@@ -813,37 +818,38 @@ class ActionShowAllLoan(Action):
         return events
 
 
-class ActionShowDetailLoan(Action):
-    """Lists the contents of then known_recipients slot"""
+# class ActionShowDetailLoan(Action):
+#     """Lists the contents of then known_recipients slot"""
 
-    def name(self) -> Text:
-        """Unique identifier of the action"""
-        return "action_show_detail_loan"
+#     def name(self) -> Text:
+#         """Unique identifier of the action"""
+#         return "action_show_detail_loan"
 
-    async def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
-    ) -> List[EventType]:
-        """Executes the custom action"""
-        loan_name = tracker.get_slot("loan_name")
-        loan_detail = conn.detail_loan(['loan_name'], [loan_name])
-        formatted_loan = "- Tên gói vay   		: {} \n- Số tiền       	        : {}VND \n- Hình thức vay 		: {} \n- Yêu cầu       		: {} \
-        \n- Thời hạn vay  		: {} \n- Lãi xuất     		        : {} \n- Thời gian giải ngân           : {}".format(loan_detail[0][0], loan_detail[0][1], loan_detail[0][2], loan_detail[0][3], loan_detail[0][4], loan_detail[0][5], loan_detail[0][6])
-        dispatcher.utter_message(
-            response="utter_detail_loan",
-            formatted_loan=formatted_loan,
-        )
+#     async def run(
+#         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+#     ) -> List[EventType]:
+#         """Executes the custom action"""
+#         loan_name = tracker.get_slot("loan_name")
+#         formatted_loan = ""
+#         # loan_detail = conn.detail_loan(['loan_name'], [loan_name])
+#         # formatted_loan = "- Tên gói vay   		: {} \n- Số tiền       	        : {}VND \n- Hình thức vay 		: {} \n- Yêu cầu       		: {} \
+#         # \n- Thời hạn vay  		: {} \n- Lãi xuất     		        : {} \n- Thời gian giải ngân           : {}".format(loan_detail[0][0], loan_detail[0][1], loan_detail[0][2], loan_detail[0][3], loan_detail[0][4], loan_detail[0][5], loan_detail[0][6])
+#         dispatcher.utter_message(
+#             response="utter_detail_loan",
+#             formatted_loan=formatted_loan,
+#         )
 
-        events = []
-        active_form_name = tracker.active_form.get("name")
-        if active_form_name:
-            # keep the tracker clean for the predictions with form switch stories
-            events.append(UserUtteranceReverted())
-            # trigger utter_ask_{form}_AA_CONTINUE_FORM, by making it the requested_slot
-            events.append(SlotSet("AA_CONTINUE_FORM", None))
-            # # avoid that bot goes in listen mode after UserUtteranceReverted
-            events.append(FollowupAction(active_form_name))
+#         events = []
+#         active_form_name = tracker.active_form.get("name")
+#         if active_form_name:
+#             # keep the tracker clean for the predictions with form switch stories
+#             events.append(UserUtteranceReverted())
+#             # trigger utter_ask_{form}_AA_CONTINUE_FORM, by making it the requested_slot
+#             events.append(SlotSet("AA_CONTINUE_FORM", None))
+#             # # avoid that bot goes in listen mode after UserUtteranceReverted
+#             events.append(FollowupAction(active_form_name))
 
-        return events
+#         return events
 
 
 class ActionConfirmCallBackTime(Action):
@@ -1084,6 +1090,8 @@ class ActionOverdueInterest(Action):
             response="utter_overdue_interest",
         )
         formatted_number_money = tracker.get_slot("number")
+        if formatted_number_money > 5000000:
+            formatted_number_money = 5000000
         if formatted_number_money != None and formatted_number_money>= 1000000:
             formatted_profit = int(0.3/365 * 5 * formatted_number_money)
             formatted_penalties = int(0.08 * formatted_number_money)
@@ -2108,6 +2116,127 @@ class ActionVerifyUserConfirm(Action):
             dispatcher.utter_message(
                 response="utter_verify_user_confirm",
             )
+        events = []
+        active_form_name = tracker.active_form.get("name")
+        if active_form_name: 
+            dispatcher.utter_message(
+				response="utter_ask_continue",
+			)
+            # keep the tracker clean for the predictions with form switch stories
+            events.append(UserUtteranceReverted())
+            # trigger utter_ask_{form}_AA_CONTINUE_FORM, by making it the requested_slot
+            events.append(SlotSet("AA_CONTINUE_FORM", None))
+            # # avoid that bot goes in listen mode after UserUtteranceReverted
+            events.append(FollowupAction(active_form_name))
+
+        return events
+
+class ActionSad(Action):
+    """Lists the contents of then known_recipients slot"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "action_sad"
+
+    async def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> List[EventType]:
+        """Executes the custom action"""
+        dispatcher.utter_message(
+            response="utter_sad",
+        )
+		
+        events = []
+        active_form_name = tracker.active_form.get("name")
+        if active_form_name: 
+            dispatcher.utter_message(
+				response="utter_ask_continue",
+			)
+            # keep the tracker clean for the predictions with form switch stories
+            events.append(UserUtteranceReverted())
+            # trigger utter_ask_{form}_AA_CONTINUE_FORM, by making it the requested_slot
+            events.append(SlotSet("AA_CONTINUE_FORM", None))
+            # # avoid that bot goes in listen mode after UserUtteranceReverted
+            events.append(FollowupAction(active_form_name))
+
+        return events
+
+
+class ActionNotPaid(Action):
+    """Lists the contents of then known_recipients slot"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "action_not_paid"
+
+    async def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> List[EventType]:
+        """Executes the custom action"""
+        dispatcher.utter_message(
+            response="utter_not_paid",
+        )
+		
+        events = []
+        active_form_name = tracker.active_form.get("name")
+        if active_form_name: 
+            dispatcher.utter_message(
+				response="utter_ask_continue",
+			)
+            # keep the tracker clean for the predictions with form switch stories
+            events.append(UserUtteranceReverted())
+            # trigger utter_ask_{form}_AA_CONTINUE_FORM, by making it the requested_slot
+            events.append(SlotSet("AA_CONTINUE_FORM", None))
+            # # avoid that bot goes in listen mode after UserUtteranceReverted
+            events.append(FollowupAction(active_form_name))
+
+        return events
+
+class ActionHelp(Action):
+    """Lists the contents of then known_recipients slot"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "action_help"
+
+    async def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> List[EventType]:
+        """Executes the custom action"""
+        dispatcher.utter_message(
+            response="utter_help",
+        )
+		
+        events = []
+        active_form_name = tracker.active_form.get("name")
+        if active_form_name: 
+            dispatcher.utter_message(
+				response="utter_ask_continue",
+			)
+            # keep the tracker clean for the predictions with form switch stories
+            events.append(UserUtteranceReverted())
+            # trigger utter_ask_{form}_AA_CONTINUE_FORM, by making it the requested_slot
+            events.append(SlotSet("AA_CONTINUE_FORM", None))
+            # # avoid that bot goes in listen mode after UserUtteranceReverted
+            events.append(FollowupAction(active_form_name))
+
+        return events
+
+class ActionNotInterest(Action):
+    """Lists the contents of then known_recipients slot"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "action_not_interest"
+
+    async def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> List[EventType]:
+        """Executes the custom action"""
+        dispatcher.utter_message(
+            response="utter_not_interest",
+        )
+		
         events = []
         active_form_name = tracker.active_form.get("name")
         if active_form_name: 

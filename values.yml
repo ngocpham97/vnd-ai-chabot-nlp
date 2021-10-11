@@ -1,0 +1,35 @@
+
+# rasax specific settings
+rasax:
+  initialUser:
+    # username specifies a name of this user
+    username: "ngocpham97qt"
+    # password for this user (leave it empty to skip the user creation)
+    password: "ngocpham97qt"
+
+rasa:
+  # version is the Rasa Open Source version which should be used.
+  # Used to ensure backward compatibility with older Rasa Open Source versions.
+  version: "2.6.3"  # Please update the default value in the Readme when updating this
+  name: "ngocpham97qt/rasa-vnd"
+  # tag refers to the Rasa image tag. If empty `.Values.rasa.version-full` is used.
+  tag: "1"
+  extraArgs: ["--log-file out.log"]
+
+  additionalChannelCredentials:
+    rest:
+
+  versions:
+    # rasaProduction is the container which serves the production environment
+    rasaProduction:
+      replicaCount: 2
+
+
+# app (custom action server) specific settings
+app:
+  name: "ngocpham97qt/vnd-ai-nlp-chatbot"
+  # tag refers to the custom action server image tag
+  tag: "1"
+  replicaCount: 1
+
+debugMode: true

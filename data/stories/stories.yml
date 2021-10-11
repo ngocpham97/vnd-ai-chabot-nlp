@@ -41,3 +41,263 @@ stories:
   - action: action_verify_user_confirm
   - intent: deny
   - action: utter_ask_whatelse
+
+- story: Deny and thanks
+  steps:
+  - intent: deny
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Not borrow_money_form when in a borrow money
+  steps:
+  - intent: borrow_money
+  - action: action_verify_user_confirm
+  - intent: deny
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Ask not_accept
+  steps:
+  - intent: not_accept
+  - action: action_not_accept
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Ask payback time
+  steps:
+  - intent: payback_time
+  - action: action_show_payback_time
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+  
+- story: Ask interest rate
+  steps:
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Late payment
+  steps:
+  - intent: late_payment
+  - action: action_late_payment
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Show payment methobs
+  steps:
+  - intent: payment_methods
+  - action: action_payment_methods
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: not interest
+  steps:
+  - intent: not_interest
+  - action: action_not_interest
+  - intent: affirm
+  - action: utter_ask_whatelse
+
+
+- story: Show loan information
+  steps:
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: online loan type
+  steps:
+  - intent: loan_type
+  - action: action_loan_type
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: loan_process
+  steps:
+  - intent: loan_process
+  - action: action_loan_process
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: detail_loan
+  steps:
+  - intent: detail_loan
+  - action: 
+  - action: action_reset_all_slots
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+
+- story: Ask time to get money
+  steps:
+  - intent: time_get_money
+  - action: action_time_get_money
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Ask methob get money
+  steps:
+  - intent: methob_get_money
+  - action: action_methob_get_money
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Ask accept_or_not
+  steps:
+  - intent: accept_or_not
+  - action: action_accept_or_not
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Story from Conversation ID ff2e6acb5b084b898660b73f14e3cfe7
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: check_human
+  - action: action_bot
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Story from Conversation ID addc621978d244c2b3d8e585980cd8d9
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: check_human
+  - action: action_bot
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Story from Conversation ID edb6eb62e17244aaa5ebd049e798b0af
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: check_human
+  - action: action_bot
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ok
+
+- story: Story from Conversation ID d9ab627ba9ac40dda8b9b3c503668736
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: inform
+  - action: action_default_fallback
+
+- story: Story from Conversation ID d5868cfa46414978a96324a68e93a30a
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: inform
+  - action: action_default_fallback
+
+- story: Story from Conversation ID 18d4fbbdf039403f874a4f2395eb919f
+  steps:
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: loan_information
+  - action: action_show_all_loan
+  - intent: inform
+  - action: action_default_fallback
+
+- story: Story from Conversation ID a3d32877788549a9874faa11115a5868
+  steps:
+  - slot_was_set:
+    - currency: VND
+  - intent: borrower
+  - action: action_borrower
+  - intent: inform
+  - action: action_default_fallback
+
+- story: Story from Conversation ID 2e917c9a46ed47cdb0bda426f981193d
+  steps:
+  - intent: loan_process
+  - action: action_loan_process
+  - intent: inform
+  - action: action_default_fallback
+
+- story: Story from Conversation ID 4b0aeedf444e471faa03c32d11c58b74
+  steps:
+  - intent: check_human
+  - action: action_bot
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: affirm
+  - action: action_loan_consulting
+
+- story: Story from Conversation ID 4b0aeedf444e471faa03c32d11c
+  steps:
+  - intent: loan_process
+  - action: action_loan_process
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: affirm
+  - action: action_loan_consulting
+
+- story: Story from Conversation ID a3d32877788549a9874faa
+  steps:
+  - intent: borrower
+  - action: action_borrower
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: affirm
+  - action: action_loan_consulting
+
+- story: Story from Conversation ID a3d32877788549a9874faassaas
+  steps:
+  - intent: interest_rate
+  - action: action_show_interest_rate
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: affirm
+  - action: action_loan_consulting
+
+- story: Story from Conversation ID a3d32877788549a9874faaosads
+  steps:
+  - intent: accept_or_not
+  - action: action_accept_or_not
+  - intent: affirm
+  - action: utter_ask_whatelse
+  - intent: affirm
+  - action: action_loan_consulting

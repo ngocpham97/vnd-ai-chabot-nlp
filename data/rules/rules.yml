@@ -49,4 +49,12 @@ rules:
   - intent: check_loan_amount
   - action: action_check_loan_amount
 
+- rule: sad user
+  steps:
+  - intent: sad
+  - action: action_sad
 
+- rule: not paid money
+  steps:
+  - intent: not_paid
+  - action: action_not_paid

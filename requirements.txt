@@ -1,10 +1,6 @@
 -r actions/requirements-actions.txt
 
-# Sync with files:
-# (-) .github/workflows/build_and_deploy.yml (`rasa_version`)
-rasa[spacy]==2.4.0
+rasa[spacy]==2.6.3
 
-# Sync with files:
-# (-) .github/workflows/continuous-integration.yml (`rasa_sdk_version`)
-# (-) Dockerfile
-rasa-sdk==2.4.0
+# Sync with `Dockerfile`
+rasa-sdk==2.6.0

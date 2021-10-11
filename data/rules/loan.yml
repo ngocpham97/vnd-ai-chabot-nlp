@@ -42,13 +42,6 @@ rules:
   - intent: loan_process
   - action: action_loan_process
 
-- rule: detail_loan
-  steps:
-  - intent: detail_loan
-  - action: action_show_detail_loan
-  - action: action_reset_all_slots
-
-
 - rule: Ask time to get money
   steps:
   - intent: time_get_money

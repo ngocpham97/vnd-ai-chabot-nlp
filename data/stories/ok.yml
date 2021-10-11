@@ -58,14 +58,6 @@ stories:
   - intent: affirm
   - action: utter_ask_whatelse
 
-- story: detail_loan
-  steps:
-  - intent: detail_loan
-  - action: action_show_detail_loan
-  - action: action_reset_all_slots
-  - intent: affirm
-  - action: utter_ask_whatelse
-
 
 - story: Ask time to get money
   steps:

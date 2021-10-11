@@ -2767,6 +2767,9 @@ nlu:
     - Chính sách trả tiền lãi bên em như thế nào
     - Chính sách trả lãi bên em như thế nào
     - Tiền lãi được trả lúc nào em nhỉ
+    - Tôi muốn thanh toán toàn bộ các chi phí vào cuối kỳ khi thôi thanh toán các khoản nợ có được không
+    - Tôi không muốn bị trừ tiền lãi vào số tiền giải ngân mà thanh toán vào cuối kỳ hạn vay có được không
+    - Tôi không muốn trừ tiền trực tiếp vào số tiền giải ngân có được không
 - intent: not_interest
   examples: |
     - Xin lỗi, tôi không có hứng thú vay tiền
@@ -3294,6 +3297,12 @@ nlu:
     - số điện thoại của mình không chính chủ thì có thể vay được không
     - Chứng minh thư của tôi bị mất tôi có thể chụp ảnh chứng minh thư photo được không
     - Tôi có thể chụp ảnh chứng minh thư photo công chứng được không
+    - Bản chứng mình thư công chứng được không?
+    - Tôi dùng bằng lái xe thay thế chứng minh thư được không
+    - Chứng mình thư tôi bị mất, dùng bằng lái xe thay thế được không
+    - Tôi dùng hộ chiếu thay thế chứng minh thư có được không
+    - Mình dùng bằng lái xe hoặc hộ chiếu thay thế chứng mình thư được không
+    - Tôi dùng chứng minh thư hoặc hộ chiếu thay thế CMT được không
     - Chứng minh thư của tôi bị mất, tôi có thể chụp ảnh chứng minh thư công chứng được không?
     - Khi vay tiền tôi cung cấp số tài khoản nhận tiền không phải của tôi có được không
     - Tôi cung cấp số tài khoản nhận tiền không phải của tôi có được không
@@ -3385,6 +3394,8 @@ nlu:
     - Người thân bạn bè tôi bị nợ xấu tôi có thể vay không
     - Gia đình tôi có người bị nợ xấu tôi có thể vay không
     - Tôi đang vay ở mấy nơi rồi tôi có vay được tiếp ở VNDC không?
+    - Tôi có vay ở bên khác thì có thể vay tiếp bên công ty được không
+    - Tôi đang vay nợ của một bên khác thì tôi có thể vay bên VNDC nữa không
     - Hiện taị tôi có nợ xấu tại CIC thì tôi có thể vay không
     - Nợ xấu tại CIC có thể vay không em
     - Công ty có cho người có nợ xấu vay không
@@ -3437,8 +3448,6 @@ nlu:
     - Tôi có thể thanh toán khoản nợ qua app của công ty không vậy?
     - Tôi có thể trả lại tiền ở đâu
     - Tôi có thể thanh toán khoản vay ở đâu
-    - Có thể thanh toán khoản vay trước hạn không
-    - Thanh toán trước hạn sẽ ảnh có sao không
     - Phương thức trả nợ là gì
     - phương thức trả nợ như thế nào
     - phương thức trả khoản vay như thế nào
@@ -3472,6 +3481,11 @@ nlu:
     - Khoản vay sẽ được hoàn trả bằng những phương thức nào
     - Công ty có những phương pháp thanh toán nào
     - Công ty cung cấp những hình thức thanh toán nào
+    - Tôi có thể thanh toán như thế nào để nhanh chóng và tiện lợi nhất
+    - Hình thức thanh toán nào của công ty nhanh chóng và tiện lợi nhất
+    - Tôi có thể thanh toán khoản vay như thế nào sao cho dễ dàng nhất
+    - Hình thức thanh toán tiện lợi nhất là gì
+    - Phương thức thanh toán dễ dàng nhất là gì
 - intent: loan_extension
   examples: |
     - Gia hạn khoản nợ như thế nào
@@ -3517,7 +3531,6 @@ nlu:
     - Phí gia hạn nợ là bao nhiêu tiền vậy
 - intent: late_payment
   examples: |
-    - Nếu tôi vay nhưng không trả nợ được thì sao? Có bị phạm tội không?
     - Tôi trả nợ một nửa có được không
     - Nếu tôi không trả nợ được thì sao
     - Tôi không trả nợ được thì sao
@@ -3560,6 +3573,10 @@ nlu:
     - Đến kì hạn nhưng thanh toán chưa đủ thì có ảnh hưởng gì không em
     - Tôi thanh toán thiếu thì có mất thêm phí không
     - Thanh toán thiếu thì mất thêm phí gì
+    - Không trả tiền kịp sẽ làm sao
+    - Nếu tôi không trả tiền kịp thì công ty sẽ làm như thế nào
+    - Trả nợ muộn thì có sao không
+    - Thanh toán muộn thì có sao không
 - intent: loan_consulting
   examples: |
     - Tôi có thể hỏi bạn một số thứ được không?
@@ -3600,6 +3617,9 @@ nlu:
     - Tư vấn giúp chi một số thắc mắc nhé
     - Cho anh hỏi một số vấn đề được không
     - Giải đáp giúp [chị](gender_value) một số thắc mắc về khoản vay
+    - Anh muốn hỏi vài điều nữa
+    - Anh có một số thắc mắc nữa
+    - Anh muốn hỏi vài thứ nữa
 - intent: cost_consulting
   examples: |
     - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} muốn vay 2 triệu thì chi phí phải trả là bao nhiêu?
@@ -3728,42 +3748,6 @@ nlu:
     - Anh cần thực hiện những bước gì để có thể vay bên em
     - Tiến trình vay bao gồm những bước nào thế
     - Các bước thực hiện để vay tiền là gì
-- intent: detail_loan
-  examples: |
-    - Tôi muốn biết thông tin cụ thể của gói vay [MoneyCat](loan_name)
-    - Tôi muốn biết thông tin cụ thể của gói vay [Tamo](loan_name)
-    - Tôi muốn biết thông tin cụ thể của gói vay [Senmo](loan_name)
-    - Tôi muốn biết thông tin cụ thể của gói vay [Takomo](loan_name)
-    - Tôi muốn biết thông tin cụ thể của gói vay [Cash24](loan_name)
-    - Thông tin cụ thể gói [MoneyCat](loan_name)
-    - Thông tin cụ thể gói [Tamo](loan_name)
-    - Thông tin cụ thể gói [Senmo](loan_name)
-    - Thông tin cụ thể gói [Takomo](loan_name)
-    - Thông tin cụ thể gói [Cash24](loan_name)
-    - Gói [MoneyCat](loan_name) cụ thể như thế nào
-    - Gói [Senmo](loan_name) cụ thể như thế nào
-    - Gói [Takomo](loan_name) cụ thể như thế nào
-    - Gói [Cash24](loan_name) cụ thể như thế nào
-    - Cho tôi biết thông tin cụ thể gói [MoneyCat](loan_name)
-    - Cho tôi biết thông tin cụ thể gói [Tamo](loan_name)
-    - Cho tôi biết thông tin cụ thể gói [Senmo](loan_name)
-    - Cho tôi biết thông tin cụ thể gói [Takomo](loan_name)
-    - Cho tôi biết thông tin cụ thể gói [Cash24](loan_name)
-    - Bạn có thể nói rõ thông tin cụ thể gói vay [Tamo](loan_name)
-    - Chi tiết cụ thể gói vay [Tamo](loan_name)
-    - Hãy cho tôi biết cụ thể gói vay [MoneyCat](loan_name)
-    - Hãy cho tôi biết cụ thể gói vay [Tamo](loan_name)
-    - Hãy cho tôi biết cụ thể gói vay [Senmo](loan_name)
-    - Hãy cho tôi biết cụ thể gói vay [Takomo](loan_name)
-    - Hãy cho tôi biết cụ thể gói vay [Cash24](loan_name)
-    - Anh có thể cho tôi thông tin đầy đủ của gói vay [Tamo](loan_name) không
-    - Hãy cung cấp cho tôi nhiều thông tin hơn về gói vay [Senmo](loan_name)
-    - Bạn hãy nói chi tiết hơn về gói vay [Senmo](loan_name) đi
-    - Nói rõ hơn về gói vay [MoneyCat](loan_name) đi bạn
-    - Nói rõ hơn về gói vay [Tamo](loan_name) đi bạn
-    - Nói rõ hơn về gói vay [Senmo](loan_name) đi bạn
-    - Nói rõ hơn về gói vay [Takomo](loan_name) đi bạn
-    - Nói rõ hơn về gói vay [Cash24](loan_name) đi bạn
 - intent: interrupt_loan
   examples: |
     - Thôi [chị](gender_value) không có nhu cầu vay nữa đâu em
@@ -4012,6 +3996,7 @@ nlu:
     - Tôi nhận được thống báo từ chối khoản vay, bao lâu nữa thì tôi có thể đăng ký vay lại
     - Từ chối lần đầu thì có thể vay tiếp được không em
     - Anh bị từ chối vay lần đầu tiên thì có thể đăng ký vay nữa không
+    - Anh đăng ký vay tiền nhưng không được duyệt thì bao lâu có thể đăng ký lại
     - Anh có thể đăng ký vay nữa không nếu lần đầu bị từ chối
     - [Chị]{"entity": "gender_value", "value": "ch\u1ecb"} có thể làm hồ sơ vay nữa không nếu lần đầu bị từ chối vay
     - Bị từ chối khoản vay thì đăng ký vay được nữa không em
@@ -4039,6 +4024,7 @@ nlu:
     - Nhiều bên thu hồi nợ rất thiếu văn minh, bên em thì như thế nào
     - Chính sách thu hồi khoản vay của bên em như thế nào
     - Chính sách thu hồi khoản vay của VNDC như thế nào
+    - Công ty có gọi điện đòi nợ thường xuyên không
 - intent: purpose_information
   examples: |
     - Em ơi, sao bên em lấy thông tin người thân của [chị](gender_value) làm gì?
@@ -4159,7 +4145,7 @@ nlu:
     - Có gì để đảm bảo thông tin a cung cấp cho bên em không bị lộ không
     - Bên em giữ an toàn thông tin khách hàng như thế nào
     - Khả năng bảo mật thông tin của VNDC có tốt không
-    - vay bên em có an toàn không
+    - vay bên em có an toàn thông tin không
 - intent: cic_introduce
   examples: |
     - CIC là gì thế
@@ -4200,6 +4186,10 @@ nlu:
     - Mỗi người có thể vay tối đa mấy hồ sơ
     - Tôi được duyệt khoản vay nhưng tôi không muốn vay nữa thì làm thế nào
     - Tôi đăng ký vay 5 triệu và đã được duyệt nhưng tôi chỉ muốn vay 3 triệu thôi có được không
+    - Tôi muốn vay nhiều khoản một lúc có được không
+    - Anh muốn vay 2 khoản cùng lúc có được không em nhỉ
+    - Vay nhiều khoản một lúc có được không
+    - Có thể vay nhiều khoản cùng lúc không nhỉ
 - intent: contract_information
   examples: |
     - Tôi không nhớ số hợp đồng của tôi, vui lòng kiểm tra lại giúp tôi
@@ -4291,6 +4281,8 @@ nlu:
 - intent: high_interest
   examples: |
     - Phí bên em cao thế
+    - phí gia hạn cao thế
+    - Phí gia hạn khoản vay bên em cao thế
     - Sao lãi suất bên em cao vậy
     - Anh thấy lãi suất và phí bên em cao thế
     - Tại sao phí bên em lại cao như vậy
@@ -4340,36 +4332,36 @@ nlu:
     - Chị có thể vay 120 triệu khônng
     - Chị vay 10 triệu được không
     - Em muốn vay 10 triệu có được không
+- intent: sad
+  examples: |
+    - Chán vậy
+    - Buồn ghê
+    - vậy là không vay được ư
+    - Buồn nhỉ muốn vay mà không được
+    - Muốn vay mà không được
+    - Vậy là tôi không có cơ hội vay ư
+    - Muốn vay mà chẳng được
+    - Chán quá mà
+    - Chán thế
+    - Tiếc nhỉ
+- intent: not_paid
+  examples: |
+    - Không trả tiền có sao không
+    - Anh không trả tiền thì bị gì
+    - Không trả tiền thì có sao không
+    - Nếu tôi không trả tiền thì sao 
+    - Nếu tôi không trả tiền thì ảnh hưởng gì
+    - Nếu tôi vay nhưng không trả nợ được thì sao? Có bị phạm tội không?
+    - Vay không trả có phạm tội không
+    - Không trả tiền thì sao thế
+    - Bùng tiền vay có làm sao không
+    - vay không trả có bị làm sao không
+# - intent: wrong_register_information
+#   examples: |
+#     - T
 - synonym: anh
   examples: |
     - Anh
 - synonym: chị
   examples: |
     - Chị
-# - synonym: MoneyCat
-#   examples: |
-#     - moneyCat
-# - synonym: Tamo
-#   examples: |
-#     - tamo
-# - synonym: Senmo
-#   examples: |
-#     - senmo
-# - synonym: Takomo
-#   examples: |
-#     - takomo
-# - synonym: Cash24
-#   examples: |
-#     - cash24
-# - synonym: nhà thuê
-#   examples: |
-#     - Nhà thuê
-#     - nhà đi thuê
-#     - Nhà đi thuê
-#     - nhà trọ
-#     - nhà mướn
-# - synonym: nhà chính chủ
-#   examples: |
-#     - Nhà chính chủ
-#     - nhà của mình
-#     - Nhà của mình
